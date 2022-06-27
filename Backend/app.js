@@ -21,6 +21,8 @@ var reclamationsRouter = require('./routes/reclamations');
 var noteRouter = require('./routes/note.route');
 var courRouter = require('./routes/cour.route');
 var exerciceRouter = require('./routes/exercice.route');
+var absenceRouter = require('./routes/absence.route');
+var rdvRouter = require('./routes/rdv.route');
 
 
 var app = express();
@@ -45,7 +47,8 @@ app.use('/reclamations', reclamationsRouter);
 app.use('/notes', noteRouter);
 app.use('/cours', courRouter);
 app.use('/exercices', exerciceRouter);
-
+app.use('/absences', absenceRouter);
+app.use('/rdvs', rdvRouter);
 
 
 
