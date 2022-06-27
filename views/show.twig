@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Account details </h1>
+   
+
+    <p> <strong> Customer Name : </strong> {{ account.name }} </p>
+    <p> <strong> IBAN : </strong> {{ account.iban }} </p>
+    <p> <strong> EXPIRATION : </strong> {{ account.expiry }} </p>
+
+     <br>
+    <img src="/images/{{ account.identityPhoto }}" alt="">
+    <br>
+
+    <br><br>
+
+</body>
+</html>

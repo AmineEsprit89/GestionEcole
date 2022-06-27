@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <fieldset style="width: max-content; display: block; margin: auto;">
+        <legend> Update An Account</legend>
+        <form action="" method="post">
+            <table>
+                <tr>
+                    <td>Name</td>
+                    <td> <input type="text" name="name" value="{{ account.name}}"> </td>
+                </tr>
+                <tr>
+                    <td>IBAN</td>
+                    <td> <input type="text" name="iban" value="{{ account.iban }}"> </td>
+                </tr>
+                <tr>
+                    <td>EXPIRY</td>
+                    <td> <input type="text" name="expiry" value="{{ account.expiry }}"> </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td> <input type="submit" value="update"> </td>
+                </tr>
+            </table>
+        </form>
+    </fieldset>
+</body>
+</html>
