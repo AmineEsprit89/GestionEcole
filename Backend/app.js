@@ -23,6 +23,8 @@ var courRouter = require('./routes/cour.route');
 var exerciceRouter = require('./routes/exercice.route');
 var absenceRouter = require('./routes/absence.route');
 var rdvRouter = require('./routes/rdv.route');
+var clubRouter = require('./routes/club.route');
+var eventRouter = require('./routes/event.route');
 
 
 var app = express();
@@ -49,6 +51,8 @@ app.use('/cours', courRouter);
 app.use('/exercices', exerciceRouter);
 app.use('/absences', absenceRouter);
 app.use('/rdvs', rdvRouter);
+app.use('/clubs', clubRouter);
+app.use('/events', eventRouter);
 
 
 
