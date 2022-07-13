@@ -28,6 +28,8 @@ var clubRouter = require('./routes/club.route');
 var eventRouter = require('./routes/event.route');
 var classesRouter = require('./routes/classes');
 var niveauxRouter = require('./routes/niveaux');
+var professeurRouter = require('./routes/professeur');
+var eleveRouter = require('./routes/eleve');
 
 
 var app = express();
@@ -58,6 +60,8 @@ app.use('/clubs', clubRouter);
 app.use('/events', eventRouter);
 app.use('/classes', classesRouter);
 app.use('/niveaux', niveauxRouter);
+app.use('/professeur', professeurRouter);
+app.use('/eleve', eleveRouter);
 
 
 

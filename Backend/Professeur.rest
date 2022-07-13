@@ -1,0 +1,38 @@
+Get http://localhost:3000/professeur
+
+###
+
+post http://localhost:3000/professeur/createPr
+Content-Type: application/json
+
+{
+      "ProfID": "RR100",
+        "NomProf": "Roua",
+        "PrenomProf": "Roua",
+        "AgeProf": 20,
+        "EmailProf": "roua@roua.tn",
+        "AdresseProf": "Tunis",
+        "Specialite": "Math"
+}
+
+###
+post http://localhost:3000/professeur/updatePr/62cc6d5ef808ac68f029786f
+Content-Type: application/json
+
+{
+      "ProfID": "HZ123",
+        "NomProf": "mod",
+        "PrenomProf": "ifié",
+        "AgeProf": 55,
+        "EmailProf": "test",
+        "AdresseProf": "test",
+        "Specialite": "test"
+}
+###
+Get http://localhost:3000/professeur/updatePr/62cd77665fa54e56e788cca9
+
+
+
+###
+
+Get http://localhost:3000/professeur/deletePr/62cd77665fa54e56e788cca9

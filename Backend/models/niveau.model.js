@@ -8,7 +8,7 @@ const niveauSchema= mongoose.Schema(
         },
         
         ProfResp: String,
-        ListeFiliere: String,
+        ListeFiliere: String,      
         
     },
 );

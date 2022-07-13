@@ -1,0 +1,37 @@
+Get http://localhost:3000/eleve
+
+###
+
+post http://localhost:3000/eleve/createEl
+Content-Type: application/json
+
+{
+      "NomEleve": "Roua",
+        "PrenomEleve": "Roua",
+        "SexeEleve": "F",
+        "EmailEleve": "roua.roua@Edtech.com",
+        "AdresseEleve": "Tunis Tunisie",
+        "DateNaissance": "01/01/2000"
+}
+
+###
+post http://localhost:3000/professeur/updatePr/62cc6d5ef808ac68f029786f
+Content-Type: application/json
+
+{
+      "ProfID": "HZ123",
+        "NomProf": "mod",
+        "PrenomProf": "ifié",
+        "AgeProf": 55,
+        "EmailProf": "test",
+        "AdresseProf": "test",
+        "Specialite": "test"
+}
+###
+Get http://localhost:3000/professeur/updatePr/62cd77665fa54e56e788cca9
+
+
+
+###
+
+Get http://localhost:3000/professeur/deletePr/62cd77665fa54e56e788cca9
