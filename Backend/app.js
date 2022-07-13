@@ -3,15 +3,16 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+require('dotenv').config();
+
 
 //importer mongoose et connection a la base de donnees
 const mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost:27017/pidev")
+mongoose.connect(process.env.DB_CONNECT)
   .then(() => console.log("database connected"))
   .catch((reason) => {
     console.log(reason);
   });
-
 
 
 var indexRouter = require('./routes/index');

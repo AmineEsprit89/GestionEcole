@@ -1,5 +1,5 @@
 const express = require("express");
-const { showCreateForm, createNote, showNotes, showUpdateNote, showOneNote, updateNote, deleteNote } = require("../controllers/note.controller");
+const { showCreateForm, createNote, showNotes, showUpdateNote, showOneNote, updateNote, deleteNote } = require("../controller/note.controller");
 const router = express.Router();
 
 /**

@@ -1,5 +1,5 @@
 const express = require("express");
-const { deleteEvent, updateEvent, showOneEvent, showUpdateEvent, showEvents, createEvent, showCreateFormE } = require("../controllers/event.controller");
+const { deleteEvent, updateEvent, showOneEvent, showUpdateEvent, showEvents, createEvent, showCreateFormE } = require("../controller/event.controller");
 const router = express.Router();
 
 /**

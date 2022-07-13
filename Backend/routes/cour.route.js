@@ -1,5 +1,5 @@
 const express = require("express");
-const { showCreateFormC, createCour, showCour, showUpdateCour, showOneCour, updateCour, deleteCour } = require("../controllers/cour.controller");
+const { showCreateFormC, createCour, showCour, showUpdateCour, showOneCour, updateCour, deleteCour } = require("../controller/cour.controller");
 const router = express.Router();
 
 /**
