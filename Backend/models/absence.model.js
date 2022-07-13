@@ -10,7 +10,11 @@ const absenceSchema = new mongoose.Schema({
     
     
 
-});
+},
+{
+    timestamps: true ,
+}
+);
 
 const Absence = mongoose.model("absences", absenceSchema);
 

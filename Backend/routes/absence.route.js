@@ -1,5 +1,5 @@
 const express = require("express");
-const { showCreateForm, createAbsence, showAbsences, showUpdateAbsence, showOneAbsence, updateAbsence, deleteAbsence } = require("../controller/absence.controller");
+const { showCreateForm, createAbsence, showAbsences, showUpdateAbsence, showOneAbsence, updateAbsence, deleteAbsence } = require("../controllers/absence.controller");
 const router = express.Router();
 
 /**

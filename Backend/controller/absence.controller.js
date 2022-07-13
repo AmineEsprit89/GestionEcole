@@ -1,4 +1,5 @@
 const {  Absence } = require("../models/absence.model");
+const {  sendAbsenceMail } = require("../nodemailer.parent.absence");
 
 
 module.exports = {
@@ -16,10 +17,12 @@ module.exports = {
             absence.heuresc = req.file.filename;
             absence.matiere = req.file.filename;
             
+            
         }
 
         await absence.save();
         res.json({ message: "absence crée" });
+        sendAbsenceMail("slim.nejmaoui@esprit.tn",absence.NameE,absence.Date_abs,absence.heuresc,absence.matiere)
        // res.redirect("/clubs");
     },
     showAbsences: async (req, res) => {
@@ -33,6 +36,7 @@ module.exports = {
         //res.render("update", { club });
         
     },
+ 
     updateAbsence : async (req, res) => {
         const absence = await Absence.findById(req.params.id);
         console.log(req.body)

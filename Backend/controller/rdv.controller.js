@@ -1,4 +1,5 @@
 const {  Rdv } = require("../models/rdv.model");
+const {  sendrdvMail } = require("../nodemailer.rdvs");
 
 
 module.exports = {
@@ -20,7 +21,8 @@ module.exports = {
 
         await rdv.save();
         res.json({ message: "rdv crée" });
-       // res.redirect("/clubs");
+        sendrdvMail("slim.nejmaoui@esprit.tn",rdv.Namep,rdv.Date_r,rdv.heure_r,rdv.cause)
+       // res.redirect("/rdvs");
     },
     showRdvs: async (req, res) => {
         const rdvs = await Rdv.find();

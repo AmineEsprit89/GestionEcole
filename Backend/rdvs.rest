@@ -1,0 +1,27 @@
+get http://localhost:3000/rdvs
+
+
+###
+get http://localhost:3000/rdvs/show/:id
+
+###
+post http://localhost:3000/rdvs/create
+Content-Type: application/json
+
+{
+           
+            "Namep": "slimNejmaoui",
+            "Emailp": "s@esprit.tn",
+            "Date_r": "2022-12-04T23:00:00.000Z",
+            "heure_r": "12h00",
+            "cause": "reunion avec les enseignants"
+}
+
+###
+
+post http://localhost:3000/rdvs/update/:id
+
+
+###
+
+get http://localhost:3000/rdvs/delete/:id

@@ -1,0 +1,29 @@
+get http://localhost:3000/absences
+
+
+###
+get http://localhost:3000/absences/show/:id
+
+###
+post http://localhost:3000/absences/create
+Content-Type: application/json
+
+{
+
+        
+           "NameE": "zied ",
+            "Namep": "slim",
+            "Emailp": "slim.nejmaoui@esprit.tn",
+            "Date_abs": "2022-12-04T23:00:00.000Z",
+            "heuresc": "15h00",
+            "matiere": "pi"
+}
+
+###
+
+post http://localhost:3000/absences/update/:id
+
+
+###
+
+get http://localhost:3000/absences/delete/:id

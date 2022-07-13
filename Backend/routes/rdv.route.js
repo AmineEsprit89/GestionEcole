@@ -1,5 +1,5 @@
 const express = require("express");
-const { showCreateForm, createRdv, showRdvs, showUpdateRdv, showOneRdv, updateRdv, deleteRdv } = require("../controller/rdv.controller");
+const { showCreateForm, createRdv, showRdvs, showUpdateRdv, showOneRdv, updateRdv, deleteRdv } = require("../controllers/rdv.controller");
 const router = express.Router();
 
 /**
