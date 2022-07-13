@@ -1,0 +1,38 @@
+get http://localhost:3000/events
+
+
+###
+get http://localhost:3000/events/show/:id
+
+###
+post http://localhost:3000/events/create
+Content-Type: application/json
+
+{
+
+        
+            "Name": "finalbox",
+            "Type": "validation",
+            "Free": "False",
+            "Price": 200,
+            "Date_event": "12/12/2020",
+            "Date_fin_event": "12/12/2020",
+            "Heure_debut": "18.00",
+            "Lieu": "Marsa",
+            "Nbr_place": "15",
+            "Image": "fdser",
+            "Id_Club": "62b480f9b1b8c16eed4c55e9"
+        
+}
+
+###
+
+post http://localhost:3000/events/update/:id
+
+
+###
+
+get http://localhost:3000/events/delete/:id
+
+
+

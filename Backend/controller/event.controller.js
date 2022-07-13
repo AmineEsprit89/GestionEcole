@@ -1,4 +1,5 @@
 const {  Event } = require("../models/event.model");
+const {  sendEventEmail } = require("../nodemailer/nodemailer.event"); 
 
 
 module.exports = {
@@ -15,12 +16,19 @@ module.exports = {
         await event.save();
         res.json({ message: "evenement crée" });
         //res.redirect("/events");
+        sendEventEmail("rabii.benkhlifa@esprit.tn",event.Name,event.Type,event.Price,
+                          event.Date_event,event.Date_fin_event,event.Heure_debut,event.Lieu,
+                          event.Nbr_place,event.Nom_Club)
+                          
+    
     },
     showEvents: async (req, res) => {
         const events = await Event.find();
         
         //res.render("events", { events });
         res.json({ events  });
+       
+
     },
     showUpdateEvent: async (req, res) => {
         const event = await Event.findById(req.params.id);
@@ -57,4 +65,13 @@ module.exports = {
         res.json({ message: "evenement supprimé" });
         //res.redirect('/events');
     },
+    testEvent: async (req,res)=>{
+       
+        //res.redirect('/events');
+    },
+
+
+
+
+
 }

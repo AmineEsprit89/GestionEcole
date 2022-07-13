@@ -11,7 +11,7 @@ const eventSchema = new mongoose.Schema({
     Lieu:String,
     Nbr_place:String,
     Image:String,
-    Id_Club:String
+    Nom_Club:String
     
     
 
