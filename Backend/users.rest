@@ -1,0 +1,68 @@
+### user with valid token (getAllUsers)
+get http://localhost:3000/users
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRoaXJkQG91dGxvb2suZnIiLCJ1c2VySWQiOiI2MmNiMDlmMDMyMTljZTZlM2U4OWFkZGUiLCJhY2NvdW50VHlwZSI6InByb2Zlc3NldXIiLCJub20iOiJIYW1kaSIsInByZW5vbSI6Ik1vaGFtZWQgQW1pbmUiLCJpYXQiOjE2NTc1NDkxMzMsImV4cCI6MTY1NzU1MjczM30.tuO-Cx51288ONXD_owvBiHl8rKEXhO7bTo13crrlKqs
+
+### user with valid token (getUserById)
+get http://localhost:3000/users/62c95c5dd9472aa38bcbc5b1
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNlY29uZEBvdXRsb29rLmZyIiwidXNlcklkIjoiNjJjNDU0NzBmYmQ1YTM5NGQ2NjJkZTgwIiwiYWNjb3VudFR5cGUiOiJQcm9mZXNzZXVyIiwiaWF0IjoxNjU3MzAzNTk2LCJleHAiOjE2NTczMDcxOTZ9.HpotE8LvKocROjxR3f2HB7oZVgaOYuKJgX4GCh_mGIU
+
+### (createUser)
+post http://localhost:3000/users/create
+Content-Type: application/json
+
+{
+       "userName" : "third",
+       "email" : "mohamedamine.hamdi@esprit.tn",
+       "password" : "thirdthird",
+       "verifyPassword": "thirdthird",
+       "accountType" :"professeur" ,
+       "questionSecurite" :"pet",
+       "reponseQuestionSecurite" :"milou",
+       "nom" :"Hamdi",
+       "prenom" :"Mohamed Amine",
+       "dateDeNaissance":"28-12-1989",
+       "adresse" :"2011 denden",
+       "classe" :"2CINFO 02",
+       "club" :"ESPRIT SPACE",
+       "specialite":"BI"
+}
+
+### admin with valid token (deleteUser)
+get http://localhost:3000/users/delete/62cb039454fc51eac06c2333
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQG91dGxvb2suZnIiLCJ1c2VySWQiOiI2MmM5NWM1ZGQ5NDcyYWEzOGJjYmM1YjEiLCJhY2NvdW50VHlwZSI6ImFkbWluIiwibm9tIjoiSGFtZGkiLCJwcmVub20iOiJNb2hhbWVkIEFtaW5lIiwiaWF0IjoxNjU3NDcyNjE5LCJleHAiOjE2NTc0NzYyMTl9.4jd_NB-tpKcmIwgqm7ELxdkws69e93Ph_sJEFjljZkY
+
+### user with valid token (updateUser)
+post http://localhost:3000/users/update/62c95c5dd9472aa38bcbc5b1
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQG91dGxvb2suZnIiLCJ1c2VySWQiOiI2MmM5NWM1ZGQ5NDcyYWEzOGJjYmM1YjEiLCJhY2NvdW50VHlwZSI6ImFkbWluIiwibm9tIjoiSGFtZGkiLCJwcmVub20iOiJNb2hhbWVkIEFtaW5lIiwiaWF0IjoxNjU3NDcyNjE5LCJleHAiOjE2NTc0NzYyMTl9.4jd_NB-tpKcmIwgqm7ELxdkws69e93Ph_sJEFjljZkY
+Content-Type: application/json
+
+{
+       "userName" : "admin",
+       "email" : "admin@outlook.fr",
+       "password" : "adminadmin",
+       "verifyPassword": "adminadmin",
+       "accountType" :"admin" ,
+       "questionSecurite" :"pet",
+       "reponseQuestionSecurite" :"milou",
+       "nom" :"Hamdi",
+       "prenom" :"Mohamed Amine",
+       "dateDeNaissance":"28-12-1989",
+       "adresse" :"2011 denden",
+       "classe" :"2CINFO 02",
+       "club" :"ESPRIT SPACE",
+       "specialite":"BI", 
+       "isActive" :true
+}
+
+### authorization + get a token(logIn)
+post http://localhost:3000/users/login
+Content-Type: application/json
+
+{
+       "email" : "third@outlook.fr",
+       "password" : "thirdthird"
+}
+
+
+
+

@@ -2,23 +2,28 @@ const mongoose = require("mongoose");
 
 const userSchema= mongoose.Schema(
     {
-        userName : String,  //all users
-        email : String,     //all users
-        password : String,  //all users
-        verifyPassword : String,       //all users
-        accountType : String,       //all users
-        questionSecurite : String,      //all users
-        reponseQuestionSecurite : String,      //all users
-        nom : String,       //all users
-        prenom : String,        //all users
-        dateDeNaissance : String,     //all users
-        adresse : String,      //all users
-        classe : String,        //eleve+professeur
-        club : String,          //all users
-        specialite : String,    //professeur
-        validationAdmin : String,       //all users
+        userName : String,  
+        email : String,     
+        password : String,  
+        verifyPassword : String,       
+        accountType : String,       
+        questionSecurite : String,      
+        reponseQuestionSecurite : String,   
+        nom : String,       
+        prenom : String,       
+        dateDeNaissance : String,     
+        adresse : String,      
+        classe : String,        
+        club : String,         
+        specialite : String,   
+        validationAdmin : String,
+        isActive :{
+            type : Boolean,
+            default : false
+        },
+        ActivationCode: String      
 
-    }
+    },{timestamps : true}
 );
 
 const User = mongoose.model('User', userSchema);

@@ -1,0 +1,23 @@
+ ### (getAllPayments)
+get http://localhost:3000/payments
+
+
+### (getPaymentById)
+
+get http://localhost:3000/payments/62c9ad25143b5dbb7e5b9d78
+
+### (deletePayment)
+
+get http://localhost:3000/payments/delete/62c9cee9ec3716ede6f6ef8e
+
+
+### (updatePayment) do not use this route : payments auto from stripe
+
+post http://localhost:3000/payments/update/62c9ac24d90f07298624a450
+Content-Type: application/json
+
+{
+    "email" : "effacer",
+    "nom" : "effacer@outlook.fr",
+    "montantPaye" : "6969"
+}

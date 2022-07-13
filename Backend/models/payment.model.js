@@ -1,15 +1,12 @@
 const mongoose = require("mongoose");
 
 const paymentSchema= mongoose.Schema(
-    {
-        datePaiement : String,
-        montantApayer : Number,
-        moyenDePaiment : String,
+    {   email : String,
+        nom : String,
         montantPaye : Number,
-        montantRestantDue : Number,
-    }
+        description : String,
+        userId :String
+    },{timestamps : true}
 );
-
 const Payment = mongoose.model('Payment', paymentSchema);
-
 module.exports = { Payment }
