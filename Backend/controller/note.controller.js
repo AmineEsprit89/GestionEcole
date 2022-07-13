@@ -24,6 +24,7 @@ module.exports = {
     showUpdateNote: async (req, res) => {
         const note = await Note.findById(req.params.id);
         
+        
     },
     updateNote : async (req, res) => {
         const note = await Note.findById(req.params.id);

@@ -30,9 +30,14 @@ module.exports = {
         console.log(req.body)
         exercice.Designation = req.body.Designation;
         exercice.nomEnseignant = req.body.nomEnseignant;
-        exercice.imageUrl= req.body.imageUrl;
+        
         exercice.chapitre= req.body.chapitre; 
+        
+           if(req.file){
+            exercice.imageUrl= req.file.filename;
+        }
 
+    
         await exercice.save();
         res.json({ message: "exercice modifié" });
     

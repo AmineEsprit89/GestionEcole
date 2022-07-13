@@ -29,6 +29,7 @@ module.exports = {
         const cour = await Cour.findById(req.params.id);
         console.log(req.body)
         cour.Designation = req.body.Designation;
+        cour.nomcour=req.body.nomcour ; 
         cour.nomEnseignant = req.body.nomEnseignant;
         cour.imageUrl= req.body.imageUrl;
         cour.chapitre= req.body.chapitre; 

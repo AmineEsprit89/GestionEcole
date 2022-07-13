@@ -1,5 +1,5 @@
 const express = require("express");
-const { showCreateFormE, createexercice, showexercice, showUpdateexercice, showOneexercice, updateexercice, deleteexercice } = require("../controller/exercice.controller");
+const { showCreateFormE, createexercice, showexercice, showUpdateexercice, showOneexercice, updateexercice, deleteexercice } = require("../controllers/exercice.controller");
 const router = express.Router();
 
 /**
@@ -22,15 +22,13 @@ const storage = multer.diskStorage({
 
 const upload = multer({storage})
 
-
-
 router.get("/create", showCreateFormE)
 router.post("/create", upload.single('imageUrl') , createexercice)
 
 router.get("/", showexercice)
 router.get("/update/:id" , showUpdateexercice )
 router.get("/show/:id" , showOneexercice)
-router.put("/update/:id" , updateexercice)
+router.post("/update/:id" , updateexercice)
 router.delete("/delete/:id", deleteexercice);
 
 
