@@ -6,12 +6,12 @@ post http://localhost:3000/eleve/createEl
 Content-Type: application/json
 
 {
-      "NomEleve": "Roua",
-        "PrenomEleve": "Roua",
-        "SexeEleve": "F",
-        "EmailEleve": "roua.roua@Edtech.com",
-        "AdresseEleve": "Tunis Tunisie",
-        "DateNaissance": "01/01/2000"
+      "NomEleve": "Melek",
+        "PrenomEleve": "Ballouti",
+        "SexeEleve": "M",
+        "EmailEleve": "Melek.ballouti@Edtech.com",
+        "AdresseEleve": "Bizerte Tunisie",
+        "DateNaissance": "01/01/1990"
 }
 
 ###

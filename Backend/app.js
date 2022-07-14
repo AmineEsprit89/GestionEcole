@@ -30,6 +30,7 @@ var classesRouter = require('./routes/classes');
 var niveauxRouter = require('./routes/niveaux');
 var professeurRouter = require('./routes/professeur');
 var eleveRouter = require('./routes/eleve');
+var pdfRouter = require('./routes/pdf.routes');
 
 
 var app = express();
@@ -62,6 +63,8 @@ app.use('/classes', classesRouter);
 app.use('/niveaux', niveauxRouter);
 app.use('/professeur', professeurRouter);
 app.use('/eleve', eleveRouter);
+app.use('/pdf', pdfRouter);
+
 
 
 

@@ -11,7 +11,7 @@ module.exports = {
         if(req.file){
             note.Type = req.file.filename;
         }
-
+        console.log(note)
         await note.save();
         res.json({ message: "note crée" });
      

@@ -11,8 +11,8 @@ Content-Type: application/json
 {
 
         
-            "Name": "finalbox",
-            "Type": "validation",
+            "Name": "musique",
+            "Type": "occidental",
             "Free": "False",
             "Price": 200,
             "Date_event": "12/12/2020",

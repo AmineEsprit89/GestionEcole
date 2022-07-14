@@ -2,15 +2,15 @@ var express = require('express');
 var router = express.Router();
 const PDFDocument = require("../pdfkit-tables");
 const fs = require('fs');
-const notechema = require("../models/note.model");
+const {  Note } = require("../models/note.model");
 
 
 router.get('/:id',async function(req,res){
-  var note = await notechema.findOne({_id: req.params.id});
+  var note = await Note.findOne({_id : req.params.id})
  if(!note)
  {
    res.status(400).json({
-     message: 'Animal not found!'
+     message: 'note not found!'
    });
  }
  

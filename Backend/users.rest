@@ -65,4 +65,33 @@ Content-Type: application/json
 
 
 
+###
 
+post http://localhost:3000/notes/create
+Content-Type: application/json
+
+{
+"Designation" : "FR",
+"nomEnseignant" : "MELEK",
+"noteCc" : "20"
+}
+
+###
+post  http://localhost:3000/notes/update/62cf02f66d6eb7df1e689a95
+
+{
+"Designation" : "FR",
+"nomEnseignant" : "MELEK",
+"noteCc" : "20"
+}
+
+###
+get http://localhost:3000/notes/
+
+###
+ 
+get http://localhost:3000/notes/delete/62cf02f66d6eb7df1e689a95
+
+###
+
+get http://localhost:3000/pdf/62cf09bc1a283186beb43b2b

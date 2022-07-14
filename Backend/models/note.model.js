@@ -1,17 +1,15 @@
 const mongoose = require("mongoose");
 
-var notechema = new mongoose.Schema({
+var noteSchema = new mongoose.Schema({
     Designation: String,
     nomEnseignant: String,
     noteCc:String,
     noteExam:String,
     imageUrl:String
-    
-    
-
 });
 
-// const Note = mongoose.model("notes", notechema);
 
 
-module.exports = mongoose.model('notes',notechema);
+ const Note = mongoose.model("notes", noteSchema);
+
+ module.exports = { Note }
