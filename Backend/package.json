@@ -22,6 +22,8 @@
     "nodemailer": "^6.7.7",
     "pdfkit": "^0.13.0",
     "stripe": "^9.12.0",
+    "social-media-sharing": "^1.0.2",
+    "social-post-api": "^1.0.20",
     "twig": "^1.15.4"
   }
 }

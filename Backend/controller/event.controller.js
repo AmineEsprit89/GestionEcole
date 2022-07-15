@@ -1,5 +1,7 @@
 const {  Event } = require("../models/event.model");
 const {  sendEventEmail } = require("../nodemailer/nodemailer.event"); 
+// model user
+//const user = new User();
 
 
 module.exports = {
@@ -10,17 +12,20 @@ module.exports = {
         const event = new Event(req.body);
 
         if(req.file){
-            club.Image = req.file.filename;
+            event.Image = req.file.filename;
         }
 
         await event.save();
         res.json({ message: "evenement crée" });
         //res.redirect("/events");
+
+        //for( int i = 0 ; i<user.length ; i++){
+           // user[i].email
         sendEventEmail("rabii.benkhlifa@esprit.tn",event.Name,event.Type,event.Price,
-                          event.Date_event,event.Date_fin_event,event.Heure_debut,event.Lieu,
-                          event.Nbr_place,event.Nom_Club)
+                          event.Date_event,event.Heure_debut,event.Date_fin_event,event.Lieu,
+                          event.Nbr_place,event.Nom_Club,event.Image)
                           
-    
+    //}
     },
     showEvents: async (req, res) => {
         const events = await Event.find();

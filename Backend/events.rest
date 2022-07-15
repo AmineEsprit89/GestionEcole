@@ -11,17 +11,17 @@ Content-Type: application/json
 {
 
         
-            "Name": "musique",
-            "Type": "occidental",
+            "Name": "marathon",
+            "Type": "sport",
             "Free": "False",
-            "Price": 200,
-            "Date_event": "12/12/2020",
-            "Date_fin_event": "12/12/2020",
-            "Heure_debut": "18.00",
-            "Lieu": "Marsa",
-            "Nbr_place": "15",
+            "Price": 150,
+            "Date_event": "10/12/2020",
+            "Date_fin_event": "11/12/2020",
+            "Heure_debut": "10.00",
+            "Lieu": "la goulette",
+            "Nbr_place": "150",
             "Image": "fdser",
-            "Id_Club": "62b480f9b1b8c16eed4c55e9"
+            "Nom_Club": "281098235_532837978428890_4367202906646536400_n.jpg"
         
 }
 
