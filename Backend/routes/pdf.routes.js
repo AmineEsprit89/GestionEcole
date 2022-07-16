@@ -5,8 +5,8 @@ const fs = require('fs');
 const {  Note } = require("../models/note.model");
 
 
-router.get('/:id',async function(req,res){
-  var note = await Note.findOne({_id : req.params.id})
+router.get('/',async function(req,res){
+  var note = await Note.find();
  if(!note)
  {
    res.status(400).json({
@@ -28,12 +28,15 @@ router.get('/:id',async function(req,res){
     .text("Ed tech", 200, 80, { align: "right" })
     .moveDown();
 
+    
     const table = {
-      headers: ["Designation", "nomEnseignant","noteExam"],
-      rows: [
-      [note.Designation , note.nomEnseignant, note.noteExam  ]
-]
+      headers: ["Designation", "nomEnseignant","noteCc","noteExam"],
+      rows: []
   };
+  for (const notes of note){
+    table.rows.push([notes.Designation , notes.nomEnseignant, notes.noteCc,  notes.noteExam  ])
+  }
+
     doc.moveDown().table(table, 10, 125, { width: 590 });
 
     doc.moveDown();

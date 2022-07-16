@@ -1,10 +1,10 @@
 const mongoose = require("mongoose");
 
 var noteSchema = new mongoose.Schema({
-    Designation: String,
-    nomEnseignant: String,
-    noteCc:String,
-    noteExam:String,
+    Designation: {type:String, minLength:5 , maxLength:20, required: true },
+    nomEnseignant: {type:String, minLength:5 , maxLength:20, required: true }, 
+    noteCc:{type: Number , min:0,max: 20 , required: true},
+    noteExam:{type: Number,min:0,max: 20 , required: true},
     imageUrl:String
 });
 
