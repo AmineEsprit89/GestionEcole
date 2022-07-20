@@ -11,7 +11,11 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit(): void {
     
+<<<<<<< HEAD
     this.role='x' 
+=======
+    this.role='y' 
+>>>>>>> 8ac37572572a63a4fd358a3ce7d8daeff5867d18
   }
 
 }
