@@ -15,8 +15,7 @@ import { EventsComponent } from './events/events.component';
 import { AbsencesComponent } from './absences/absences.component';
 import { RdvComponent } from './rdv/rdv.component';
 import { NotesComponent } from './notes/notes.component';
-import { SidebarComponent } from './sidebar/sidebar.component';
-import { FooterComponent } from './footer/footer.component';
+
 
 
 @NgModule({
@@ -32,9 +31,7 @@ import { FooterComponent } from './footer/footer.component';
     EventsComponent,
     AbsencesComponent,
     RdvComponent,
-    NotesComponent,
-    SidebarComponent,
-    FooterComponent
+    NotesComponent
   
   ],
   imports: [
