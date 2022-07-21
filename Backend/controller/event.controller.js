@@ -31,7 +31,7 @@ module.exports = {
         const events = await Event.find();
         
         //res.render("events", { events });
-        res.json({ events  });
+        res.json(events );
        
 
     },

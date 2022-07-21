@@ -28,9 +28,11 @@ router.get("/create", showCreateForm)
 router.post("/create", upload.single('Type') , createClub)
 
 router.get("/", showClubs)
-router.get("/update/:id" , showUpdateClub )
 router.get("/show/:id" , showOneClub )
+
+router.get("/update/:id" , showUpdateClub )
 router.post("/update/:id" , updateClub)
+
 router.get('/delete/:id', deleteClub);
 
 

@@ -32,15 +32,19 @@ var professeurRouter = require('./routes/professeur');
 var eleveRouter = require('./routes/eleve');
 var pdfRouter = require('./routes/pdf.routes');
 var socialpostRouter = require('./routes/socialpost.routes');
+var cors = require ('cors');
+
 
 
 var app = express();
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'twig');
 
 //middlewares cree par defaut
+app.use(cors());
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -66,6 +70,10 @@ app.use('/professeur', professeurRouter);
 app.use('/eleve', eleveRouter);
 app.use('/pdf', pdfRouter);
 app.use('/socialpost', socialpostRouter);
+
+
+
+
 
 
 

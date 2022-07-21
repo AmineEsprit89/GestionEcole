@@ -1,0 +1,19 @@
+<h1>Ajouter club</h1>
+<form #y="ngForm">
+<label>Name</label>
+<input type="text" name="Name" #i="ngModel" ngModel>
+<label>Type</label>
+<input type="text" name="Type" #t="ngModel" ngModel>
+<label>Date_seance</label>
+<input type="text" name="Date_seance" #d="ngModel" ngModel>
+<label>Heure_debut</label>
+<input type="text" name="Heure_debut" #p="ngModel" ngModel>
+<label>Duree</label>
+<input type="text" name="Duree" #s="ngModel" ngModel>
+<label>Description</label>
+<input type="text" name="Description" #e="ngModel" ngModel>
+<input type="submit" value="ajouter" (click)="ajouterclub(y.value)">
+
+</form>
+
+

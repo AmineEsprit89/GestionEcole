@@ -1,21 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { ClubsService } from '../services/clubs.service';
 
-
 @Component({
-  selector: 'app-clubs',
-  templateUrl: './clubs.component.html',
-  styleUrls: ['./clubs.component.css']
+  selector: 'app-modifyclub',
+  templateUrl: './modifyclub.component.html',
+  styleUrls: ['./modifyclub.component.css']
 })
-export class ClubsComponent implements OnInit {
-  dataArray!:any
-  constructor(private cs:ClubsService) { 
+export class ModifyclubComponent implements OnInit {
 
-    this.cs.getallclubs().subscribe((d)=>{this.dataArray=d;})
-  }
+  constructor(private cs:ClubsService) { }
 
   ngOnInit(): void {
   }
+  dataArray:any;
   dataclub={Name:'',Type:'',Date_seance:'',Heure_debut:'',Duree:'',Description:'',id:''}
   getdata(Name: string,Type: string, Date_seance: string, Heure_debut:string, Duree:string ,Description:string,id:any){
     this.dataclub.Name=Name;
@@ -26,6 +23,7 @@ export class ClubsComponent implements OnInit {
     this.dataclub.Description=Description;
     this.dataclub.id=id;
   }
+
   updateclubInofrmations(f:any){
     let data = f.value;
     this.cs.updateclub(this.dataclub.id,data).subscribe(response=>{
@@ -42,12 +40,4 @@ export class ClubsComponent implements OnInit {
     })
 
 }
-
-delete(id:any,i:any){
-  this.cs.deleteclub(id).subscribe(Response=>{
-    this.dataArray.splice(i,1)
-  })
-}
-
-
 }

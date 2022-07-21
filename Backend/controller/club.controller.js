@@ -20,7 +20,7 @@ module.exports = {
         const clubs = await Club.find();
         
         //res.render("clubs", { clubs });
-        res.json({ clubs  });
+        res.json( clubs );
     },
     showUpdateClub: async (req, res) => {
         const club = await Club.findById(req.params.id);
@@ -39,14 +39,14 @@ module.exports = {
         club.Logo = req.body.Logo;
 
         await club.save();
-        res.json({ message: "club modifié" });
+        res.json( {message: "club modifié"} );
        
         
        // res.redirect("/clubs");
     },
     showOneClub: async (req, res) => {
         const club = await Club.findById(req.params.id);
-        res.json({ club });
+        res.json(club );
        // res.render("show", { club });
        
 

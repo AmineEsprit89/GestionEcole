@@ -1,0 +1,31 @@
+<h1>Ajouter evenement</h1>
+<form #y="ngForm">
+<label>Name</label>
+<input type="text" name="Name" #i="ngModel" ngModel>
+<label>Type</label>
+<input type="text" name="Type" #t="ngModel" ngModel>
+<label>Free</label>
+<input type="text" name="Free" #d="ngModel" ngModel>
+<label>Price</label>
+<input type="text" name="Price" #p="ngModel" ngModel>
+<label>Date_event</label>
+<input type="text" name="Date_event" #s="ngModel" ngModel>
+<label>Date_fin_event</label>
+<input type="text" name="Date_fin_event" #e="ngModel" ngModel>
+
+<label>Heure_debut</label>
+<input type="text" name="Heure_debut" #h="ngModel" ngModel>
+<label>Lieu</label>
+<input type="text" name="Lieu" #l="ngModel" ngModel>
+<label>Nbr_place</label>
+<input type="text" name="Nbr_place" #n="ngModel" ngModel>
+<label>Nom_Club</label>
+<input type="text" name="Nom_Club" #c="ngModel" ngModel>
+
+
+
+<input type="submit" value="ajouter" (click)="ajouterevent(y.value)">
+
+</form>
+
+
