@@ -32,15 +32,27 @@ var professeurRouter = require('./routes/professeur');
 var eleveRouter = require('./routes/eleve');
 var pdfRouter = require('./routes/pdf.routes');
 var socialpostRouter = require('./routes/socialpost.routes');
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+var cors = require ('cors');
+
+=======
+var xlsxRouter = require('./routes/xlsx');
+var absxlsxRouter = require('./routes/absxlsx');
+>>>>>>> ebf5d3547fca46aae5d09733c61bbe1b70e0c153
+>>>>>>> 2a1ab8a3c8b37056664562f51efaa6863eb9b2e7
 
 
 var app = express();
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'twig');
 
 //middlewares cree par defaut
+app.use(cors());
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -66,6 +78,10 @@ app.use('/professeur', professeurRouter);
 app.use('/eleve', eleveRouter);
 app.use('/pdf', pdfRouter);
 app.use('/socialpost', socialpostRouter);
+
+
+
+
 
 
 

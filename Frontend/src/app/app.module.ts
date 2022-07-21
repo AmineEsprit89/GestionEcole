@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -15,6 +16,10 @@ import { EventsComponent } from './events/events.component';
 import { AbsencesComponent } from './absences/absences.component';
 import { RdvComponent } from './rdv/rdv.component';
 import { NotesComponent } from './notes/notes.component';
+import { AddclubComponent } from './addclub/addclub.component';
+import { ModifyclubComponent } from './modifyclub/modifyclub.component';
+import { AddeventComponent } from './addevent/addevent.component';
+import { ShoweventComponent } from './showevent/showevent.component';
 
 
 
@@ -31,12 +36,20 @@ import { NotesComponent } from './notes/notes.component';
     EventsComponent,
     AbsencesComponent,
     RdvComponent,
-    NotesComponent
+    NotesComponent,
+    AddclubComponent,
+    ModifyclubComponent,
+    AddeventComponent,
+    ShoweventComponent,
+    
+    
+   
   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     HttpClientModule
     
   ],

@@ -1,0 +1,47 @@
+<table border="2" >
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Free</th>
+            <th>Price</th>
+            <th>Date_event</th>
+            <th>Date_fin_event</th>
+            <th>Heure_debut</th>
+            <th>Lieu</th>
+            <th>Nbr_place</th>
+            <th>Nom_Club</th>
+            
+           
+            
+        </tr>
+    </thead>
+
+    
+    
+    <tbody>
+        <tr *ngFor="let item of dataArray index as i">
+
+            <td> {{item.Name}} </td> 
+            
+            <td>{{item.Type}}</td>
+            <td>{{item.Free}} </td>
+            <td>{{item.Price}}</td>
+            <td>{{item.Date_event}}</td>
+            <td>{{item.Date_fin_event}}</td>
+            <td>{{item.Heure_debut}} </td>
+            <td>{{item.Lieu}}</td>
+            <td>{{item.Nbr_place}}</td>
+            <td>{{item.Nom_Club}}</td>
+
+
+      
+            
+          
+          
+        </tr>
+
+        
+        
+    </tbody>
+</table> 
