@@ -32,13 +32,8 @@ var professeurRouter = require('./routes/professeur');
 var eleveRouter = require('./routes/eleve');
 var pdfRouter = require('./routes/pdf.routes');
 var socialpostRouter = require('./routes/socialpost.routes');
-<<<<<<< HEAD
 var cors = require ('cors');
 
-=======
-var xlsxRouter = require('./routes/xlsx');
-var absxlsxRouter = require('./routes/absxlsx');
->>>>>>> ebf5d3547fca46aae5d09733c61bbe1b70e0c153
 
 
 var app = express();
@@ -75,8 +70,6 @@ app.use('/professeur', professeurRouter);
 app.use('/eleve', eleveRouter);
 app.use('/pdf', pdfRouter);
 app.use('/socialpost', socialpostRouter);
-app.use('/xlsx', xlsxRouter);
-app.use('/absxlsx', absxlsxRouter);
 
 
 

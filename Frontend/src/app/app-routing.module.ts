@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AbsencesComponent } from './absences/absences.component';
 import { AddclubComponent } from './addclub/addclub.component';
+import { AddcoursComponent } from './addcours/addcours.component';
 import { AddeventComponent } from './addevent/addevent.component';
 import { ClubsComponent } from './clubs/clubs.component';
 import { ContentComponent } from './content/content.component';
@@ -29,6 +30,10 @@ const routes: Routes = [
   {path: 'update', component: ModifyclubComponent},
 
   {path: 'createE', component: AddeventComponent},
+
+
+
+  {path: 'createC', component: AddcoursComponent},
 
 
 

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router,Route } from '@angular/router';
 import { EventsService } from '../services/events.service';
 
 @Component({
@@ -20,6 +20,9 @@ export class AddeventComponent implements OnInit {
     this.service.addevent(f).subscribe(
       
       ()=>{this.route.navigate(['/events'])}
+      
+  
+    
 
     )
   }
