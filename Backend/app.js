@@ -32,8 +32,15 @@ var professeurRouter = require('./routes/professeur');
 var eleveRouter = require('./routes/eleve');
 var pdfRouter = require('./routes/pdf.routes');
 var socialpostRouter = require('./routes/socialpost.routes');
+<<<<<<< HEAD
 var cors = require ('cors');
 
+=======
+
+var cors = require ('cors');
+
+
+>>>>>>> 5cf4bd34fa7b5dfb10accff658626e41710fab18
 
 
 var app = express();
