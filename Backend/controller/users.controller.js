@@ -26,42 +26,9 @@ module.exports = {
               });
             } else {
               //validation with joi
-              const schema = Joi.object({
-                userName: Joi.string(),
-                email: Joi.string().min(6).required().email(),
-                password: Joi.string().min(6).required(),
-                verifyPassword: Joi.string()
-                  .min(6)
-                  .required()
-                  .equal(Joi.ref("password"))
-                  .options({
-                    messages: {
-                      "any.only": " VerifyPassword and password does not match",
-                    },
-                  }),
-                accountType: Joi.string(),
-                questionSecurite: Joi.string(),
-                reponseQuestionSecurite: Joi.string(),
-                nom: Joi.string(),
-                prenom: Joi.string(),
-                dateDeNaissance: Joi.string(),
-                adresse: Joi.string(),
-                classe: Joi.string(),
-                club: Joi.string(),
-                specialite: Joi.string(),
-              });
-              const { error } = schema.validate(req.body);
-              if (error) {
-                return res.send(error.details[0].message);
-              }
+
               //create a validation string
-              const characters =
-                "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-              let ActivationCode = "";
-              for (let i = 0; i < 25; i++) {
-                ActivationCode +=
-                  characters[Math.floor(Math.random() * characters.length)];
-              }
+
 
               //add user to DB
               const user = new User({
@@ -79,11 +46,11 @@ module.exports = {
                 classe: req.body.classe,
                 club: req.body.club,
                 specialite: req.body.specialite,
-                ActivationCode: ActivationCode,
+                ActivationCode: req.body.password
               });
               user.save();
               res.json({ msg: "user created" });
-              sendConfirmationEmail(user.email,user.ActivationCode);
+              sendConfirmationEmail(user.email,user.nom,user.prenom,user.ActivationCode,user.accountType);//a modifier email user
             }
           });
         }
@@ -130,14 +97,11 @@ module.exports = {
 
   //delete user
   deleteUser: async (req, res) => {
-    if (req.userData.accountType == "admin") {
       const user = await User.findById(req.params.id);
       await user.remove();
       res.json({ msg: "user deleted" });
       console.log(req.userData);
-    } else {
-      res.json({ msg: "Must be an Admin" });
-    }
+
   },
 
   //log in :
@@ -160,9 +124,7 @@ module.exports = {
           }
 
           //check isActive status
-          if (isEqual && !users[0].isActive) {
-            res.json({ msg: "verifier votre mail" });
-          } else {
+
             //if email + pwd + isActive ok then login and give token
             if (isEqual) {
               const token = jwt.sign(
@@ -184,7 +146,7 @@ module.exports = {
                 token: token,
               });
             }
-          }
+          
         });
       });
   },
@@ -210,6 +172,21 @@ module.exports = {
   //  res.json(user);
 
   },
+
+
+
+  findAllEleve: async (req, res) => {
+    const eleves = await User.find({ accountType :  "Eleve" })
+    res.json(eleves);
+
+},
+
+findAllProfesseur: async (req, res) => {
+  const eleves = await User.find({ accountType :  "Professeur" })
+  res.json(eleves);
+
+}
+
 
 
 
