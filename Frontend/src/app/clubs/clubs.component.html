@@ -46,6 +46,8 @@
 </table> 
 <h3><button><a routerLink="/create">Ajouter club</a></button></h3>
 
+
+
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -57,29 +59,34 @@
           </button>
         </div>
         <div class="modal-body">
-            <h1>modifier club</h1>
-            <form #y="ngForm" (ngSubmit)=" updateclubInofrmations(y)">
-            <label>Name</label>
+            <h1 id="h1">Modifier club</h1>
+            <form  class="A1" #y="ngForm" (ngSubmit)=" updateclubInofrmations(y)">
+            <label id="l">Name</label>
             <input type="text" name="Name" #i="ngModel" ngModel [(ngModel)]="dataclub.Name" >
-            <label>Type</label>
+            <label id="l">Type</label>
             <input type="text" name="Type" #t="ngModel" ngModel [(ngModel)]="dataclub.Type">
-            <label>Date_seance</label>
+            <label id="l">Date_seance</label>
             <input type="text" name="Date_seance" #d="ngModel" ngModel [(ngModel)]="dataclub.Date_seance">
-            <label>Heure_debut</label>
+            <label id="l">Heure_debut</label>
             <input type="text" name="Heure_debut" #p="ngModel" ngModel [(ngModel)]="dataclub.Heure_debut">
-            <label>Duree</label>
+            <label id="l">Duree</label>
             <input type="text" name="Duree" #p="ngModel" ngModel [(ngModel)]="dataclub.Duree">
-            <label>Description</label>
-            <input type="text" name="Description" #e="ngModel" ngModel [(ngModel)]="dataclub.Description">
-            <input type="submit" value="Mettre a jour" >
+            <label id="l">Description</label>
+            <input type="text" name="Description" #e="ngModel" ngModel [(ngModel)]="dataclub.Description"> <br><br>
+            <input type="submit" class="btn btn-secondary" value="Mettre a jour" id="btn">
             
             </form>
+            <br>
+            
+            
             
             
             
         </div>
         <div class="modal-footer">
+         
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          
           
         </div>
       </div>

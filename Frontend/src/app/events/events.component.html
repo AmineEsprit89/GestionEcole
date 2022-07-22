@@ -66,31 +66,31 @@
           </button>
         </div>
         <div class="modal-body">
-            <h1>modifier club</h1>
-            <form #y="ngForm" (ngSubmit)=" updateeventInofrmations(y)">
-            <label>Name</label>
+            <h1 id="h1">Modifier evenement</h1>
+            <form class="A1" #y="ngForm" (ngSubmit)=" updateeventInofrmations(y)">
+            <label id="l">Name</label>
             <input type="text" name="Name" #i="ngModel" ngModel [(ngModel)]="dataevent.Name" >
-            <label>Type</label>
+            <label id="l">Type</label>
             <input type="text" name="Type" #t="ngModel" ngModel [(ngModel)]="dataevent.Type">
-            <label>Free</label>
+            <label id="l">Free</label>
             <input type="text" name="Free" #d="ngModel" ngModel [(ngModel)]="dataevent.Free">
-            <label>Price</label>
+            <label id="l">Price</label>
             <input type="text" name="Price" #p="ngModel" ngModel [(ngModel)]="dataevent.Price">
-            <label>Date_event</label>
+            <label id="l">Date_event</label>
             <input type="text" name="Date_event" #da="ngModel" ngModel [(ngModel)]="dataevent.Date_event">
-            <label>Date_fin_event</label>
+            <label id="l">Date_fin_event</label>
             <input type="text" name="Date_fin_event" #e="ngModel" ngModel [(ngModel)]="dataevent.Date_fin_event">
-            <label>Heure_debut</label>
+            <label id="l">Heure_debut</label>
             <input type="text" name="Heure_debut" #h="ngModel" ngModel [(ngModel)]="dataevent.Heure_debut">
-            <label>Lieu</label>
+            <label id="l">Lieu</label>
             <input type="text" name="Lieu" #l="ngModel" ngModel [(ngModel)]="dataevent.Lieu">
-            <label>Nbr_place</label>
+            <label id="l">Nbr_place</label>
             <input type="text" name="Nbr_place" #n="ngModel" ngModel [(ngModel)]="dataevent.Nbr_place">
-            <label>Nom_Club</label>
-            <input type="text" name="Nom_Club" #c="ngModel" ngModel [(ngModel)]="dataevent.Nom_Club">
+            <label id="l">Nom_Club</label>
+            <input type="text" name="Nom_Club" #c="ngModel" ngModel [(ngModel)]="dataevent.Nom_Club"><br><br>
 
 
-            <input type="submit" value="Mettre a jour" >
+            <input type="submit" class="btn btn-secondary" value="Mettre a jour" id="btn">
             
             </form>
             

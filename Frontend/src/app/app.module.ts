@@ -21,6 +21,11 @@ import { ModifyclubComponent } from './modifyclub/modifyclub.component';
 import { AddeventComponent } from './addevent/addevent.component';
 import { ShoweventComponent } from './showevent/showevent.component';
 import { AddcoursComponent } from './addcours/addcours.component';
+import { ExercicesComponent } from './exercices/exercices.component';
+import { PayementsComponent } from './payements/payements.component';
+import { MatieresComponent } from './matieres/matieres.component';
+import { ReclamationsComponent } from './reclamations/reclamations.component';
+import { ClassesComponent } from './classes/classes.component';
 
 
 
@@ -43,6 +48,11 @@ import { AddcoursComponent } from './addcours/addcours.component';
     AddeventComponent,
     ShoweventComponent,
     AddcoursComponent,
+    ExercicesComponent,
+    PayementsComponent,
+    MatieresComponent,
+    ReclamationsComponent,
+    ClassesComponent,
     
     
    
