@@ -1,0 +1,12 @@
+post http://localhost:3000/cours/create
+Content-Type: application/json
+
+{
+
+            "Designation": "marathon",
+            "nomcour": "sport",
+            "nomEnseignant": "False",
+            "chapitre": "azeaea"
+       
+            
+}

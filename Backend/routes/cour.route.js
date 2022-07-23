@@ -69,8 +69,10 @@ router.post("/create", upload.single('imageUrl') , createCour)
 router.get("/", showCour)
 router.get("/update/:id" , showUpdateCour )
 router.get("/show/:id" , showOneCour)
-router.put("/update/:id" , updateCour)
-router.delete("/delete/:id", deleteCour);
+router.post("/update/:id" , updateCour)
+
+
+router.get("/delete/:id", deleteCour);
 
 
 

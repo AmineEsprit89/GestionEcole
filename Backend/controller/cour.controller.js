@@ -19,7 +19,7 @@ module.exports = {
     showCour: async (req, res) => {
         const cours = await Cour.find();
         
-        res.json({ cours  });
+        res.json( cours  );
     },
     showUpdateCour: async (req, res) => {
         const cour = await Cour.findById(req.params.id);
@@ -40,7 +40,7 @@ module.exports = {
     },
     showOneCour: async (req, res) => {
         const cour = await Cour.findById(req.params.id);
-        res.json({ cour });
+        res.json( cour );
        
     },
     deleteCour: async (req,res)=>{

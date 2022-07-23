@@ -2,7 +2,9 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AbsencesComponent } from './absences/absences.component';
 import { AddclubComponent } from './addclub/addclub.component';
+import { AddcoursComponent } from './addcours/addcours.component';
 import { AddeventComponent } from './addevent/addevent.component';
+import { AddnoteComponent } from './addnote/addnote.component';
 import { ClubsComponent } from './clubs/clubs.component';
 import { ContentComponent } from './content/content.component';
 import { CoursesComponent } from './courses/courses.component';
@@ -29,6 +31,10 @@ const routes: Routes = [
   {path: 'update', component: ModifyclubComponent},
 
   {path: 'createE', component: AddeventComponent},
+  {path: 'createN', component: AddnoteComponent},
+
+
+  {path: 'createC', component: AddcoursComponent},
 
 
 

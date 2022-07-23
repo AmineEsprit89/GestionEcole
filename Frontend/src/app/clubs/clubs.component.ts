@@ -16,6 +16,9 @@ export class ClubsComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+
+  
   dataclub={Name:'',Type:'',Date_seance:'',Heure_debut:'',Duree:'',Description:'',id:''}
   getdata(Name: string,Type: string, Date_seance: string, Heure_debut:string, Duree:string ,Description:string,id:any){
     this.dataclub.Name=Name;

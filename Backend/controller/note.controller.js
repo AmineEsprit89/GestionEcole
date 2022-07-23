@@ -19,7 +19,7 @@ module.exports = {
     showNotes: async (req, res) => {
         const notes = await Note.find();
         
-        res.json({ notes });
+        res.json( notes );
     },
     showUpdateNote: async (req, res) => {
         const note = await Note.findById(req.params.id);
@@ -43,7 +43,7 @@ module.exports = {
     },
     showOneNote: async (req, res) => {
         const note = await Note.findById(req.params.id);
-        res.json({ note });
+        res.json(note );
        
        
 
