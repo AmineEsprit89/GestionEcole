@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PaymentService } from '../services/payment.service';
 
 @Component({
   selector: 'app-payements',
@@ -6,8 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./payements.component.css']
 })
 export class PayementsComponent implements OnInit {
+  dataArray!:any
 
-  constructor() { }
+  constructor(private ps : PaymentService) {
+    this.ps.getallpayments().subscribe((d)=>{this.dataArray=d;})
+  }
 
   ngOnInit(): void {
   }

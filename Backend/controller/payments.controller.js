@@ -44,7 +44,7 @@ module.exports = {
   showPayment: async (req, res) => {
     //decoding token to send info for payment details
     const token =
-      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRoaXJkQG91dGxvb2suZnIiLCJ1c2VySWQiOiI2MmNiMDlmMDMyMTljZTZlM2U4OWFkZGUiLCJhY2NvdW50VHlwZSI6InByb2Zlc3NldXIiLCJub20iOiJIYW1kaSIsInByZW5vbSI6Ik1vaGFtZWQgQW1pbmUiLCJpYXQiOjE2NTc1NDk1Mzl9.F51XRqQmCsItmGnnl4etmKYwzQ4WNF_3nAyC6PuykiI";
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im9uZW9ucHBwcHJpdC50biIsInVzZXJJZCI6IjYyZGFlOWMwOTIyY2E1ODg3YWQ3NTg2NSIsImFjY291bnRUeXBlIjoiYWRtaW4iLCJub20iOiJIYW1kaSIsInByZW5vbSI6Ik1vaGFtZWQgQW1pbmUiLCJpYXQiOjE2NTg1NjY3MTQsImV4cCI6MTY1ODU3MDMxNH0.IDaD4Dxeey3vTwYY3xXDSNW3YKGm4cJ--KpGrMvHpM4";
     const decoded = jwt.verify(token, process.env.ACCESS_TOKEN_SECRET);
     res.render("payment", {
       key: process.env.PUBLISHABLE_KEY,
@@ -58,7 +58,7 @@ module.exports = {
   payment: async (req, res) => {
     //decoding token
     const token =
-      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRoaXJkQG91dGxvb2suZnIiLCJ1c2VySWQiOiI2MmNiMDlmMDMyMTljZTZlM2U4OWFkZGUiLCJhY2NvdW50VHlwZSI6InByb2Zlc3NldXIiLCJub20iOiJIYW1kaSIsInByZW5vbSI6Ik1vaGFtZWQgQW1pbmUiLCJpYXQiOjE2NTc1NDk1Mzl9.F51XRqQmCsItmGnnl4etmKYwzQ4WNF_3nAyC6PuykiI";
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im9uZW9ucHBwcHJpdC50biIsInVzZXJJZCI6IjYyZGFlOWMwOTIyY2E1ODg3YWQ3NTg2NSIsImFjY291bnRUeXBlIjoiYWRtaW4iLCJub20iOiJIYW1kaSIsInByZW5vbSI6Ik1vaGFtZWQgQW1pbmUiLCJpYXQiOjE2NTg1NjY3MTQsImV4cCI6MTY1ODU3MDMxNH0.IDaD4Dxeey3vTwYY3xXDSNW3YKGm4cJ--KpGrMvHpM4";
     const decoded = jwt.verify(token, process.env.ACCESS_TOKEN_SECRET);
     //create customer (data quand on click détails paiment)
     stripe.customers

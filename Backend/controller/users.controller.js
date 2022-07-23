@@ -138,9 +138,11 @@ module.exports = {
                 },
                 process.env.ACCESS_TOKEN_SECRET,
                 //token options
+                /* 
                 {
                   expiresIn: "1h",
                 }
+                */
               );
               return res.status(200).header("auth-token", token).json({
                 message: "authorization successful",

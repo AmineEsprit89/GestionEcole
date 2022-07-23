@@ -49,7 +49,8 @@ const routes: Routes = [
   {path: 'eleves/create', component: AddeleveComponent},
 
 
-
+//path crud payments
+{path: 'payments', component: PayementsComponent},
 
 
 
