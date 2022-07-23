@@ -26,6 +26,8 @@ import { PayementsComponent } from './payements/payements.component';
 import { MatieresComponent } from './matieres/matieres.component';
 import { ReclamationsComponent } from './reclamations/reclamations.component';
 import { ClassesComponent } from './classes/classes.component';
+import { ElevesComponent } from './eleves/eleves.component';
+import { AddeleveComponent } from './addeleve/addeleve.component';
 
 
 
@@ -53,6 +55,8 @@ import { ClassesComponent } from './classes/classes.component';
     MatieresComponent,
     ReclamationsComponent,
     ClassesComponent,
+    ElevesComponent,
+    AddeleveComponent,
     
     
    

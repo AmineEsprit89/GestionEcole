@@ -3,11 +3,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { AbsencesComponent } from './absences/absences.component';
 import { AddclubComponent } from './addclub/addclub.component';
 import { AddcoursComponent } from './addcours/addcours.component';
+import { AddeleveComponent } from './addeleve/addeleve.component';
 import { AddeventComponent } from './addevent/addevent.component';
 import { ClassesComponent } from './classes/classes.component';
 import { ClubsComponent } from './clubs/clubs.component';
 import { ContentComponent } from './content/content.component';
 import { CoursesComponent } from './courses/courses.component';
+import { ElevesComponent } from './eleves/eleves.component';
 import { EtudiantsComponent } from './etudiants/etudiants.component';
 import { EventsComponent } from './events/events.component';
 import { ExercicesComponent } from './exercices/exercices.component';
@@ -38,12 +40,16 @@ const routes: Routes = [
 
   {path: 'create', component: AddclubComponent},
   {path: 'update', component: ModifyclubComponent},
-
   {path: 'createE', component: AddeventComponent},
-
-
-
   {path: 'createC', component: AddcoursComponent},
+
+
+  //path crud eleves
+  {path: 'eleves', component: ElevesComponent},
+  {path: 'eleves/create', component: AddeleveComponent},
+
+
+
 
 
 

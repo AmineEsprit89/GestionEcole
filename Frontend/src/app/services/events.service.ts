@@ -18,7 +18,7 @@ export class EventsService {
 
     updateevent(id:any,dataevent:any){
       return this.http.post('http://localhost:3000/events/update/'+id,dataevent)
-   
+
      }
 
      showevent(id:any){
@@ -30,6 +30,6 @@ export class EventsService {
     deleteevent(id:any){
       return this.http.get('http://localhost:3000/events/delete/'+id)
     }
-  
+
 
 }

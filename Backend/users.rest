@@ -10,24 +10,25 @@ post http://localhost:3000/users/create
 Content-Type: application/json
 
 {
-       "userName" : "ALI",
-       "email" : "zied.hedhiri@esprit.tn",
-       "password" : "zied123",
-       "verifyPassword": "zied123",
-       "accountType" :"Professeur" ,
-       "questionSecurite" :"pet",
-       "reponseQuestionSecurite" :"milou",
-       "nom" :"ALI",
-       "prenom" :"SALAH",
-       "dateDeNaissance":"28-12-1989",
+       "userName" : "RABI",
+       "email" : "hedhirizied1@gmail.com",
+       "password" : "rabi123",
+       "verifyPassword": "rabi123",
+       "accountType" :"Eleve" ,
+       "questionSecurite" :"lol",
+       "reponseQuestionSecurite" :"lol",
+       "nom" :"Ben Khlifa",
+       "prenom" :"rabi",
+       "dateDeNaissance":"01/01/1990",
        "adresse" :"2011 denden",
+       "isActive":"M",
        "classe" :"2CINFO 02",
        "club" :"ESPRIT SPACE",
        "specialite":"BI"
 }
 
 ### admin with valid token (deleteUser)
-get http://localhost:3000/users/delete/62daf751841855d62ba3e8f9
+get http://localhost:3000/users/delete/62db2f8dffb3cf85b68b7876
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im9uZW9uZUBlc3ByaXQudG4iLCJ1c2VySWQiOiI2MmRhZTczNmNjYzkwZGMzMmNlODZkMGEiLCJhY2NvdW50VHlwZSI6ImFkbWluIiwibm9tIjoiSGFtZGkiLCJwcmVub20iOiJNb2hhbWVkIEFtaW5lIiwiaWF0IjoxNjU4NTEzMzA4LCJleHAiOjE2NTg1MTY5MDh9.oRlad3rfagEZTJLn8wVn4I-sANCQ69tggrb5t2NWGNs
 
 ### user with valid token (updateUser)

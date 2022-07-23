@@ -17,9 +17,8 @@ const userSchema= mongoose.Schema(
         club : String,         
         specialite : String,   
         validationAdmin : String,
-        isActive :{
-            type : Boolean,
-            default : false
+        isActive :{         //sexe
+            type : String
         },
         ActivationCode: String      
 

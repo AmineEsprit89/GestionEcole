@@ -1,0 +1,27 @@
+<h1>Ajouter Eleve</h1>
+<form #y="ngForm">
+<label>Email</label>
+<input type="text" name="email" #i="ngModel" ngModel>
+<label>Password</label>
+<input type="text" name="password" #t="ngModel" ngModel>
+<label>Account Type</label>
+<input type="text" name="accountType" #d="ngModel" ngModel> <!--default Eleve -->
+<label>Nom</label>
+<input type="text" name="nom" #p="ngModel" ngModel>
+<label>Prenom</label>
+<input type="text" name="prenom" #s="ngModel" ngModel>
+<label>Date De Naissance</label>
+<input type="text" name="dateDeNaissance" #e="ngModel" ngModel>
+<label>Sexe</label>
+<input type="text" name="isActive" #a="ngModel" ngModel>
+<label>Adresse</label>
+<input type="text" name="adresse" #x="ngModel" ngModel>
+<label>Classe</label>
+<input type="text" name="classe" #b="ngModel" ngModel>
+<label>Club</label>
+<input type="text" name="club" #z="ngModel" ngModel>
+
+<input type="submit" value="Ajouter Eleve" (click)="ajouteruser(y.value)">
+
+</form>
+

@@ -41,11 +41,12 @@ module.exports = {
                 reponseQuestionSecurite: req.body.reponseQuestionSecurite,
                 nom: req.body.nom,
                 prenom: req.body.prenom,
-                dateDeNaissance: req.body.questionSecurite,
+                dateDeNaissance: req.body.dateDeNaissance,
                 adresse: req.body.adresse,
                 classe: req.body.classe,
                 club: req.body.club,
                 specialite: req.body.specialite,
+                isActive : req.body.isActive,
                 ActivationCode: req.body.password
               });
               user.save();
