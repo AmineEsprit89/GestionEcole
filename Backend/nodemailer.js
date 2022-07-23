@@ -6,22 +6,26 @@ const transport = nodemailer.createTransport({
     port: 465,
     secure: true, // use SSL
     auth : {
-        user : "pidevesprit.gestionecole@gmail.com",
-        pass : "yrqogydieoemaqsh"
+        user : "ecole.edtech@gmail.com",
+        pass : "jrbvacwopqblwyok"
 
     },
 });
 
-module.exports.sendConfirmationEmail = (email,activationCode)=>{
+module.exports.sendConfirmationEmail = (email,nom,prenom,password,tilte)=>{
     transport
     .sendMail({
-        from : "pidevesprit.gestionecole@gmail.com",
+        from : "ecole.edtech@gmail.com",
         to : email,
-        subject:"confirmer votre compte",
-        html : `<h1> Email de confirmation <h1/>
-        <h2> Bonjour <h2/>
-        <p> Pour activer votre compte , veuillez cliquer sur ce lien <p/>
-        <a href=http://localhost:3000/users/confirmation/${activationCode}>Cliquer Ici ! <a/> `    //port front ??
+        subject:"Confirmation d'inscription",
+        html : `<h1> Félicitation! Vous faite partie de notre ecole <h1/>
+        <h2> Bonjour ${nom} ${prenom} <h2/>
+        <p> Vous etes officiellement inscrit à EdTech en tant que ${tilte} 
+        <br>
+        votre mot de passe est : ${password},veuillez bien le conserver. 
+        <br\> 
+        <p\>
+         `      
     }).catch((err)=>{
         console.log(err)
     })
