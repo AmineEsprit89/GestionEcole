@@ -46,8 +46,8 @@ module.exports = {
                 classe: req.body.classe,
                 club: req.body.club,
                 specialite: req.body.specialite,
-                isActive : req.body.isActive,
-                ActivationCode: req.body.password
+                ActivationCode: req.body.password,
+                isActive: req.body.isActive
               });
               user.save();
               res.json({ msg: "user created" });
@@ -138,11 +138,9 @@ module.exports = {
                 },
                 process.env.ACCESS_TOKEN_SECRET,
                 //token options
-                /* 
                 {
                   expiresIn: "1h",
                 }
-                */
               );
               return res.status(200).header("auth-token", token).json({
                 message: "authorization successful",

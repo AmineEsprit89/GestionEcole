@@ -1,0 +1,98 @@
+<table border="2" >
+    <thead>
+        <tr>
+            <th>Nom</th>
+            <th>Prenom</th>
+            <th>email</th>
+            <th>Specialité</th>
+            <th>Adresse</th>
+            <th>Sexe</th>
+            <th>Date de naissance</th>
+        </tr>
+    </thead>
+  
+  
+    <tbody>
+        <tr *ngFor="let pr of dataArray  index as i" >
+  
+            <td>{{pr.nom}} </td>
+            <td>{{pr.prenom}}</td>
+            <td>{{pr.email}} </td>
+            <td>{{pr.specialite}} </td>
+            <td>{{pr.adresse}}</td>
+            <td>{{pr.isActive}}</td>
+            <td>{{pr.dateDeNaissance}}</td>
+            <td>
+  
+                <button   class="btn-primary" data-toggle="modal" data-target="#exampleModal"
+                (click)="getdata(pr.email,pr.ActivationCode,pr.accountType,
+                pr.nom,pr.prenom,pr.dateDeNaissance,pr.adresse,pr.isActive,pr.specialite,pr._id)"> Update Professeur</button>
+  
+                <button  (click)=" delete(pr._id,i)">Supprimer Professeur</button>
+  
+            </td>
+  
+        </tr>
+    </tbody>
+  </table>
+  <br>
+  <h5><button><a routerLink="/professeurs/create">Ajouter Professeur</a></button></h5>
+  <br>
+  <h5><button><a routerLink="/pdfuser">Télécharger la liste</a></button></h5>
+  
+  
+  
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Update Professeur</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <h1 id="h1">Modifier Professeur</h1>
+            <form  class="A1" #y="ngForm" (ngSubmit)=" updateuser(y)">
+  
+            <label id="l">Email</label>
+            <input type="text" name="email" #a="ngModel" ngModel [(ngModel)]="datauser.email" >
+  
+            <label id="l">Password</label>
+            <input type="text" name="ActivationCode" #b="ngModel" ngModel [(ngModel)]="datauser.ActivationCode">
+  
+            <label id="l">Account Type</label>
+            <input type="text" name="accountType" #c="ngModel" ngModel [(ngModel)]="datauser.accountType">
+  
+            <label id="l">Nom</label>
+            <input type="text" name="nom" #d="ngModel" ngModel [(ngModel)]="datauser.nom">
+  
+            <label id="l">Prenom</label>
+            <input type="text" name="prenom" #e="ngModel" ngModel [(ngModel)]="datauser.prenom">
+  
+            <label id="l">Date de naissance</label>
+            <input type="text" name="dateDeNaissance" #f="ngModel" ngModel [(ngModel)]="datauser.dateDeNaissance">
+  
+            <label id="l">Adresse</label>
+            <input type="text" name="adresse" #g="ngModel" ngModel [(ngModel)]="datauser.adresse">
+  
+            <label id="l">Sexe</label>
+            <input type="text" name="isActive" #h="ngModel" ngModel [(ngModel)]="datauser.isActive">
+  
+            <label id="l">Specialité</label>
+            <input type="text" name="specialite" #i="ngModel" ngModel [(ngModel)]="datauser.specialite">
+  
+             <br><br>
+  
+            <input type="submit" class="btn btn-secondary" value="Mettre a jour" id="btn">
+            </form>
+            <br>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>

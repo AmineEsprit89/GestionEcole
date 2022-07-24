@@ -32,6 +32,7 @@ var professeurRouter = require('./routes/professeur');
 var eleveRouter = require('./routes/eleve');
 var pdfRouter = require('./routes/pdf.routes');
 var socialpostRouter = require('./routes/socialpost.routes');
+var pdfrouter = require('./routes/pdfuser');
 var cors = require ('cors');
 
 
@@ -69,6 +70,7 @@ app.use('/niveaux', niveauxRouter);
 app.use('/professeur', professeurRouter);
 app.use('/eleve', eleveRouter);
 app.use('/pdf', pdfRouter);
+app.use('/pdfuser', pdfrouter);
 app.use('/socialpost', socialpostRouter);
 
 

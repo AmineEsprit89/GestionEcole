@@ -1,0 +1,26 @@
+<h1>Ajouter Professeur</h1>
+<form #y="ngForm">
+<label>Email</label>
+<input type="text" name="email" #i="ngModel" ngModel>
+<label>Password</label>
+<input type="text" name="password" #t="ngModel" ngModel>
+<label>Account Type</label>
+<input type="text" name="accountType" #d="ngModel" ngModel> <!--default ¨Professeur -->
+<label>Nom</label>
+<input type="text" name="nom" #p="ngModel" ngModel>
+<label>Prenom</label>
+<input type="text" name="prenom" #s="ngModel" ngModel>
+<label>Date De Naissance</label>
+<input type="text" name="dateDeNaissance" #e="ngModel" ngModel>
+<label>Sexe</label>
+<input type="text" name="isActive" #a="ngModel" ngModel>
+<label>Adresse</label>
+<input type="text" name="adresse" #x="ngModel" ngModel>
+<label>Specialité</label>
+<input type="text" name="specialite" #b="ngModel" ngModel>
+
+
+<input type="submit" value="Ajouter Professeur" (click)="ajouteruser(y.value)">
+
+</form>
+

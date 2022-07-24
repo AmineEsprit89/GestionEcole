@@ -8,8 +8,8 @@ const classeSchema= mongoose.Schema(
         },
         
         NbrEleves: Number,
-        ChefDeClasse: String,
-        ListEleves: String
+        ChefDeClasse: String, // designation
+        ListEleves: String // 
     },
 );
 

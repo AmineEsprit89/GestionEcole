@@ -26,6 +26,10 @@ import { RdvComponent } from './rdv/rdv.component';
 import { ReclamationsComponent } from './reclamations/reclamations.component';
 import { TeachersComponent } from './teachers/teachers.component';
 
+import { ProfesseursComponent } from './professeurs/professeurs.component';
+import { AddprofesseurComponent } from './addprofesseur/addprofesseur.component';
+import { AddclasseComponent } from './addclasse/addclasse.component';
+
 const routes: Routes = [
   {path: '', component: ContentComponent},
   {path: 'courses', component: CoursesComponent},
@@ -58,6 +62,12 @@ const routes: Routes = [
   //path crud eleves
   {path: 'eleves', component: ElevesComponent},
   {path: 'eleves/create', component: AddeleveComponent},
+  
+  //path crud prof
+  
+  {path: 'professeurs', component: ProfesseursComponent},
+  {path: 'professeurs/create', component: AddprofesseurComponent},
+  {path: 'classes/create', component: AddclasseComponent},
 
 
 //path crud payments

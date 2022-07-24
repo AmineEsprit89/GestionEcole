@@ -31,6 +31,9 @@ import { ReclamationsComponent } from './reclamations/reclamations.component';
 import { ClassesComponent } from './classes/classes.component';
 import { ElevesComponent } from './eleves/eleves.component';
 import { AddeleveComponent } from './addeleve/addeleve.component';
+import { ProfesseursComponent } from './professeurs/professeurs.component';
+import { AddprofesseurComponent } from './addprofesseur/addprofesseur.component';
+import { AddclasseComponent } from './addclasse/addclasse.component';
 
 
 
@@ -64,6 +67,9 @@ import { AddeleveComponent } from './addeleve/addeleve.component';
     ClassesComponent,
     ElevesComponent,
     AddeleveComponent,
+    ProfesseursComponent,
+    AddprofesseurComponent,
+    AddclasseComponent,
 
     
     

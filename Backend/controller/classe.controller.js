@@ -5,7 +5,7 @@ module.exports = {
      // afficher tous les Classes
      getAllClasses: async (req, res) => {      
         const classes = await Classe.find();
-        res.render('list', { classes })
+        res.json( classes )
     },
         //ajouter une nouvelle classe
         showForm: (req, res) => {
@@ -32,7 +32,7 @@ module.exports = {
         getClasseById: async (req, res) => {      
             const { id } = req.params;
             const classe = await Classe.findById(id);
-            res.render('show', { classe });
+            res.json( classe );
         },
     
         deleteClasse: async (req,res)=>{
