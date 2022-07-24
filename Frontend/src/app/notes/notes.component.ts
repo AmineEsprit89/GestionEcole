@@ -7,16 +7,23 @@ import { NotesService} from '../services/notes.service';
   styleUrls: ['./notes.component.css']
 })
 export class NotesComponent implements OnInit {
-
-  dataArray!:any
+  msg!:string;
+  dataArray!:any;
+  
   constructor(private cs:NotesService) { 
 
     this.cs.getallnotes().subscribe((d)=>{this.dataArray=d;})
   }
 
-  ngOnInit(): void {
-  }
-
+ 
+    role!:any;
+   
+  
+    ngOnInit(): void {
+      
+      this.role='x' 
+    }
+  
 
   datanote={Designation:'',nomEnseignant:'',noteCc:'',noteExam:'',id:''}
   getdata(Designation: string,nomEnseignant: string, noteCc: string, noteExam:string,id:any){
@@ -54,6 +61,15 @@ export class NotesComponent implements OnInit {
       this.dataArray.splice(i,1)
     })
   }
+  public showMyMessage = false
+  pdfdownload(){
 
+this.cs.pdf().subscribe((d)=>{this.dataArray=d;});
+this.msg='pdf telecharge ';
+    return this.msg;
+  }
+ 
+
+  
 }
 

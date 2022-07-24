@@ -5,7 +5,7 @@
             <th>nomEnseignant</th>
             <th>noteCc</th>
             <th>noteExam</th>
-            
+           
             <th>actions</th>
            
            
@@ -21,8 +21,8 @@
             <td>{{item.nomEnseignant}} </td>
             <td>{{item.noteCc}}</td>
             <td>{{item.noteExam}}</td>
+            
            
-
 
 
            <td>
@@ -32,16 +32,29 @@
                 
                 <button  (click)=" delete(item._id,i)">supprimer note</button>
             </td> 
+           
             
-          
           
         </tr>
 
-        
+       
+         
         
     </tbody>
 </table> 
+
 <h3><button><a routerLink="/createN">Ajouter notes</a></button></h3>
+
+
+<div style="text-align:right">
+  <button  (click)="pdfdownload()" >
+  Telecharger pdf </button>
+  <h3>{{msg}}</h3>
+</div>
+
+
+          
+
 
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -64,18 +77,22 @@
             <label>noteExam</label>
             <input type="text" name="noteExam" #p="ngModel" ngModel [(ngModel)]="datanote.noteExam">
            
+           <!--<input type="text" name="imageUrl" #p="ngModel" ngModel [(ngModel)]="datanote.imageUrl">-->
+           
             <input type="submit" value="Mettre a jour" >
-            
+           
             </form>
          
             
-            
+          
             
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
           
         </div>
+        
       </div>
     </div>
   </div>
+ 

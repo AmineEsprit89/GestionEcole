@@ -25,4 +25,10 @@ export class NotesService {
     deletenote(id:any){
       return this.http.get('http://localhost:3000/notes/delete/'+id)
     }
+
+    pdf(){
+      return this.http.get('http://localhost:3000/pdf')
+    }
+  
+    
 }
