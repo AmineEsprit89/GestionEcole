@@ -24,6 +24,9 @@ export class EventsService {
      showevent(id:any){
       return this.http.get('http://localhost:3000/events/show/'+id)
      }
+     facebookevent(id:any){
+      return this.http.get('http://localhost:3000/socialpost/'+id)
+    }
 
 
 

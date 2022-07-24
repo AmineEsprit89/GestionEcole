@@ -64,6 +64,11 @@ export class EventsComponent implements OnInit {
   }
 
 
+  facebook(id:any){
+    this.es.facebookevent(id).subscribe(Response=>{
+      this.dataArray=id
+    })
+  }
   
 
  
