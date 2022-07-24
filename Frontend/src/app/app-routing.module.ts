@@ -3,14 +3,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { AbsencesComponent } from './absences/absences.component';
 import { AddclubComponent } from './addclub/addclub.component';
 import { AddcoursComponent } from './addcours/addcours.component';
-<<<<<<< HEAD
-import { AddeventComponent } from './addevent/addevent.component';
+
+
 import { AddnoteComponent } from './addnote/addnote.component';
-=======
+
 import { AddeleveComponent } from './addeleve/addeleve.component';
 import { AddeventComponent } from './addevent/addevent.component';
 import { ClassesComponent } from './classes/classes.component';
->>>>>>> 77475c8ad8846c6d5c99f11368050398f1f48ede
+
 import { ClubsComponent } from './clubs/clubs.component';
 import { ContentComponent } from './content/content.component';
 import { CoursesComponent } from './courses/courses.component';
@@ -46,12 +46,12 @@ const routes: Routes = [
   {path: 'create', component: AddclubComponent},
   {path: 'update', component: ModifyclubComponent},
   {path: 'createE', component: AddeventComponent},
-<<<<<<< HEAD
+
   {path: 'createN', component: AddnoteComponent},
 
 
   {path: 'createC', component: AddcoursComponent},
-=======
+
   {path: 'createC', component: AddcoursComponent},
 
 
@@ -62,7 +62,7 @@ const routes: Routes = [
 
 //path crud payments
 {path: 'payments', component: PayementsComponent},
->>>>>>> 77475c8ad8846c6d5c99f11368050398f1f48ede
+
 
 
 

@@ -21,9 +21,9 @@ import { ModifyclubComponent } from './modifyclub/modifyclub.component';
 import { AddeventComponent } from './addevent/addevent.component';
 import { ShoweventComponent } from './showevent/showevent.component';
 import { AddcoursComponent } from './addcours/addcours.component';
-<<<<<<< HEAD
+
 import { AddnoteComponent } from './addnote/addnote.component';
-=======
+
 import { ExercicesComponent } from './exercices/exercices.component';
 import { PayementsComponent } from './payements/payements.component';
 import { MatieresComponent } from './matieres/matieres.component';
@@ -31,7 +31,7 @@ import { ReclamationsComponent } from './reclamations/reclamations.component';
 import { ClassesComponent } from './classes/classes.component';
 import { ElevesComponent } from './eleves/eleves.component';
 import { AddeleveComponent } from './addeleve/addeleve.component';
->>>>>>> 77475c8ad8846c6d5c99f11368050398f1f48ede
+
 
 
 
@@ -54,9 +54,9 @@ import { AddeleveComponent } from './addeleve/addeleve.component';
     AddeventComponent,
     ShoweventComponent,
     AddcoursComponent,
-<<<<<<< HEAD
+
     AddnoteComponent,
-=======
+
     ExercicesComponent,
     PayementsComponent,
     MatieresComponent,
@@ -64,7 +64,7 @@ import { AddeleveComponent } from './addeleve/addeleve.component';
     ClassesComponent,
     ElevesComponent,
     AddeleveComponent,
->>>>>>> 77475c8ad8846c6d5c99f11368050398f1f48ede
+
     
     
    
