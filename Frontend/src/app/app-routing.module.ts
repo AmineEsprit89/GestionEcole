@@ -29,6 +29,8 @@ import { TeachersComponent } from './teachers/teachers.component';
 import { ProfesseursComponent } from './professeurs/professeurs.component';
 import { AddprofesseurComponent } from './addprofesseur/addprofesseur.component';
 import { AddclasseComponent } from './addclasse/addclasse.component';
+import { AddrdvComponent } from './addrdv/addrdv.component';
+import { AddabsComponent } from './addabs/addabs.component';
 
 const routes: Routes = [
   {path: '', component: ContentComponent},
@@ -72,6 +74,10 @@ const routes: Routes = [
 
 //path crud payments
 {path: 'payments', component: PayementsComponent},
+
+//path crud abs/rdv
+{path: 'createrdv', component:AddrdvComponent },
+  {path: 'createabs', component:AddabsComponent },
 
 
 

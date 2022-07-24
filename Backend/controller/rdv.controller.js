@@ -28,7 +28,7 @@ module.exports = {
         const rdvs = await Rdv.find();
         
         //res.render("clubs", { clubs });
-        res.json({ rdvs  });
+        res.json( rdvs  );
     },
     showUpdateRdv: async (req, res) => {
         const rdv = await Rdv.findById(req.params.id);
@@ -53,7 +53,7 @@ module.exports = {
     },
     showOneRdv: async (req, res) => {
         const rdv = await Rdv.findById(req.params.id);
-        res.json({ rdv });
+        res.json( rdv );
        // res.render("show", { club });
        
 

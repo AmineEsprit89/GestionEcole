@@ -1,0 +1,33 @@
+<h1>Ajouter  absence </h1> <br>
+<form #y="ngForm">
+<label>Classe</label>
+<select name="Classe" id="pet-select"  #i="ngModel" ngModel> >
+    <option value="">--Please choose an Classe--</option>
+    <option value="">1cinfo5</option>
+    <option value="">1cinfo1</option>
+    <option value="">1cinfo1</option>
+    <option value="">1cinfo3</option>
+    <option value="">1cinfo2</option>
+    <option value="">1cinfo2</option>
+    
+</select> <br>
+<label>Name student</label>
+<input type="text" name="NameE" #i="ngModel" ngModel> <br>
+
+<label>Name parent</label>
+<input type="text" name="Namep" #t="ngModel" ngModel><br>
+<label>Email parent</label>
+<input type="text" name="Emailp" #d="ngModel" ngModel><br>
+<label>Date_absence </label>
+<input  type="date" id="start" name="trip-start"value="2018-07-22" name="Date_abs" #p="ngModel" ngModel> <br>
+
+<label>heuresc</label>
+<input type="time" name="appt"min="00:00" max="23:59" required name="heuresc" #s="ngModel" ngModel> <br>
+<label>matiere</label>
+<input type="text" name="matiere" #e="ngModel" ngModel> <br>
+<input type="reset" value="Reset"> 
+<input type="submit" value="ADD" (click)="ajouterabs(y.value)">
+
+</form>
+
+

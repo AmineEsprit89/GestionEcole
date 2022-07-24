@@ -29,7 +29,7 @@ module.exports = {
         const absences = await Absence.find();
         
         //res.render("clubs", { clubs });
-        res.json({ absences  });
+        res.json( absences  );
     },
     showUpdateAbsence: async (req, res) => {
         const absence = await Absence.findById(req.params.id);
@@ -55,7 +55,7 @@ module.exports = {
     },
     showOneAbsence: async (req, res) => {
         const absence = await Absence.findById(req.params.id);
-        res.json({ absence });
+        res.json( absence );
        // res.render("show", { club });
        
 

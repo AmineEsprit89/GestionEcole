@@ -1,0 +1,7 @@
+:host {
+    font-style: italic;
+  }
+  
+  :host(.active) {
+    font-weight: bold;
+  }

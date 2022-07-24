@@ -1,0 +1,19 @@
+<h1>Ajouter rdv</h1>
+<form #y="ngForm">
+<label>Name parent</label>
+<input type="text"  name="Namep" #i="ngModel" ngModel>
+<label for="Email parent">Enter email: </label>
+<input type="email" id="email"pattern=".+@globex\.com" size="30" name="Emailp" #t="ngModel" ngModel>
+<label>date rendez vous </label>
+<input type="date" id="start" name="trip-start"value="2018-07-22" name="Date_r" #d="ngModel" ngModel>
+
+<label>heure_rendez vous </label>
+<input type="time" name="appt"min="00:00" max="23:59" required name="heure_r" #p="ngModel" ngModel>
+<label>cause </label>
+<input type="text" name="cause" #s="ngModel" ngModel>
+<input type="reset" value="Reset">
+<input type="submit" value="ajouter" (click)="ajouterrdv(y.value)">
+
+</form>
+
+

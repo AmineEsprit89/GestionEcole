@@ -34,6 +34,8 @@ import { AddeleveComponent } from './addeleve/addeleve.component';
 import { ProfesseursComponent } from './professeurs/professeurs.component';
 import { AddprofesseurComponent } from './addprofesseur/addprofesseur.component';
 import { AddclasseComponent } from './addclasse/addclasse.component';
+import { AddabsComponent } from './addabs/addabs.component';
+import { AddrdvComponent } from './addrdv/addrdv.component';
 
 
 
@@ -70,6 +72,8 @@ import { AddclasseComponent } from './addclasse/addclasse.component';
     ProfesseursComponent,
     AddprofesseurComponent,
     AddclasseComponent,
+    AddabsComponent,
+    AddrdvComponent,
 
     
     

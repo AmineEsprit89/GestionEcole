@@ -26,6 +26,7 @@
     "social-media-sharing": "^1.0.2",
     "social-post-api": "^1.0.20",
     "stripe": "^9.12.0",
-    "twig": "^1.15.4"
+    "twig": "^1.15.4",
+    "xlsx": "^0.18.5"
   }
 }

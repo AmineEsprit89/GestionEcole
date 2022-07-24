@@ -1,1 +1,99 @@
-<p>rdv works!</p>
+<table border="2" >
+    <thead>
+        <tr>
+            <th>Name eleve</th>
+            <th>Email parent</th>
+            <th>Date_rendez vous </th>
+            <th>heure_rendez vous </th>
+            <th>cause</th>
+            <th>actions</th>
+           
+            
+        </tr>
+    </thead>
+    
+
+ 
+    
+    <tbody>
+        <tr *ngFor="let item of dataArray  index as i" > 
+
+            <td> {{item.Namep}} </td> 
+            
+            <td>{{item.Emailp}}</td>
+            <td>{{item.Date_r}} </td>
+            <td>{{item.heure_r}}</td>
+            <td>{{item.cause}}</td>
+           
+            
+            <td>
+
+                
+  
+                <button   class="btn-primary" data-toggle="modal" data-target="#exampleModal"
+                (click)="getdata(item.Namep,item.Emailp,item.Date_r,
+                item.heure_r,item.cause,item._id)"> update rdv</button>
+                
+                <button  (click)=" delete(item._id,i)">supprimer rdv</button>
+            </td>
+    
+          
+          
+        </tr>
+
+        
+        
+      
+    </tbody>
+</table> 
+<h3><button><a routerLink="/createrdv">Ajouter rdv</a></button></h3>
+<div style="text-align: center">
+
+<button (click)="exeldownload()">
+  download 
+</button>
+<h5>{{msg}} </h5>
+</div>
+
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog"  role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <h1>modifier rdv</h1>
+            <form #y="ngForm" (ngSubmit)=" updaterdv(y)">
+            <label>Name parent</label>
+            <input type="text" name="Namep" #i="ngModel"  ngModel [(ngModel)]="datardv.Namep" > <br>
+            <label>Email parent</label>
+            <input type="text" name="Emailp" #t="ngModel" ngModel [(ngModel)]="datardv.Emailp"> <br>
+            <label>Date_rendez vous </label>
+            <input type="text" name="Date_r" #d="ngModel" ngModel [(ngModel)]="datardv.Date_r"><br>
+            <label>heure_rendez vous </label>
+            <input type="text" name="heure_r" #p="ngModel" ngModel [(ngModel)]="datardv.heure_r"><br>
+            <label>cause</label>
+            <input type="text" name="cause" #p="ngModel" ngModel [(ngModel)]="datardv.cause"><br>
+            <input type="submit" value="Mettre a jour" >
+            
+            </form>
+            
+            
+            
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
