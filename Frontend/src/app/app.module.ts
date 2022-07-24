@@ -36,6 +36,7 @@ import { AddprofesseurComponent } from './addprofesseur/addprofesseur.component'
 import { AddclasseComponent } from './addclasse/addclasse.component';
 import { AddabsComponent } from './addabs/addabs.component';
 import { AddrdvComponent } from './addrdv/addrdv.component';
+import { LoginComponent } from './login/login.component';
 
 
 
@@ -74,6 +75,7 @@ import { AddrdvComponent } from './addrdv/addrdv.component';
     AddclasseComponent,
     AddabsComponent,
     AddrdvComponent,
+    LoginComponent,
 
     
     

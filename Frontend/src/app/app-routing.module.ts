@@ -31,6 +31,7 @@ import { AddprofesseurComponent } from './addprofesseur/addprofesseur.component'
 import { AddclasseComponent } from './addclasse/addclasse.component';
 import { AddrdvComponent } from './addrdv/addrdv.component';
 import { AddabsComponent } from './addabs/addabs.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   {path: '', component: ContentComponent},
@@ -64,9 +65,9 @@ const routes: Routes = [
   //path crud eleves
   {path: 'eleves', component: ElevesComponent},
   {path: 'eleves/create', component: AddeleveComponent},
-  
+
   //path crud prof
-  
+
   {path: 'professeurs', component: ProfesseursComponent},
   {path: 'professeurs/create', component: AddprofesseurComponent},
   {path: 'classes/create', component: AddclasseComponent},
@@ -78,6 +79,10 @@ const routes: Routes = [
 //path crud abs/rdv
 {path: 'createrdv', component:AddrdvComponent },
   {path: 'createabs', component:AddabsComponent },
+
+
+  //login route
+  {path: 'login', component:LoginComponent },
 
 
 

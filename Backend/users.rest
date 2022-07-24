@@ -10,21 +10,21 @@ post http://localhost:3000/users/create
 Content-Type: application/json
 
 {
-       "userName" : "RABI",
-       "email" : "hedhirizied1@gmail.com",
-       "password" : "rabi123",
-       "verifyPassword": "rabi123",
-       "accountType" :"Eleve" ,
-       "questionSecurite" :"lol",
-       "reponseQuestionSecurite" :"lol",
-       "nom" :"Ben Khlifa",
-       "prenom" :"rabi",
-       "dateDeNaissance":"01/01/1990",
-       "adresse" :"2011 denden",
-       "isActive":"M",
-       "classe" :"2CINFO 02",
-       "club" :"ESPRIT SPACE",
-       "specialite":"BI"
+       "userName" : "PROFESSEUR",
+       "email" : "professeur@gmail.com",
+       "password" : "professeurprofesseur",
+       "verifyPassword": "professeurprofesseur",
+       "accountType" :"Professeur" ,
+       "questionSecurite" :"professeur",
+       "reponseQuestionSecurite" :"professeur",
+       "nom" :"professeur",
+       "prenom" :"professeur",
+       "dateDeNaissance":"professeur",
+       "adresse" :"professeur",
+       "isActive":"professeur",
+       "classe" :"professeur",
+       "club" :"professeur",
+       "specialite":"professeur"
 }
 
 ### admin with valid token (deleteUser)

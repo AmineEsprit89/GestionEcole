@@ -50,6 +50,15 @@ app.set('view engine', 'twig');
 app.use(cors());
 app.use(logger('dev'));
 app.use(express.json());
+
+app.all('/*',(req,res,next)=>{
+  res.header('Access-Control-Allow-Origin','*');
+  res.header('Access-Control-Allow-Method','GET,PUT,POST,DELETE,OPTIONS,PATCH');
+  res.header('Access-Control-Allow-Headers','Content-Type,Authorization,Content-Length,X-Requested-With');
+  next()
+  })
+
+  
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
