@@ -92,4 +92,52 @@ module.exports = {
         res.send(err);
       });
   },
+
+
+  //final method works !!
+  payWithCard: async (req, res) => {
+    try {
+      token = req.body.token            //store token from the frontend
+    const customer = stripe.customers
+      .create({
+        email: req.body.token.email , //recuperer email 
+        source: token.id    //extracting the token by using token.id stored inside source property
+      })
+      .then((customer) => {   //create customer
+        console.log(customer);
+        return stripe.charges.create({    //charging customer using charges.create
+          amount: 6200,
+          description: "Payer Annee Scolaire",
+          currency: "USD",
+          customer: customer.id,
+        });
+      })
+      .then((charge) => {
+        console.log(charge);
+          res.json({
+            data:"success"
+        })
+        const payment = new Payment({
+          email: req.body.token.email,
+          montantPaye: 6200,
+          userId: req.body.token.userId,
+        });
+        payment.save();
+
+      })
+      .catch((err) => {
+          res.json({
+            data: "failure",
+          });
+      });
+    return true;
+  } catch (error) {
+    return false;
+  }
+
+  }
+
+
+
+
 };

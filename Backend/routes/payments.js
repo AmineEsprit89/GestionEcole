@@ -9,15 +9,18 @@ const paymentsController = require("../controller/payments.controller");
 */
 
 
+
 router.get('/payment', paymentsController.showPayment)
 .post('/payment', paymentsController.payment);
+
+router.post('/checkout', paymentsController.payWithCard); 
 
 router.get('/', paymentsController.getAllpayments); 
 router.get('/:id',paymentsController.getpaymentById);
 router.post("/update/:id" , paymentsController.updatePayment);
 router.get("/delete/:id",paymentsController.deletePayment);
 
-                         
+                             
   
 
 
