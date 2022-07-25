@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { AuthService } from '../services/auth.service';
 import { CoursesService } from '../services/courses.service';
 
 @Component({
@@ -9,9 +11,11 @@ import { CoursesService } from '../services/courses.service';
 export class CoursesComponent implements OnInit {
 
   dataArray!:any
-  constructor(private cs:CoursesService) { 
+  accountType:any
+  constructor(private cs:CoursesService,private us : AuthService,private ar:ActivatedRoute,private route:Router) { 
 
     this.cs.getallcours().subscribe((d)=>{this.dataArray=d;})
+    this.accountType=us.getUserAccountType()
   }
 
   ngOnInit(): void {

@@ -5,8 +5,9 @@
             <th>nomcour</th>
             <th>nomEnseignant</th>
             <th>chapitre</th>
-            
+            <div *ngIf="accountType=='Professeur'" >
             <th>actions</th>
+            </div>
            
            
             
@@ -24,7 +25,7 @@
            
 
 
-
+            <div *ngIf="accountType=='Professeur'" >
            <td>
                <button   class="btn-primary" data-toggle="modal" data-target="#exampleModal"
                 (click)="getdata(item.Designation,item.nomcour,item.nomEnseignant,
@@ -33,15 +34,20 @@
                 <button  (click)=" delete(item._id,i)">supprimer cours</button>
             </td> 
             
-          
+            </div>
           
         </tr>
+
+      
 
         
         
     </tbody>
 </table> 
+<div *ngIf="accountType=='Professeur'" >
 <h3><button><a routerLink="/createC">Ajouter cours</a></button></h3>
+</div>
+
 
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">

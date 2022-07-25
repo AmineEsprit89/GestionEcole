@@ -5,8 +5,9 @@
             <th>nomEnseignant</th>
             <th>noteCc</th>
             <th>noteExam</th>
-           
+            <div *ngIf="accountType=='Professeur'" >
             <th>actions</th>
+          </div>
            
            
             
@@ -24,6 +25,7 @@
             
            
 
+            <div *ngIf="accountType=='Professeur'" >
 
            <td>
                <button   class="btn-primary" data-toggle="modal" data-target="#exampleModal"
@@ -32,6 +34,7 @@
                 
                 <button  (click)=" delete(item._id,i)">supprimer note</button>
             </td> 
+            </div>
            
             
           
@@ -42,14 +45,16 @@
         
     </tbody>
 </table> 
-
+<div *ngIf="accountType=='Professeur'" >
 <h3><button><a routerLink="/createN">Ajouter notes</a></button></h3>
+</div>
 
-
+<div *ngIf="accountType=='Eleve'" >
 <div style="text-align:right">
   <button  (click)="pdfdownload()" >
   Telecharger pdf </button>
   <h3>{{msg}}</h3>
+</div>
 </div>
 
 

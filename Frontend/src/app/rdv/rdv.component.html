@@ -6,7 +6,10 @@
             <th>Date_rendez vous </th>
             <th>heure_rendez vous </th>
             <th>cause</th>
+
+            <div *ngIf="accountType=='Admin'" >
             <th>actions</th>
+            </div>
            
             
         </tr>
@@ -25,7 +28,7 @@
             <td>{{item.heure_r}}</td>
             <td>{{item.cause}}</td>
            
-            
+            <div *ngIf="accountType=='Admin'" >
             <td>
 
                 
@@ -36,7 +39,7 @@
                 
                 <button  (click)=" delete(item._id,i)">supprimer rdv</button>
             </td>
-    
+          </div>
           
           
         </tr>
@@ -46,13 +49,18 @@
       
     </tbody>
 </table> 
+<div *ngIf="accountType=='Admin'" >
 <h3><button><a routerLink="/createrdv">Ajouter rdv</a></button></h3>
+
+
+
 <div style="text-align: center">
 
 <button (click)="exeldownload()">
   download 
 </button>
 <h5>{{msg}} </h5>
+</div>
 </div>
 
 

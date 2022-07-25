@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { AuthService } from '../services/auth.service';
 import { NotesService} from '../services/notes.service';
 
 @Component({
@@ -9,19 +11,21 @@ import { NotesService} from '../services/notes.service';
 export class NotesComponent implements OnInit {
   msg!:string;
   dataArray!:any;
+  accountType!:any;
   
-  constructor(private cs:NotesService) { 
+  constructor(private cs:NotesService,private us : AuthService,private ar:ActivatedRoute,private route:Router) { 
 
     this.cs.getallnotes().subscribe((d)=>{this.dataArray=d;})
+    this.accountType=us.getUserAccountType()
   }
 
  
-    role!:any;
+    
    
   
     ngOnInit(): void {
       
-      this.role='x' 
+      
     }
   
 

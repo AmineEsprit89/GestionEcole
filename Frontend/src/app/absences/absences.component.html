@@ -9,7 +9,10 @@
             <th>Date_abs</th>
             <th>heuresc</th>
             <th>matiere</th>
+
+            <div *ngIf="accountType=='Professeur'" >
             <th>actions</th>
+          </div>
            
             
         </tr>
@@ -28,10 +31,14 @@
             <td>{{item.Date_abs}}</td>
             <td>{{item.heuresc}}</td>
             <td>{{item.matiere}}</td>
+
+
+
+            <div *ngIf="accountType=='Professeur'" >
             <td>
 
 
-             
+              
   
                <button   class="btn-primary" data-toggle="modal" data-target="#exampleModal"
                 (click)="getdata(item.Classe,item.NameE,item.Namep,item.Emailp,
@@ -40,13 +47,20 @@
                 <button  (click)=" delete(item._id,i)">supprimer abs</button> 
             
             </td>
+          </div>
             
           
           
         </tr>
     </tbody>
 </table> 
-<h3><button><a routerLink="/createabs">Ajouter abs</a></button></h3>
+<div *ngIf="accountType=='Professeur'" >
+<h3><button><a routerLink="/createabs">Ajouter abs</a></button></h3></div>
+
+
+
+<div *ngIf="accountType!='Eleve'" >
+
 <div style="text-align: center">
 
   <button (click)="exeldownload()">
@@ -54,6 +68,7 @@
   </button>
   <h5>{{msg}} </h5>
   </div>
+</div>
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

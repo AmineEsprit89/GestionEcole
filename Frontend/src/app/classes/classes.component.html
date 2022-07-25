@@ -15,7 +15,7 @@
             <td>{{cl.ClsID}} </td>
             <td>{{cl.NbrEleves}}</td>
             <td>{{cl.ChefDeClasse}} </td>
-            
+            <div *ngIf="accountType=='Admin'" >
             <td>
   
                 <button   class="btn-primary" data-toggle="modal" data-target="#exampleModal"
@@ -24,13 +24,16 @@
                 <button  (click)=" deleteClasse(cl._id,i)">Supprimer Classe</button>
   
             </td>
+            </div>
   
         </tr>
     </tbody>
   </table>
   <br>
+  <div *ngIf="accountType=='Admin'" >
   <h5><button><a routerLink="/classes/create">Ajouter Classe</a></button></h5>
   <br>  
+</div>
   
   
   

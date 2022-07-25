@@ -21,4 +21,27 @@
 color: white}
 #btn{border-color: aliceblue;
     background-color: blue;}
+#a{position: center;
+    margin: auto;
+   
+    border-color: white;
+    width: 20%;}
+.btn-outline-secondary{color : orange;
+    background-color: white;
+ }
+
+ .btn-outline-light {
+    background-color: blue;
+ }
+ .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  .facebook{
+    background-color: white;
+    border: white;
+    color: white;
+  }
+  
+
 

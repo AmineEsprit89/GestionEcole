@@ -23,22 +23,28 @@
             <td>{{pr.isActive}}</td>
             <td>{{pr.dateDeNaissance}}</td>
             <td>
+
+
+              <div *ngIf="accountType=='Admin'" >
+              
   
                 <button   class="btn-primary" data-toggle="modal" data-target="#exampleModal"
                 (click)="getdata(pr.email,pr.ActivationCode,pr.accountType,
                 pr.nom,pr.prenom,pr.dateDeNaissance,pr.adresse,pr.isActive,pr.specialite,pr._id)"> Update Professeur</button>
   
                 <button  (click)=" delete(pr._id,i)">Supprimer Professeur</button>
-  
+               </div>
             </td>
   
         </tr>
     </tbody>
   </table>
   <br>
+  <div *ngIf="accountType=='Admin'" >
   <h5><button><a routerLink="/professeurs/create">Ajouter Professeur</a></button></h5>
   <br>
   <h5><button><a routerLink="/pdfuser">Télécharger la liste</a></button></h5>
+</div>
   
   
   

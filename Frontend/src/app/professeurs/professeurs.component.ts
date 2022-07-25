@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { AuthService } from '../services/auth.service';
 import { UsersService } from '../services/users.service';
 
 
@@ -9,10 +11,12 @@ import { UsersService } from '../services/users.service';
 })
 export class ProfesseursComponent implements OnInit {
   dataArray!:any
+  accountType!:any;
 
-  constructor(private us : UsersService) {
+  constructor(private us : UsersService,private pr : AuthService,private ar:ActivatedRoute,private route:Router) {
 
     this.us.getallprofesseurs().subscribe((d)=>{this.dataArray=d;})
+    this.accountType=pr.getUserAccountType()
 
    }
 

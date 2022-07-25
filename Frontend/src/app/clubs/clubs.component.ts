@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { AuthService } from '../services/auth.service';
 import { ClubsService } from '../services/clubs.service';
 
 
@@ -9,9 +11,11 @@ import { ClubsService } from '../services/clubs.service';
 })
 export class ClubsComponent implements OnInit {
   dataArray!:any
-  constructor(private cs:ClubsService) { 
+  accountType:any
+  constructor(private cs:ClubsService,private us : AuthService,private ar:ActivatedRoute,private route:Router) { 
 
     this.cs.getallclubs().subscribe((d)=>{this.dataArray=d;})
+    this.accountType=us.getUserAccountType()
   }
 
   ngOnInit(): void {

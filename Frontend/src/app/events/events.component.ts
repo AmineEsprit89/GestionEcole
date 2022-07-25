@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { AuthService } from '../services/auth.service';
 import { EventsService } from '../services/events.service';
 
 @Component({
@@ -7,11 +9,12 @@ import { EventsService } from '../services/events.service';
   styleUrls: ['./events.component.css']
 })
 export class EventsComponent implements OnInit {
-
+  accountType:any
   dataArray!:any
-  constructor(private es:EventsService) { 
+  constructor(private es:EventsService,private us : AuthService,private ar:ActivatedRoute,private route:Router) { 
 
     this.es.getallevents().subscribe((e)=>{this.dataArray=e;})
+    this.accountType=us.getUserAccountType()
   }
 
   ngOnInit(): void {

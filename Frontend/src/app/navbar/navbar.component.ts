@@ -18,8 +18,8 @@ export class NavbarComponent implements OnInit {
   loggedIn=this.us.loggedIn()
 
   constructor(private us : AuthService,private ar:ActivatedRoute,private route:Router) {
-  //  this.id=us.getUserId()
-    //this.email=us.getUserEmail()
+    this.id=us.getUserId()
+    this.email=us.getUserEmail()
     this.accountType=us.getUserAccountType()
   // console.log(this.us.loggedIn())
    }

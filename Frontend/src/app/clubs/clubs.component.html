@@ -1,14 +1,22 @@
-<table border="2" >
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Date_seance</th>
-            <th>Heure_debut</th>
-            <th>Duree</th>
-            <th>Description</th>
-            <th>actions</th>
-           
+<table class="table" border="2">
+  <thead class="thead-dark">
+    <tr>
+     
+      <th scope="col">Name</th>
+      <th scope="col">Type</th>
+      <th scope="col">Date seance</th>
+      <th scope="col">Heure debut</th>
+      <th scope="col">Duree</th>
+      
+      <th scope="col">Description</th>
+
+      <div *ngIf="accountType=='Admin'" >
+      <th scope="col">Actions</th>
+      </div>
+      
+     
+    
+     
             
         </tr>
     </thead>
@@ -20,21 +28,25 @@
             <td> {{item.Name}} </td> 
             
             <td>{{item.Type}}</td>
-            <td>{{item.Date_seance}} </td>
+            <td>{{item.Date_seance.substring(0,10)}} </td>
             <td>{{item.Heure_debut}}</td>
             <td>{{item.Duree}}</td>
             <td>{{item.Description}}</td>
+
+
+
+
+            <div *ngIf="accountType=='Admin'" >
             <td>
-
-
-             
-  
-                <button   class="btn-primary" data-toggle="modal" data-target="#exampleModal"
+                <button   class="btn  btn-primary" data-toggle="modal" data-target="#exampleModal"
                 (click)="getdata(item.Name,item.Type,item.Date_seance,
-                item.Heure_debut,item.Duree,item.Description,item._id)"> update club</button>
+                item.Heure_debut,item.Duree,item.Description,item._id)"> Update </button>
+
+               <!-- <button class="btn  btn-success" [routerLink]="['/show']" (click)=" (item._id)">show </button> -->
                 
-                <button  (click)=" delete(item._id,i)">supprimer club</button>
+                <button class="btn  btn-danger" (click)=" delete(item._id,i)">Delete</button>
             </td>
+            </div>
             
           
           
@@ -44,7 +56,8 @@
         
     </tbody>
 </table> 
-<h3><button><a routerLink="/create">Ajouter club</a></button></h3>
+<div *ngIf="accountType=='Admin'" >
+<h3><button><a routerLink="/create">Ajouter club</a></button></h3></div>
 
 
 

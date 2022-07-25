@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { AuthService } from '../services/auth.service';
 import { RdvsService } from '../services/rdvs.service';
 
 @Component({
@@ -9,10 +11,13 @@ import { RdvsService } from '../services/rdvs.service';
 export class RdvComponent implements OnInit {
 msg!:string;
   dataArray!:any
-  constructor(private rs:RdvsService) { 
+  accountType!:any
+  
+  constructor(private rs:RdvsService,private pr : AuthService,private ar:ActivatedRoute,private route:Router) { 
 
 
     this.rs.getallrdvs().subscribe((d)=>{this.dataArray=d;})
+    this.accountType=pr.getUserAccountType()
   }
 
   ngOnInit(): void {

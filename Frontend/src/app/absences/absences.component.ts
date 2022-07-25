@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { AbsencesService } from '../services/absences.service';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-absences',
@@ -9,10 +11,12 @@ import { AbsencesService } from '../services/absences.service';
 export class AbsencesComponent implements OnInit {
   msg!:string;
   dataArray!:any
-  constructor(private as:AbsencesService) { 
+  accountType!:any
+  constructor (private as:AbsencesService,private ps : AuthService,private ar:ActivatedRoute,private route:Router) { 
 
 
     this.as.getallabs().subscribe((d)=>{this.dataArray=d;})
+    this.accountType=ps.getUserAccountType()
   }
 
   

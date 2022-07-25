@@ -19,7 +19,7 @@ export class AddeventComponent implements OnInit {
    
     this.service.addevent(f).subscribe(
       
-      ()=>{this.route.navigate(['/events'])}
+      ()=>{this.route.navigate(['/evenements'])}
       
   
     
