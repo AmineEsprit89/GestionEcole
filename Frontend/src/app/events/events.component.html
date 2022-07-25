@@ -21,7 +21,8 @@
 
           <th scope="col">Actions</th>
           <th scope="col">Actions</th>
-          <th>Facebook  </th>
+          <th scope="col">Actions</th>
+          <th>FB  </th>
           
           </div>
           
@@ -51,18 +52,18 @@
                   (click)="getdataevent(item.Name,item.Type,item.Free,
                   item.Price,item.Date_event,item.Date_fin_event,item.Heure_debut,
                   item.Lieu,item.Nbr_place,item.Nom_Club,
-                  item._id)"> Update</button></td>
+                  item._id)"> Update</button>
                   
                   
-                 
+                  <button class="btn  btn-success" [routerLink]="['/show']" (click)=" (item._id)">show </button> 
                  <!--<input type="submit" class="btn-primary" [routerLink]="['/show']" value="Show">-->
-               <td>
+               
 
-                  <button   class="btn  btn-danger" (click)=" delete(item._id,i)"> Delete </button></td>
+                  <button   class="btn  btn-danger" (click)=" delete(item._id,i)"> Delete </button>
                  
               
                   
-                 <td>
+                 
                  <button class="facebook"  (click)=" facebook(item._id)">
                  <a class="btn btn-outline-light btn-square mr-2" ><i class="fab fa-facebook-f"></i></a>
                   <!--<a href="#" class="fa fa-facebook"></a>-->
@@ -83,7 +84,9 @@
     </table>
     <div *ngIf="accountType=='Admin'" >
     
-   <h3> <input type="submit" class="btn-primary" [routerLink]="['/createE']" value="Ajouter Evenements" id="a"> </h3>
+   <!--<h3> <input type="submit" class="btn-primary" [routerLink]="['/createE']" value="Ajouter Evenements" id="a"> </h3>-->
+
+   <h2><button  [routerLink]="['/createE']" class="btn btn-primary" href="">Ajouter evenement</button></h2>
    </div>
 
 
@@ -101,26 +104,33 @@
             <h1 id="h1">Modifier evenement</h1>
             <form class="A1" #y="ngForm" (ngSubmit)=" updateeventInofrmations(y)">
             <label id="l">Name</label>
-            <input type="text" name="Name" #i="ngModel" ngModel [(ngModel)]="dataevent.Name" >
+            <input type="text" name="Name" #i="ngModel" ngModel [(ngModel)]="dataevent.Name" required>
             <label id="l">Type</label>
-            <input type="text" name="Type" #t="ngModel" ngModel [(ngModel)]="dataevent.Type">
+            <input type="text" name="Type" #t="ngModel" ngModel [(ngModel)]="dataevent.Type" required>
             <label id="l">Free</label>
-            <input type="text" name="Free" #d="ngModel" ngModel [(ngModel)]="dataevent.Free">
+            <input type="text" name="Free" #d="ngModel" ngModel [(ngModel)]="dataevent.Free" required>
             <label id="l">Price</label>
-            <input type="text" name="Price" #p="ngModel" ngModel [(ngModel)]="dataevent.Price">
+            <input type="text" name="Price" #p="ngModel" ngModel [(ngModel)]="dataevent.Price" required>
             <label id="l">Date_event</label>
-            <input  type="date"  name="trip-start"value="2018-07-22" name="Date_event" #i="ngModel" ngModel> <br>
-            <input type="text" name="Date_event" #da="ngModel" ngModel [(ngModel)]="dataevent.Date_event">
+            <input  type="date"  name="trip-start"value="2018-07-22" name="Date_event"
+             #i="ngModel" ngModel [(ngModel)]="dataevent.Date_event"> <br>
+            
+            
+            
             <label id="l">Date_fin_event</label>
-            <input type="text" name="Date_fin_event" #e="ngModel" ngModel [(ngModel)]="dataevent.Date_fin_event">
+            <input  type="date"  name="trip-start"value="2018-07-22" name="Date_fin_event"
+             #e="ngModel" ngModel [(ngModel)]="dataevent.Date_fin_event" required> <br>
+            
+            
+            
             <label id="l">Heure_debut</label>
-            <input type="text" name="Heure_debut" #h="ngModel" ngModel [(ngModel)]="dataevent.Heure_debut">
+            <input type="text" name="Heure_debut" #h="ngModel" ngModel [(ngModel)]="dataevent.Heure_debut" required>
             <label id="l">Lieu</label>
-            <input type="text" name="Lieu" #l="ngModel" ngModel [(ngModel)]="dataevent.Lieu">
+            <input type="text" name="Lieu" #l="ngModel" ngModel [(ngModel)]="dataevent.Lieu" required>
             <label id="l">Nbr_place</label>
-            <input type="text" name="Nbr_place" #n="ngModel" ngModel [(ngModel)]="dataevent.Nbr_place">
+            <input type="text" name="Nbr_place" #n="ngModel" ngModel [(ngModel)]="dataevent.Nbr_place" required>
             <label id="l">Nom_Club</label>
-            <input type="text" name="Nom_Club" #c="ngModel" ngModel [(ngModel)]="dataevent.Nom_Club"><br><br>
+            <input type="text" name="Nom_Club" #c="ngModel" ngModel [(ngModel)]="dataevent.Nom_Club" required><br><br>
 
 
             <input type="submit" class="btn btn-secondary" value="Mettre a jour" id="btn">
@@ -138,128 +148,6 @@
     </div>
   </div>
 
-  <!-- esprit tableau-->
-
-  <form method="post" action="./Resultat.aspx" id="form1">
-            
-                 <h1> Les Evénèments planifiés</h1>
-                    
-                    <div id="ContentPlaceHolder1_Panel1">
-      
-                   
-                    
-                     
-    
-                <br>
-                        <div>
-        <table class="list-inline" cellspacing="0" cellpadding="3" rules="all" id="ContentPlaceHolder1_GridView1" style="background-color:White;border-color:#CCCCCC;border-width:1px;border-style:None;border-collapse:collapse;">
-          <tbody><tr style="color:White;background-color:blue;font-weight:bold;">
-            <th scope="col">Name</th>
-            <th scope="col">Type</th><th scope="col">Free</th><th scope="col">Price</th><th scope="col">Date event</th>
-            <th scope="col">Date fin</th>
-            <th scope="col">Heure_debut</th><th scope="col">Lieu</th><th scope="col">Nbr_place</th>
-            <th scope="col">Nom_Club</th>
 
 
-            <div *ngIf="accountType=='Admin'" >
-
-              <th scope="col" >Actions</th>
-              
-              
-              </div>
-
-
-
-          </tr><tr style="color:#000066;" *ngFor="let item of dataArray index as i">
-            
-            <td>{{item.Name}}</td>
-            <td>{{item.Type}}</td>
-            <td>{{item.Free}}</td>
-            <td>{{item.Price}}
-                                        <span id="ContentPlaceHolder1_GridView1_Label3_0"></span>
-                                    </td>
-            <td>{{item.Date_fin_event.substring(0,10)  }}
-                                        <span id="ContentPlaceHolder1_GridView1_Label4_0"></span>
-                                    </td>
-            <td>{{item.Date_fin_event.substring(0,10)  }}
-                                        <span id="ContentPlaceHolder1_GridView1_Label2_0"></span>
-                                    </td>
-          <td>{{item.Heure_debut}}
-                                      <span id="ContentPlaceHolder1_GridView1_Label3_0"></span>
-                                  </td>
-          <td> {{item.Lieu}}
-                                      <span id="ContentPlaceHolder1_GridView1_Label4_0"></span>
-                                  </td>
-          <td>{{item.Nbr_place}}
-                                      <span id="ContentPlaceHolder1_GridView1_Label2_0"></span>
-                                  </td>
-          <td>{{item.Nom_Club}}
-                                    <span id="ContentPlaceHolder1_GridView1_Label2_0"></span>
-                                </td>
-                                  
-                        <div *ngIf="accountType=='Admin'" >
-                  <td>
-                 <button   class="btn btn-primary"  data-toggle="modal" data-target="#exampleModal"
-                  (click)="getdataevent(item.Name,item.Type,item.Free,
-                  item.Price,item.Date_event,item.Date_fin_event,item.Heure_debut,
-                  item.Lieu,item.Nbr_place,item.Nom_Club,
-                  item._id)"> Update</button>
-                  
-                  
-                 
-                 <!--<input type="submit" class="btn-primary" [routerLink]="['/show']" value="Show">-->
-
-
-                  <button   class="btn  btn-danger" (click)=" delete(item._id,i)"> Delete </button>
-                 
-                  
-                 
-                 <button class="facebook" (click)=" facebook(item._id)">
-                  <a class="btn btn-outline-light btn-square mr-2" ><i class="fab fa-facebook-f"></i></a>
-                  </button>
-                  </td>
-
-               </div>             
-                                    
-                                    
-                                    
-          
-          </tr>
-        </tbody></table>
-        
-      </div>
-
-      <div *ngIf="accountType=='Admin'" >
-    
-        <h3> <input type="submit" class="btn-primary" [routerLink]="['/createE']" value="Ajouter Evenements" id="a"> </h3>
-        </div>
-     
-    
-           <br><br>
-           <br><br>
-           <br><br>
-           <br><br>
-           <br><br>
-           <br><br>
-           <br><br>             
-   
-                    
-        <div id="footer">
-               
-                
-          <div class="container">
-          <hr>
-            <p class="text-center">
-                        © 2022 EdTech, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
-          </div>
-        
-            </div>
-               <input type="hidden" name="ctl00$H1" id="H1" value="06234357">
-                                        <input type="hidden" name="ctl00$H2" id="H2" value="06234357">
-                                        <input type="hidden" name="ctl00$H3" id="H3" value="06234357">
-                                        <input type="hidden" name="ctl00$H4" id="H4" value="06234357">
-        
-
-
-  
   

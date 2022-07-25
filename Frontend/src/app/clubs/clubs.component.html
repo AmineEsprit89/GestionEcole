@@ -12,13 +12,15 @@
 
       <div *ngIf="accountType=='Admin'" >
       <th scope="col">Actions</th>
+      <th scope="col">Actions</th>
+      <th scope="col">Actions</th>
       </div>
       
      
     
      
             
-        </tr>
+    </tr>
     </thead>
     
     
@@ -42,7 +44,7 @@
                 (click)="getdata(item.Name,item.Type,item.Date_seance,
                 item.Heure_debut,item.Duree,item.Description,item._id)"> Update </button>
 
-               <!-- <button class="btn  btn-success" [routerLink]="['/show']" (click)=" (item._id)">show </button> -->
+                <button class="btn  btn-success" [routerLink]="['/show']" (click)=" (item._id)">show </button> 
                 
                 <button class="btn  btn-danger" (click)=" delete(item._id,i)">Delete</button>
             </td>
@@ -57,7 +59,12 @@
     </tbody>
 </table> 
 <div *ngIf="accountType=='Admin'" >
-<h3><button><a routerLink="/create">Ajouter club</a></button></h3></div>
+<!--<h3><button><a routerLink="/create">Ajouter club</a></button></h3>-->
+<h2><button  [routerLink]="['/create']" class="btn btn-primary" href="">Ajouter Club</button></h2>
+
+
+
+</div>
 
 
 

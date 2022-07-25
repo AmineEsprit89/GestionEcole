@@ -3,13 +3,13 @@ const mongoose = require("mongoose");
 const eventSchema = new mongoose.Schema({
     Name: String,
     Type: String,
-    Free:String,
+    Free:Boolean,
     Price:Number,
     Date_event:Date,
     Date_fin_event:Date,
     Heure_debut:String,
     Lieu:String,
-    Nbr_place:String,
+    Nbr_place:Number,
     Image:String,
     Nom_Club:String
     

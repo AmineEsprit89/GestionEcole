@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const clubSchema = new mongoose.Schema({
     Name: String,
     Type: String,
-    Date_seance: String,
+    Date_seance: Date,
     Heure_debut:String,
     Duree:String ,
     Description:String,

@@ -1,29 +1,29 @@
 <h1>Ajouter evenement</h1>
 <form #y="ngForm">
 <label>Name</label>
-<input type="text" name="Name" #i="ngModel" ngModel><br>
+<input type="text" name="Name" #i="ngModel" ngModel required><br>
 <label>Type</label>
-<input type="text" name="Type" #t="ngModel" ngModel><br>
+<input type="text" name="Type" #t="ngModel" ngModel required><br>
 <label>Free</label>
-<input type="text" name="Free" #d="ngModel" ngModel><br>
+<input type="text" name="Free" #d="ngModel" ngModel required><br>
 <label>Price</label>
-<input type="text" name="Price" #p="ngModel" ngModel><br>
+<input type="text" name="Price" #p="ngModel" ngModel required><br>
 <label>Date_event</label>
-<input  type="date"  name="trip-start"value="2018-07-22" name="Date_event" #i="ngModel" ngModel> <br>
+<input  type="date"  name="trip-start"value="2018-07-22" name="Date_event" #i="ngModel" ngModel required> <br>
 
 
 <label>Date_fin_event</label>
-<input  type="date"  name="trip-start"value="2018-07-22" name="Date_fin_event" #e="ngModel" ngModel > <br>
+<input  type="date"  name="trip-start"value="2018-07-22" name="Date_fin_event" #e="ngModel" ngModel required> <br>
 
 
 <label>Heure_debut</label>
-<input type="time" name="appt"min="00:00" max="23:59"  name="Heure_debut" #s="ngModel" ngModel> <br>
+<input type="time" name="appt"min="00:00" max="23:59"  name="Heure_debut" #s="ngModel" ngModel required> <br>
 <label>Lieu</label>
-<input type="text" name="Lieu" #l="ngModel" ngModel><br>
+<input type="text" name="Lieu" #l="ngModel" ngModel required><br>
 <label>Nbr_place</label>
-<input type="text" name="Nbr_place" #n="ngModel" ngModel><br>
+<input type="number" name="Nbr_place" #n="ngModel" ngModel required><br>
 <label>Nom_Club</label>
-<input type="text" name="Nom_Club" #c="ngModel" ngModel><br>
+<input type="text" name="Nom_Club" #c="ngModel" ngModel required><br>
 
 
 
