@@ -112,7 +112,7 @@ module.exports = {
       .then((users) => {
         //check if email exists
         if (users.length < 1) {
-          return res.json({ msg: "email not found" });
+          return res.status(404).json({ msg: "email not found" });
         }
         //check hashed pwd
         bcrypt.compare(req.body.password, users[0].password, (err, isEqual) => {
@@ -121,7 +121,7 @@ module.exports = {
           }
           //check if pwd is correct
           if (!isEqual) {
-            res.json({ msg: "mot de passe incorrecte" });
+            res.status(401).json({ msg: "mot de passe incorrecte" });
           }
 
           //check isActive status
@@ -159,18 +159,6 @@ module.exports = {
     const user = User.find({userName : "third"})
     console.log(user.email)
 
-   // const user = User.find({ActivationCode : {$all:[link]}},(error,data=>{
-     // console.log(data)
-
-    //}))
-   // console.log(user.email);
-
-  //  const user = User.findOne({ActivationCode : link})
-  //  res.json(user)
-   //const user = await User.findOne(link) 
-   // res.json(user)
-  //  const user = await User.findById(id);
-  //  res.json(user);
 
   },
 
