@@ -31,6 +31,7 @@
       
         <tbody>
           <tr *ngFor="let item of dataArray index as i">
+            
   
               <td> {{item.Name}} </td> 
               
@@ -43,24 +44,25 @@
               <td>{{item.Lieu}}</td>
               <td>{{item.Nbr_place}}</td>
               <td>{{item.Nom_Club}}</td>
+              <!-- <td> <img src="http://localhost:3000/images/{{item.images}}"></td> -->
+            
   
   
               
               <div *ngIf="accountType=='Admin'" >
                   <td>
-                 <button   class="btn btn-primary"  data-toggle="modal" data-target="#exampleModal"
+                 <button   class="btn btn-sm btn-primary"  data-toggle="modal" data-target="#exampleModal"
                   (click)="getdataevent(item.Name,item.Type,item.Free,
                   item.Price,item.Date_event,item.Date_fin_event,item.Heure_debut,
                   item.Lieu,item.Nbr_place,item.Nom_Club,
                   item._id)"> Update</button>
                   
                   
-                  <button class="btn  btn-success" [routerLink]="['/show']" (click)=" (item._id)">show </button> 
+                  <button class="btn  btn-sm btn-success" [routerLink]="['/show/'+item._id]" >show </button> 
                  <!--<input type="submit" class="btn-primary" [routerLink]="['/show']" value="Show">-->
-               
 
-                  <button   class="btn  btn-danger" (click)=" delete(item._id,i)"> Delete </button>
-                 
+               
+                 <button class="btn  btn-danger" (click)=" delete(item._id,i)">Delete</button>
               
                   
                  

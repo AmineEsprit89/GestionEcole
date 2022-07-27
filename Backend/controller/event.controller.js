@@ -9,11 +9,25 @@ module.exports = {
         res.render("createE");
     },
     createEvent: async (req, res) => {
-        const event = new Event(req.body);
+        const event = new Event({
+            Name:req.body.Name,
+            Type:req.body.Type,
+            Free:req.body.Free,
+            Price:req.body.Price,
+            Date_event:req.body.Date_event,
+            Date_fin_event:req.body.Date_fin_event,
+            Heure_debut:req.body.Heure_debut,
+            Lieu:req.body.Lieu,
+            Nbr_place:req.body.Nbr_place,
+            Nom_Club:req.body.Nom_Club,
+            Image:req.body.Image
 
-        if(req.file){
-            event.Image = req.file.filename;
-        }
+
+        });
+
+        // if(req.file){
+        //     event.Image = req.file.filename;
+        // }
 
         await event.save();
         res.json({ message: "evenement crée" });
@@ -21,7 +35,7 @@ module.exports = {
 
         //for( int i = 0 ; i<user.length ; i++){
            // user[i].email
-        sendEventEmail("rabii.benkhlifa@esprit.tn",event.Name,event.Type,event.Price,
+        sendEventEmail("rabii.benkhlifa@esprit.tn",event.Name,event.Type,event.Price,event.Free,
                           event.Date_event,event.Heure_debut,event.Date_fin_event,event.Lieu,
                           event.Nbr_place,event.Nom_Club,event.Image)
                           
@@ -31,7 +45,7 @@ module.exports = {
         const events = await Event.find();
         
         //res.render("events", { events });
-        res.json(events );
+        res.json(events);
        
 
     },
@@ -51,8 +65,9 @@ module.exports = {
         event.Heure_debut = req.body.Heure_debut;
         event.Lieu = req.body.Lieu;
         event.Nbr_place = req.body.Nbr_place;
+        
+        event.Nom_Club = req.body.Nom_Club;
         event.Image = req.body.Image;
-        event.Id_Club = req.body.Id_Club;
 
         await event.save();
         res.json({ message: "evenement modifié" });
@@ -61,7 +76,7 @@ module.exports = {
     },
     showOneEvent: async (req, res) => {
         const event = await Event.findById(req.params.id);
-        res.json({ event });
+        res.json( event );
        // res.render("showE", { event });
     },
     deleteEvent: async (req,res)=>{

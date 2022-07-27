@@ -10,11 +10,16 @@ import { EventsService } from '../services/events.service';
 })
 export class EventsComponent implements OnInit {
   accountType:any
-  dataArray!:any
+  dataArray:any
+  email:any
+  userId:any
   constructor(private es:EventsService,private us : AuthService,private ar:ActivatedRoute,private route:Router) { 
 
     this.es.getallevents().subscribe((e)=>{this.dataArray=e;})
     this.accountType=us.getUserAccountType()
+    this.email=us.getUserEmail()
+    this.userId=us.getUserId()
+    
   }
 
   ngOnInit(): void {
@@ -59,9 +64,7 @@ export class EventsComponent implements OnInit {
         this.dataArray[indexId].Lieu = data.Lieu
         this.dataArray[indexId].Nbr_place = data.Nbr_place
         this.dataArray[indexId].Nom_Club = data.Nom_Club
-  
-  
-  
+        
       })
   
   }
@@ -73,15 +76,18 @@ export class EventsComponent implements OnInit {
     })
   }
   
+  show(id:any){
+    this.es.showevent(id).subscribe((e)=>{
+      this.dataArray=e;})
 
+  }
  
-
-
-  
-
   delete(id:any,i:any){
-    this.es.deleteevent(id).subscribe(Response=>{
+     this.es.deleteevent(id).subscribe(Response=>{
       this.dataArray.splice(i,1)
     })
+    // console.log(this.accountType)
+    // console.log(this.email)
+    // console.log(this.userId)
   }
 }

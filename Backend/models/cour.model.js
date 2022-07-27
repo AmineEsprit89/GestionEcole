@@ -5,6 +5,8 @@ const courSchema = new mongoose.Schema({
     nomcour:String, 
     nomEnseignant: String,
     chapitre:String,
+    EmailE:String,
+    EmailP:String,
     imageUrl:String,
     
     

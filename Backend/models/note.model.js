@@ -5,6 +5,7 @@ var noteSchema = new mongoose.Schema({
     nomEnseignant: {type:String, minLength:5 , maxLength:20, required: true }, 
     noteCc:{type: Number , min:0,max: 20 , required: false },
     noteExam:{type: Number,min:0,max: 20 , required: true},
+    
     imageUrl:String
 });
 

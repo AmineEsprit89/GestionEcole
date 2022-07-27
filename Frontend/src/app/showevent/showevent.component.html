@@ -11,6 +11,7 @@
             <th>Lieu</th>
             <th>Nbr_place</th>
             <th>Nom_Club</th>
+            <th>Image</th>
             
            
             
@@ -20,28 +21,31 @@
     
     
     <tbody>
-        <tr *ngFor="let item of dataArray ">
-
-            <td> {{item.Name}} </td> 
+       <tr>
+          
+            <td> {{data.Name}} </td> 
             
-            <td>{{item.Type}}</td>
-            <td>{{item.Free}} </td>
-            <td>{{item.Price}}</td>
-            <td>{{item.Date_event}}</td>
-            <td>{{item.Date_fin_event}}</td>
-            <td>{{item.Heure_debut}} </td>
-            <td>{{item.Lieu}}</td>
-            <td>{{item.Nbr_place}}</td>
-            <td>{{item.Nom_Club}}</td>
-
+            <td>{{data.Type}}</td>
+            <td>{{data.Free}} </td>
+            <td>{{data.Price}}</td>
+            <td>{{data.Date_event}}</td>
+            <td>{{data.Date_fin_event}}</td>
+            <td>{{data.Heure_debut}} </td>
+            <td>{{data.Lieu}}</td>
+            <td>{{data.Nbr_place}}</td>
+            <td>{{data.Nom_Club}}</td>
+            <td> <img src="http://localhost:3000/images/'{{data.Image}}'"></td> 
+            
+            
+        </tr>
 
       
             
           
           
-        </tr>
+      
 
         
         
     </tbody>
-</table> 
+</table>

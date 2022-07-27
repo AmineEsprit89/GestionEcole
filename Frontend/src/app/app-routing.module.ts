@@ -32,6 +32,7 @@ import { AddclasseComponent } from './addclasse/addclasse.component';
 import { AddrdvComponent } from './addrdv/addrdv.component';
 import { AddabsComponent } from './addabs/addabs.component';
 import { LoginComponent } from './login/login.component';
+import { ShoweventComponent } from './showevent/showevent.component';
 
 const routes: Routes = [
   {path: '', component: ContentComponent},
@@ -83,6 +84,11 @@ const routes: Routes = [
 
   //login route
   {path: 'login', component:LoginComponent },
+
+
+  //show event
+  {path: 'show/:id', component:ShoweventComponent },
+
 
 
 

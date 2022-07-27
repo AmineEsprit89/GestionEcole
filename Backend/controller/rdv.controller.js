@@ -11,7 +11,8 @@ module.exports = {
 
         if(req.file){
             rdv.Namep = req.file.filename;
-            rdv.Emailp = req.file.filename;
+            rdv.EmailE = req.file.filename;
+            rdv.EmailP = req.file.filename;
             rdv.Date_r = req.file.filename;
             rdv.heure_r = req.file.filename;
             rdv.cause = req.file.filename;
@@ -39,7 +40,8 @@ module.exports = {
         const rdv = await Rdv.findById(req.params.id);
         console.log(req.body)
         rdv.Namep = req.body.Namep;
-        rdv.Emailp = req.body.Emailp;
+        rdv.EmailE = req.body.EmailE;
+        rdv.EmailP = req.body.EmailP;
         rdv.Date_r = req.body.Date_r;
         rdv.heure_r = req.body.heure_r;
         rdv.cause = req.body.cause;

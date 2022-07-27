@@ -1,33 +1,35 @@
 <h1>Ajouter evenement</h1>
-<form #y="ngForm">
+<form #y="ngForm" (ngSubmit)="ajouterevent(y)">
 <label>Name</label>
-<input type="text" name="Name" #i="ngModel" ngModel required><br>
+<input type="text" name="Name" #Name="ngModel" ngModel required><br>
 <label>Type</label>
-<input type="text" name="Type" #t="ngModel" ngModel required><br>
+<input type="text" name="Type" #Type="ngModel" ngModel required><br>
 <label>Free</label>
-<input type="text" name="Free" #d="ngModel" ngModel required><br>
+<input type="text" name="Free" #Free="ngModel" ngModel required><br>
 <label>Price</label>
-<input type="text" name="Price" #p="ngModel" ngModel required><br>
+<input type="number" name="Price" #Price="ngModel" ngModel required><br>
 <label>Date_event</label>
-<input  type="date"  name="trip-start"value="2018-07-22" name="Date_event" #i="ngModel" ngModel required> <br>
+<input  type="date"  name="trip-start"value="2018-07-22" name="Date_event" #Date_event="ngModel" ngModel required> <br>
 
 
 <label>Date_fin_event</label>
-<input  type="date"  name="trip-start"value="2018-07-22" name="Date_fin_event" #e="ngModel" ngModel required> <br>
+<input  type="date"  name="trip-start"value="2018-07-22" name="Date_fin_event" #Date_fin_event="ngModel" ngModel required> <br>
 
 
 <label>Heure_debut</label>
-<input type="time" name="appt"min="00:00" max="23:59"  name="Heure_debut" #s="ngModel" ngModel required> <br>
+<input type="time" name="appt"min="00:00" max="23:59"  name="Heure_debut" #Heure_debut="ngModel" ngModel required> <br>
 <label>Lieu</label>
-<input type="text" name="Lieu" #l="ngModel" ngModel required><br>
+<input type="text" name="Lieu" #Lieu="ngModel" ngModel required><br>
 <label>Nbr_place</label>
-<input type="number" name="Nbr_place" #n="ngModel" ngModel required><br>
+<input type="number" name="Nbr_place" #Nbr_place="ngModel" ngModel required><br>
 <label>Nom_Club</label>
-<input type="text" name="Nom_Club" #c="ngModel" ngModel required><br>
+<input type="text" name="Nom_Club" #Nom_Club="ngModel" ngModel required><br>
+<input type="file" id="basic-addon-name" class="form-control" placeholder="Image" aria-label="Name" aria-describedby="basic-addon-name" required 
+                    name="image" #Image="ngModel" ngModel (change)="selectImage($event)" />
 
 
 
-<input type="submit" value="Ajouter" (click)="ajouterevent(y.value)"> 
+<input type="submit" value="Ajouter" > 
 
 </form>
 

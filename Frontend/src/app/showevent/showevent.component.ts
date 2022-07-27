@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EventsService } from '../services/events.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-showevent',
@@ -8,13 +9,22 @@ import { EventsService } from '../services/events.service';
 })
 export class ShoweventComponent implements OnInit {
 
-  constructor(private es:EventsService) { }
-dataArray:any
+  constructor(private es:EventsService,private route:ActivatedRoute) { }
+
+id:any
+data:any
+Image:any
+
   ngOnInit(): void {
+    this.id=this.route.snapshot.params['id'];
+    this.finalShow();
   }
-  show(id:any){
-    this.es.showevent(id).subscribe((e)=>{
-      this.dataArray=e;})
+
+  finalShow()
+  {
+    this.es.showevent(this.id).subscribe(data=>{
+      this.data=data
+    })
     
   }
 }
