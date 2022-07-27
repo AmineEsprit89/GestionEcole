@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UsersService } from '../services/users.service';
+import { AuthService } from '../services/auth.service';
+
 
 @Component({
   selector: 'app-eleves',
@@ -8,6 +10,7 @@ import { UsersService } from '../services/users.service';
 })
 export class ElevesComponent implements OnInit {
   dataArray!:any
+  msg!:string;
 
   constructor(private us : UsersService) {
     this.us.getalleleves().subscribe((d)=>{this.dataArray=d;})
@@ -64,6 +67,12 @@ export class ElevesComponent implements OnInit {
     })
   }
 
+  public showMyMessage = false
+  pdfuser(){
 
+this.us.pdfuser().subscribe((d)=>{this.dataArray=d;});
+this.msg='PDF Téléchargé ';
+    return this.msg;
+  }
 
 }
