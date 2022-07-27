@@ -19,14 +19,14 @@
           <td>{{e.email}} </td>
           <td>{{e.adresse}}</td>
           <td>{{e.isActive}}</td>
-          <td>{{e.dateDeNaissance}}</td>
+          <td>{{e.dateDeNaissance.substring(0,10)}}</td>
           <td>
 
               <button   class="btn-primary" data-toggle="modal" data-target="#exampleModal"
               (click)="getdata(e.email,e.ActivationCode,e.accountType,
-              e.nom,e.prenom,e.dateDeNaissance,e.adresse,e.isActive,e.classe,e.club,e._id)"> update eleve</button>
+              e.nom,e.prenom,e.dateDeNaissance,e.adresse,e.isActive,e.classe,e.club,e._id)"> Modifier élève</button>
 
-              <button  (click)=" delete(e._id,i)">supprimer eleve</button>
+              <button  (click)=" delete(e._id,i)">Supprimer élève</button>
 
           </td>
 
@@ -34,6 +34,11 @@
   </tbody>
 </table>
 <h3><button><a routerLink="/eleves/create">Ajouter eleve</a></button></h3>
+<br>
+<button  (click)="pdfuser()" >
+  Telecharger La liste </button>
+  
+  <h3>{{msg}}</h3>
 
 
 
@@ -49,40 +54,46 @@
         </button>
       </div>
       <div class="modal-body">
-          <h1 id="h1">Modifier eleve</h1>
+          <h1 id="h1">Modifier élève</h1>
           <form  class="A1" #y="ngForm" (ngSubmit)=" updateuser(y)">
-
+            <br>
           <label id="l">Email</label>
           <input type="text" name="email" #a="ngModel" ngModel [(ngModel)]="datauser.email" >
-
+          <br>
           <label id="l">Password</label>
           <input type="text" name="ActivationCode" #b="ngModel" ngModel [(ngModel)]="datauser.ActivationCode">
-
-          <label id="l">Account Type</label>
-          <input type="text" name="accountType" #c="ngModel" ngModel [(ngModel)]="datauser.accountType">
-
+          <br>
+          <label>Account Type</label>
+          <select name="accountType" #d="ngModel" ngModel>
+            <option value="">--Selectionnez le rôle--</option>
+            <option value="Admin">Admin</option>
+            <option value="Eleve">Eleve</option>
+            <option value="Professeur">Professeur</option> 
+        </select>
+        <br>
           <label id="l">Nom</label>
           <input type="text" name="nom" #d="ngModel" ngModel [(ngModel)]="datauser.nom">
-
+          <br>
           <label id="l">Prenom</label>
           <input type="text" name="prenom" #e="ngModel" ngModel [(ngModel)]="datauser.prenom">
-
+          <br>
           <label id="l">Date de naissance</label>
-          <input type="text" name="dateDeNaissance" #f="ngModel" ngModel [(ngModel)]="datauser.dateDeNaissance">
-
+          <input  type="date" id="start" name="trip-start"value="2018-07-22" name="dateDeNaissance" #p="ngModel" ngModel> 
+          <br>
           <label id="l">Adresse</label>
           <input type="text" name="adresse" #g="ngModel" ngModel [(ngModel)]="datauser.adresse">
-
+          <br>
           <label id="l">Sexe</label>
           <input type="text" name="isActive" #h="ngModel" ngModel [(ngModel)]="datauser.isActive">
-
+          <br>
           <label id="l">Classe</label>
           <input type="text" name="classe" #i="ngModel" ngModel [(ngModel)]="datauser.classe">
-
+          <br>
           <label id="l">Club</label>
           <input type="text" name="club" #j="ngModel" ngModel [(ngModel)]="datauser.club"> <br><br>
-
+          <br>
           <input type="submit" class="btn btn-secondary" value="Mettre a jour" id="btn">
+          <br>
           </form>
           <br>
       </div>
@@ -92,19 +103,3 @@
     </div>
   </div>
 </div>
-
-<!--
-      this.dataArray[indexId].email = data.email
-      this.dataArray[indexId].password = data.password
-      this.dataArray[indexId].accountType = data.accountType
-      this.dataArray[indexId].nom = data.nom
-      this.dataArray[indexId].prenom = data.prenom
-      this.dataArray[indexId].dateDeNaissance = data.dateDeNaissance
-      this.dataArray[indexId].adresse = data.adresse
-      this.dataArray[indexId].isActive = data.isActive
-      this.dataArray[indexId].classe = data.classe
-      this.dataArray[indexId].club = data.club
-
-
-
--->

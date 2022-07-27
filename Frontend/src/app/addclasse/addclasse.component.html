@@ -1,15 +1,28 @@
 <h1>Ajouter Classe</h1>
-<form #y="ngForm">
-<label>Classe</label>
-<input type="text" name="ClsID" #i="ngModel" ngModel>
-<label>Nombre d'élèves</label>
-<input type="text" name="NbrEleves" #t="ngModel" ngModel>
-<label>Designation</label>
-<input type="text" name="ChefDeClasse" #d="ngModel" ngModel> <!--designation -->
+<form #y="ngForm"></form>
 
+<div>
+    <label>Niveau</label>
+    <select name="NivCls" #d="ngModel" ngModel>
+        <option value="">--Selectionnez le Niveau--</option>
+        <option value="7 ème">7 ème</option>
+        <option value="8 ème">8 ème</option>
+        <option value="9 ème">9 ème</option> 
+    </select>
+ </div>  
+    <br>
+    <label>Classe</label>
+    <input type="text" name="ClsID" #i="ngModel" ngModel>
+    <br>
+    <label>Nombre d'élèves</label>
+    <input type="text" name="NbrEleves" #t="ngModel" ngModel>
+    <br>
+    <label>Designation</label>
+    <input type="text" name="ChefDeClasse" #d="ngModel" ngModel> <!--designation -->
+    <br>
+    <br>
+    
+   
 
-
-<input type="submit" value="Ajouter Classe" (click)="ajouterclasse(y.value)">
-
-</form>
-
+    
+    <input type="submit" value="Ajouter Classe" (click)="ajouterclasse(y.value)">
