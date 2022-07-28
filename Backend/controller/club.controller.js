@@ -6,7 +6,17 @@ module.exports = {
         res.render("create");
     },
     createClub: async (req, res) => {
-        const club = new Club(req.body);
+        const club = new Club({
+        Name:req.body.Name,
+        Type:req.body.Type,
+        Date_seance:req.body.Date_seance,
+        Heure_debut:req.body.Heure_debut,
+        Duree:req.body.Duree,
+        Description:req.body.Description,
+        Heure_debut:req.body.Heure_debut,
+
+    });
+        
 
         if(req.file){
             club.Logo = req.file.filename;

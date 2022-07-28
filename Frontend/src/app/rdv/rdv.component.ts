@@ -12,20 +12,23 @@ export class RdvComponent implements OnInit {
 msg!:string;
   dataArray!:any
   accountType!:any
+  email:any
   
   constructor(private rs:RdvsService,private pr : AuthService,private ar:ActivatedRoute,private route:Router) { 
 
 
     this.rs.getallrdvs().subscribe((d)=>{this.dataArray=d;})
     this.accountType=pr.getUserAccountType()
+    this.email=pr.getUserEmail()
   }
 
   ngOnInit(): void {
   }
-  datardv={Namep:'',Emailp:'',Date_r:'',heure_r:'',cause:'',id:''}
-  getdata(Namep: string,Emailp: string, Date_r: string, heure_r:string, cause:string ,id:any){
+  datardv={Namep:'',EmailE:'',EmailP:'',Date_r:'',heure_r:'',cause:'',id:''}
+  getdata(Namep: string,EmailE: string,EmailP: string, Date_r: string, heure_r:string, cause:string ,id:any){
     this.datardv.Namep=Namep;
-    this.datardv.Emailp=Emailp;
+    this.datardv.EmailE=EmailE;
+    this.datardv.EmailP=EmailP;
     this.datardv.Date_r=Date_r;
     this.datardv.heure_r=heure_r;
     this.datardv.cause=cause;
@@ -37,7 +40,8 @@ updaterdv(f:any){
   this.rs.updaterdv(this.datardv.id,data).subscribe(response=>{
     let indexId = this.dataArray.findIndex((obj:any)=>obj._id==this.datardv.id)
     this.dataArray[indexId].Namep = data.Namep
-    this.dataArray[indexId].Emailp = data.Emailp
+    this.dataArray[indexId].EmailE = data.EmailE
+    this.dataArray[indexId].EmailP = data.EmailP
     this.dataArray[indexId].Date_r = data.Date_r
     this.dataArray[indexId].heure_r = data.heure_r
     this.dataArray[indexId].cause = data.cause

@@ -1,8 +1,9 @@
 <table border="2" >
     <thead>
         <tr>
-            <th>Name eleve</th>
-            <th>Email parent</th>
+            <th>Namep</th>
+            <th>EmailE</th>
+            <th>EmailP</th>
             <th>Date_rendez vous </th>
             <th>heure_rendez vous </th>
             <th>cause</th>
@@ -20,13 +21,31 @@
     
     <tbody>
         <tr *ngFor="let item of dataArray  index as i" > 
+          <td  *ngIf="email==item.EmailE"> {{item.Namep}} </td> 
+          <td  *ngIf="email==item.EmailE"> {{item.EmailE}} </td>
+          <td  *ngIf="email==item.EmailE"> {{item.EmailP}} </td> 
+          <td  *ngIf="email==item.EmailE">{{item.Date_r.substring(0,10)}}  </td>
+          <td  *ngIf="email==item.EmailE">{{item.heure_r}} </td>
+          <td  *ngIf="email==item.EmailE">{{item.cause}} </td>
 
-            <td> {{item.Namep}} </td> 
+
+          <td *ngIf="accountType=='Professeur'||accountType=='Admin'"> {{item.Namep}} </td>
+          
+          <td *ngIf="accountType=='Professeur'||accountType=='Admin'"> {{item.EmailE}} </td>
+          <td *ngIf="accountType=='Professeur'||accountType=='Admin'"> {{item.EmailP}} </td>
+          
+          <td *ngIf="accountType=='Professeur'||accountType=='Admin'"> {{item.Date_r.substring(0,10)}} </td>
+          
+          <td *ngIf="accountType=='Professeur'||accountType=='Admin'"> {{item.heure_r}} </td>
+          <td *ngIf="accountType=='Professeur'||accountType=='Admin'"> {{item.cause}} </td>
+          
+
+            <!-- <td> {{item.Namep}} </td> 
             
             <td>{{item.Emailp}}</td>
             <td>{{item.Date_r}} </td>
             <td>{{item.heure_r}}</td>
-            <td>{{item.cause}}</td>
+            <td>{{item.cause}}</td> -->
            
             <div *ngIf="accountType=='Admin'" >
             <td>
@@ -34,7 +53,7 @@
                 
   
                 <button   class="btn-primary" data-toggle="modal" data-target="#exampleModal"
-                (click)="getdata(item.Namep,item.Emailp,item.Date_r,
+                (click)="getdata(item.Namep,item.EmailE,item.EmailP,item.Date_r,
                 item.heure_r,item.cause,item._id)"> update rdv</button>
                 
                 <button  (click)=" delete(item._id,i)">supprimer rdv</button>
@@ -82,8 +101,12 @@
             <form #y="ngForm" (ngSubmit)=" updaterdv(y)">
             <label>Name parent</label>
             <input type="text" name="Namep" #i="ngModel"  ngModel [(ngModel)]="datardv.Namep" > <br>
-            <label>Email parent</label>
-            <input type="text" name="Emailp" #t="ngModel" ngModel [(ngModel)]="datardv.Emailp"> <br>
+            <label>EmailE</label>
+            <input type="text" name="EmailE" #t="ngModel" ngModel [(ngModel)]="datardv.EmailE"> <br>
+
+            <label>EmailP</label>
+            <input type="text" name="EmailP" #t="ngModel" ngModel [(ngModel)]="datardv.EmailP"> <br>
+
             <label>Date_rendez vous </label>
             <input type="text" name="Date_r" #d="ngModel" ngModel [(ngModel)]="datardv.Date_r"><br>
             <label>heure_rendez vous </label>

@@ -21,6 +21,12 @@ getallclubs(){
    return this.http.post('http://localhost:3000/clubs/update/'+id,dataclub)
 
   }
+
+  showclub(id:any){
+    return this.http.get('http://localhost:3000/clubs/show/'+id)
+   }
+
+
   deleteclub(id:any){
     return this.http.get('http://localhost:3000/clubs/delete/'+id)
   }

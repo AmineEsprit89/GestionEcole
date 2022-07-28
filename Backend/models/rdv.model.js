@@ -2,7 +2,8 @@ const mongoose = require("mongoose");
 
 const rdvSchema = new mongoose.Schema({
     Namep: String,
-    Emailp:String,
+    EmailE:String,
+    EmailP:String,
     Date_r:String,
     heure_r:String,
     cause:String

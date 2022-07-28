@@ -1,4 +1,4 @@
-<table border="2" >
+<!-- <table border="2" >
     <thead>
         <tr>
             <th>Name</th>
@@ -11,6 +11,7 @@
             <th>Lieu</th>
             <th>Nbr_place</th>
             <th>Nom_Club</th>
+            <th>Image</th>
             
            
             
@@ -20,28 +21,59 @@
     
     
     <tbody>
-        <tr *ngFor="let item of dataArray ">
-
-            <td> {{item.Name}} </td> 
-            
-            <td>{{item.Type}}</td>
-            <td>{{item.Free}} </td>
-            <td>{{item.Price}}</td>
-            <td>{{item.Date_event}}</td>
-            <td>{{item.Date_fin_event}}</td>
-            <td>{{item.Heure_debut}} </td>
-            <td>{{item.Lieu}}</td>
-            <td>{{item.Nbr_place}}</td>
-            <td>{{item.Nom_Club}}</td>
-
-
-      
-            
+       <tr>
           
-          
-        </tr>
-
-        
+            <td> {{data.Name}} </td> 
+            
+            <td>{{data.Type}}</td>
+            <td>{{data.Free}} </td>
+            <td>{{data.Price}}</td>
+            <td>{{data.Date_event}}</td>
+            <td>{{data.Date_fin_event}}</td>
+            <td>{{data.Heure_debut}} </td>
+            <td>{{data.Lieu}}</td>
+            <td>{{data.Nbr_place}}</td>
+            <td>{{data.Nom_Club}}</td>
+            <td> <img src="http://localhost:3000/images/{{data.Image}}" width="100" height="100"></td> 
+            
+            
+        </tr>  
         
     </tbody>
-</table> 
+</table>
+<h2><button  [routerLink]="['/evenements']" class="btn btn-primary" href="">Retour</button></h2> -->
+
+
+<h1>Détails de l'évenement</h1>
+<img  src="http://localhost:3000/images/{{data.Image}}" 
+    class="img-fluid" alt="Responsive image" width="200" height="200">
+
+
+<br>
+
+    
+    
+
+         <a> 
+        
+             Nom de l'évenement :{{data.Name}} <br>
+             Type  : {{data.Type}}<br>
+             Free : {{data.Free}} <br>
+             Price : {{data.Price}}<br>
+             Date_event : {{data.Date_event.substring(0,10)}}<br>
+             Date_fin_event : {{data.Date_fin_event.substring(0,10)}}<br>
+             Heure_debut : {{data.Heure_debut}} <br>
+             Lieu : {{data.Lieu}}<br>
+             Nbr_place : {{data.Nbr_place}}<br>
+             Nom_Club : {{data.Nom_Club}}<br>
+        </a>
+           
+            <!-- <td> <img src="http://localhost:3000/images/{{data.Logo}}" width="200" height="100"></td>  -->
+            
+            
+      
+<h2><button  [routerLink]="['/evenements']" class="btn btn-primary" href="">Retour</button></h2>
+
+
+
+

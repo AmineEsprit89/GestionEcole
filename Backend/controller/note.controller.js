@@ -34,6 +34,8 @@ module.exports = {
         note.nomEnseignant = req.body.nomEnseignant ;
         note.noteCc = req.body.noteCc;
         note.noteExam = req.body.noteExam;
+        note.EmailE = req.body.EmailE;
+        note.EmailP = req.body.EmailP;
         imageUrl = req.body.imageUrl;
         await note.save();
         res.json({ message: "note modifiée" });

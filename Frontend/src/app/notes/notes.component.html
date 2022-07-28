@@ -3,6 +3,8 @@
         <tr>
             <th>Designation</th>
             <th>nomEnseignant</th>
+            <th>EmailE</th>
+            <th>EmailP</th>
             <th>noteCc</th>
             <th>noteExam</th>
             <div *ngIf="accountType=='Professeur'" >
@@ -18,10 +20,29 @@
     <tbody>
         <tr *ngFor="let item of dataArray  index as i" > 
 
-            <td>{{item.Designation}} </td>   
-            <td>{{item.nomEnseignant}} </td>
-            <td>{{item.noteCc}}</td>
-            <td>{{item.noteExam}}</td>
+
+          <td  *ngIf="email==item.EmailE"> {{item.Designation}} </td> 
+          <td  *ngIf="email==item.EmailE"> {{item.nomEnseignant}} </td>
+          <td  *ngIf="email==item.EmailE"> {{item.EmailE}} </td> 
+          <td  *ngIf="email==item.EmailE"> {{item.EmailP}} </td> 
+         
+          <td  *ngIf="email==item.EmailE">{{item.noteCc}} </td>
+          <td  *ngIf="email==item.EmailE">{{item.noteExam}} </td>
+
+
+          <td *ngIf="accountType=='Professeur'||accountType=='Admin'"> {{item.Designation}} </td>
+          <td *ngIf="accountType=='Professeur'||accountType=='Admin'"> {{item.nomEnseignant}} </td>
+          
+          <td *ngIf="accountType=='Professeur'||accountType=='Admin'"> {{item.EmailE}} </td>
+          <td *ngIf="accountType=='Professeur'||accountType=='Admin'"> {{item.EmailP}} </td>
+          
+       
+          
+          <td *ngIf="accountType=='Professeur'||accountType=='Admin'"> {{item.noteCc}} </td>
+          <td *ngIf="accountType=='Professeur'||accountType=='Admin'"> {{item.noteExam}} </td>
+          
+
+          
             
            
 
@@ -29,7 +50,7 @@
 
            <td>
                <button   class="btn-primary" data-toggle="modal" data-target="#exampleModal"
-                (click)="getdata(item.Designation,item.nomEnseignant,item.noteCc,
+                (click)="getdata(item.Designation,item.nomEnseignant,item.EmailE,item.EmailP,item.noteCc,
                 item.noteExam,item._id)"> update note</button> 
                 
                 <button  (click)=" delete(item._id,i)">supprimer note</button>
@@ -77,6 +98,10 @@
             <input type="text" name="Designation" #i="ngModel" ngModel [(ngModel)]="datanote.Designation" >
             <label>nomEnseignant</label>
             <input type="text" name="nomEnseignant" #t="ngModel" ngModel [(ngModel)]="datanote.nomEnseignant">
+            <label>EmailE</label>
+            <input type="text" name="EmailE" #d="ngModel" ngModel [(ngModel)]="datanote.EmailE">
+            <label>EmailP</label>
+            <input type="text" name="EmailP" #p="ngModel" ngModel [(ngModel)]="datanote.EmailP">
             <label>noteCc</label>
             <input type="text" name="noteCc" #d="ngModel" ngModel [(ngModel)]="datanote.noteCc">
             <label>noteExam</label>
