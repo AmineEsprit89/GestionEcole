@@ -10,21 +10,21 @@ post http://localhost:3000/users/create
 Content-Type: application/json
 
 {
-       "userName" : "eleve",
-       "email" : "admin1@gmail.com",
-       "password" : "admin123",
-       "verifyPassword": "admin123",
-       "accountType" :"Admin" ,
-       "questionSecurite" :"eleve",
-       "reponseQuestionSecurite" :"eleve",
-       "nom" :"eleve",
-       "prenom" :"eleve",
-       "dateDeNaissance":"eleve",
-       "adresse" :"eleve",
-       "isActive":"eleve",
-       "classe" :"eleve",
-       "club" :"eleve",
-       "specialite":"eleve"
+       "userName" : "haroun",
+       "email" : "haroun@gmail.com",
+       "password" : "haroun",
+       "verifyPassword": "haroun ",
+       "accountType" :"haroun" ,
+       "questionSecurite" :"haroun",
+       "reponseQuestionSecurite" :"haroun",
+       "nom" :"haroun",
+       "prenom" :"haroun",
+       "dateDeNaissance":"haroun",
+       "adresse" :"haroun",
+       "isActive":"haroun",
+       "classe" :"haroun",
+       "club" :"haroun",
+       "specialite":"haroun"
 }
 
 ### admin with valid token (deleteUser)
