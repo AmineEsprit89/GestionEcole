@@ -1,5 +1,19 @@
 
 <h1>Ajouter cours</h1>
+<<<<<<< HEAD
+<form #y="ngForm">
+<label>Designation</label><br>
+<input type="text" name="Designation" #i="ngModel" ngModel><br>
+<label>nomcour</label><br>
+<input type="text" name="nomcour" #t="ngModel" ngModel><br>
+<label>nomEnseignant</label><br>
+<input type="text" name="nomEnseignant" #d="ngModel" ngModel><br>
+<label>chapitre</label><br>
+<input type="text" name="chapitre" #p="ngModel" ngModel><br>
+<br>
+
+<input type="submit"  [routerLink]= "['/courses']" value="Ajouter" (click)="ajoutercour(y.value)">
+=======
 <form #y="ngForm" (ngSubmit)="ajoutercour(y)">
 <label>Designation</label>
 <input type="text" name="Designation" #i="ngModel" ngModel>
@@ -16,6 +30,7 @@
                     name="imageUrl" #imageUrl="ngModel" ngModel (change)="selectImage($event)" />
 
 <input type="submit" value="Ajouter" >
+>>>>>>> 158d9027f369063fefa196474e61790b028172ce
 
 
 </form>

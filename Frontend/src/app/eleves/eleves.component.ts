@@ -8,6 +8,8 @@ import { UsersService } from '../services/users.service';
 })
 export class ElevesComponent implements OnInit {
   dataArray!:any
+  showMyMessage = false
+  msg:any
 
   constructor(private us : UsersService) {
     this.us.getalleleves().subscribe((d)=>{this.dataArray=d;})
@@ -49,8 +51,17 @@ export class ElevesComponent implements OnInit {
       this.dataArray[indexId].club = data.club
     })
 
+
+
+
 }
 
+pdfuser(){
+
+  this.us.pdfuser().subscribe((d)=>{this.dataArray=d;});
+  this.msg='PDF Téléchargé ';
+      return this.msg;
+    }
 
 
 

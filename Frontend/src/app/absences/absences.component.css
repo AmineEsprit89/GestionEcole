@@ -33,7 +33,19 @@ color: white}
 .btn-outline-light {
   background-color: blue;
 }
+<<<<<<< HEAD
 
+=======
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+.facebook{
+  background-color: white;
+  border: white;
+  color: white;
+}
+>>>>>>> ea34bf1f0a8a3227c8b08236c2a78c841965fd1f
 .btn-primary{
   position:center;
 }

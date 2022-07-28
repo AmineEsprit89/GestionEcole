@@ -10,6 +10,23 @@ post http://localhost:3000/users/create
 Content-Type: application/json
 
 {
+<<<<<<< HEAD
+       "userName" : "haroun",
+       "email" : "haroun@gmail.com",
+       "password" : "haroun",
+       "verifyPassword": "haroun ",
+       "accountType" :"haroun" ,
+       "questionSecurite" :"haroun",
+       "reponseQuestionSecurite" :"haroun",
+       "nom" :"haroun",
+       "prenom" :"haroun",
+       "dateDeNaissance":"haroun",
+       "adresse" :"haroun",
+       "isActive":"haroun",
+       "classe" :"haroun",
+       "club" :"haroun",
+       "specialite":"haroun"
+=======
        "userName" : "eleve",
        "email" : "eleve@gmail.com",
        "password" : "eleveeleve",
@@ -25,6 +42,7 @@ Content-Type: application/json
        "classe" :"eleve",
        "club" :"eleve",
        "specialite":"eleve"
+>>>>>>> 1f743d9a27f57972bce2711d3042dbdc87a2cd49
 }
 
 ### admin with valid token (deleteUser)

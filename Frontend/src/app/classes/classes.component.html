@@ -2,41 +2,61 @@
     <thead>
         <tr>
             <th>Classe</th>
+<<<<<<< HEAD
+            <th>Nombre Max d'élèves</th>
+            <th>Professeur Responsable </th>
+=======
             <th>Nombre d'élèves</th>
+<<<<<<< HEAD
+            <th>Prof Responsable</th>
+            <th>Action</th>
+
+
+=======
             <th>Designation</th>
+>>>>>>> 5e03e279db51fcf90d4f2a2e9e46d2b396234760
             
+>>>>>>> 895360ac72f2a85a0493c74520248e92c7296715
         </tr>
     </thead>
-  
-  
+
+
     <tbody>
         <tr *ngFor="let cl of dataArray  index as i" >
-  
+
             <td>{{cl.ClsID}} </td>
             <td>{{cl.NbrEleves}}</td>
-            <td>{{cl.ChefDeClasse}} </td>
+            <td>{{cl.emailP}} </td>
             <div *ngIf="accountType=='Admin'" >
             <td>
-  
+
                 <button   class="btn-primary" data-toggle="modal" data-target="#exampleModal"
+<<<<<<< HEAD
+                (click)="getdata(cl.NivCls,cl.ClsID,cl.NbrEleves,cl.emailP,cl.email,cl._id)"> Modifier Classe</button>
+=======
                 (click)="getdata(cl.ClsID,cl.NbrEleves,cl.ChefDeClasse,cl._id)"> Update Classe</button>
+<<<<<<< HEAD
+
+=======
+>>>>>>> 5e03e279db51fcf90d4f2a2e9e46d2b396234760
   
+>>>>>>> 895360ac72f2a85a0493c74520248e92c7296715
                 <button  (click)=" deleteClasse(cl._id,i)">Supprimer Classe</button>
-  
+
             </td>
             </div>
-  
+
         </tr>
     </tbody>
   </table>
   <br>
   <div *ngIf="accountType=='Admin'" >
   <h5><button><a routerLink="/classes/create">Ajouter Classe</a></button></h5>
-  <br>  
+  <br>
 </div>
-  
-  
-  
+
+
+
   <!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -50,19 +70,37 @@
         <div class="modal-body">
             <h1 id="h1">Modifier Classe</h1>
             <form  class="A1" #y="ngForm" (ngSubmit)=" updateClasse(y)">
-  
+
             <label id="l">Classe</label>
             <input type="text" name="ClsID" #a="ngModel" ngModel [(ngModel)]="dataclasse.ClsID" >
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+  <br>
+            <label id="l">Nombre Max d'élèves</label>
+            <input type="number" name="NbrEleves" #b="ngModel" ngModel [(ngModel)]="dataclasse.NbrEleves">
+  <br>
+            <label id="l">Professeur Responsable</label>
+            <input type="text" name="emailP" #c="ngModel" ngModel [(ngModel)]="dataclasse.emailP">
+=======
   
+>>>>>>> 895360ac72f2a85a0493c74520248e92c7296715
             <label id="l">Nombre d'élèves</label>
             <input type="text" name="NbrEleves" #b="ngModel" ngModel [(ngModel)]="dataclasse.NbrEleves">
-  
+
             <label id="l">Designation</label>
             <input type="text" name="ChefDeClasse" #c="ngModel" ngModel [(ngModel)]="dataclasse.ChefDeClasse">
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 5e03e279db51fcf90d4f2a2e9e46d2b396234760
   
             
+>>>>>>> 895360ac72f2a85a0493c74520248e92c7296715
              <br><br>
-  
+
             <input type="submit" class="btn btn-secondary" value="Mettre a jour" id="btn">
             </form>
             <br>

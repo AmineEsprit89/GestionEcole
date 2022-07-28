@@ -1,18 +1,15 @@
-<table border="2" >
-    <thead>
-        <tr>
-            <th>Designation</th>
-            <th>nomEnseignant</th>
-            <th>EmailE</th>
-            <th>EmailP</th>
-            <th>noteCc</th>
-            <th>noteExam</th>
+<table style="text-align:center"  border="2" >
+  <thead style="text-align:center"  class="table" border="2">
+        <tr style="text-align:center" class="thead-dark">
+            <th style="text-align:center"  scope="col">Designation</th>
+            <th scope="col">nom de l'enseignant</th>
+            <th scope="col">Email Eleve </th>
+            <th scope="col">Email Professeur</th>
+            <th scope="col">note controle continue</th>
+            <th scope="col">note Exam </th>
             <div *ngIf="accountType=='Professeur'" >
-            <th>actions</th>
+            <th scope="col" width="10%" >actions</th>
           </div>
-           
-           
-            
         </tr>
     </thead>
     
@@ -48,7 +45,7 @@
 
             <div *ngIf="accountType=='Professeur'" >
 
-           <td>
+           <td width="10%">
                <button   class="btn-primary" data-toggle="modal" data-target="#exampleModal"
                 (click)="getdata(item.Designation,item.nomEnseignant,item.EmailE,item.EmailP,item.noteCc,
                 item.noteExam,item._id)"> update note</button> 
@@ -66,13 +63,19 @@
         
     </tbody>
 </table> 
+
 <div *ngIf="accountType=='Professeur'" >
 <h3><button><a routerLink="/createN">Ajouter notes</a></button></h3>
 </div>
 
-<div *ngIf="accountType=='Eleve'" >
-<div style="text-align:right">
-  <button  (click)="pdfdownload()" >
+
+ <div *ngIf="accountType=='Eleve'">
+  <br>
+  <br><br><br><br><br><br><br><br><br><br><br><br>
+<div style="text-align:center" width="10%">
+  
+  <button   (click)="pdfdownload()" >
+  
   Telecharger pdf </button>
   <h3>{{msg}}</h3>
 </div>
@@ -92,6 +95,7 @@
           </button>
         </div>
         <div class="modal-body">
+<<<<<<< HEAD
             <h1 >modifier note</h1>
             <form class="A1" #y="ngForm" (ngSubmit)=" updatenotenofrmations(y)">
             <label>Designation</label>
@@ -106,6 +110,22 @@
             <input type="text" name="noteCc" #d="ngModel" ngModel [(ngModel)]="datanote.noteCc">
             <label>noteExam</label>
             <input type="text" name="noteExam" #p="ngModel" ngModel [(ngModel)]="datanote.noteExam">
+=======
+            <h1>modifier note</h1>
+            <form #y="ngForm" (ngSubmit)=" updatenotenofrmations(y)">
+            <label>Designation</label><br>
+            <input type="text" name="Designation" #i="ngModel" ngModel [(ngModel)]="datanote.Designation" ><br>
+            <label>nom de l'enseignant</label><br>
+            <input type="text" name="nomEnseignant" #t="ngModel" ngModel [(ngModel)]="datanote.nomEnseignant" ><br>
+            <label>EmailE</label><br>
+            <input type="text" name="EmailE" #d="ngModel" ngModel [(ngModel)]="datanote.EmailE"><br>
+            <label>EmailP</label><br>
+            <input type="text" name="EmailP" #p="ngModel" ngModel [(ngModel)]="datanote.EmailP"><br>
+            <label>note controle continue</label><br>
+            <input type="text" name="noteCc" #d="ngModel" ngModel [(ngModel)]="datanote.noteCc" ><br>
+            <label>note Exam</label><br>
+            <input type="text" name="noteExam" #p="ngModel" ngModel [(ngModel)]="datanote.noteExam"><br>
+>>>>>>> ea34bf1f0a8a3227c8b08236c2a78c841965fd1f
            
            <!--<input type="text" name="imageUrl" #p="ngModel" ngModel [(ngModel)]="datanote.imageUrl">-->
            

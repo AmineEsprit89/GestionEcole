@@ -1,9 +1,15 @@
 <table border="2" >
     <thead>
         <tr>
+<<<<<<< HEAD
             <th>Nom parent</th>
             <th>Email eleve</th>
             <th>Email prof</th>
+=======
+            <th>Nom Parent</th>
+            <th>Email Eleve</th>
+            <th>Email Parent</th>
+>>>>>>> ea34bf1f0a8a3227c8b08236c2a78c841965fd1f
             <th>Date_rendez vous </th>
             <th>heure_rendez vous </th>
             <th>cause</th>
@@ -76,7 +82,7 @@
 <div style="text-align: center">
 
 <button (click)="exeldownload()">
-  download 
+  TÉLÉCHARGER 
 </button>
 <h5>{{msg}} </h5>
 </div>
@@ -91,20 +97,20 @@
     <div class="modal-dialog"  role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <h5 class="modal-title" id="exampleModalLabel"></h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
-            <h1>modifier rdv</h1>
+            <h1>modifier rend vouz</h1>
             <form #y="ngForm" (ngSubmit)=" updaterdv(y)">
             <label>Name parent</label>
             <input type="text" name="Namep" #i="ngModel"  ngModel [(ngModel)]="datardv.Namep" > <br>
-            <label>EmailE</label>
+            <label>Email Eleve</label>
             <input type="text" name="EmailE" #t="ngModel" ngModel [(ngModel)]="datardv.EmailE"> <br>
 
-            <label>EmailP</label>
+            <label>Email Parent</label>
             <input type="text" name="EmailP" #t="ngModel" ngModel [(ngModel)]="datardv.EmailP"> <br>
 
             <label>Date_rendez vous </label>
