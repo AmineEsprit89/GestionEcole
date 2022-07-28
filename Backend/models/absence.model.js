@@ -1,9 +1,9 @@
 const mongoose = require("mongoose");
 
 const absenceSchema = new mongoose.Schema({
-    Classe:String,
-    NameE: String,
-    Namep: String,
+    Classe:{type:String, required: true },
+    NameE:{type:String, required: true },
+    Namep: {type:String, required: true },
     EmailE:String,
     EmailP:String,
     Date_abs:Date,

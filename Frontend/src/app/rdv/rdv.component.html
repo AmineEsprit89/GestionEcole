@@ -1,9 +1,9 @@
 <table border="2" >
     <thead>
         <tr>
-            <th>Namep</th>
-            <th>EmailE</th>
-            <th>EmailP</th>
+            <th>Nom parent</th>
+            <th>Email eleve</th>
+            <th>Email prof</th>
             <th>Date_rendez vous </th>
             <th>heure_rendez vous </th>
             <th>cause</th>
@@ -54,9 +54,9 @@
   
                 <button   class="btn-primary" data-toggle="modal" data-target="#exampleModal"
                 (click)="getdata(item.Namep,item.EmailE,item.EmailP,item.Date_r,
-                item.heure_r,item.cause,item._id)"> update rdv</button>
+                item.heure_r,item.cause,item._id)"> update rend vouz</button>
                 
-                <button  (click)=" delete(item._id,i)">supprimer rdv</button>
+                <button  (click)=" delete(item._id,i)">supprimer rend vouz</button>
             </td>
           </div>
           

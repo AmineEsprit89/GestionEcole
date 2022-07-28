@@ -5,3 +5,47 @@
   :host(.active) {
     font-weight: bold;
   }
+
+  .A1{
+    margin: auto;
+   
+    border-color: blue;
+    width: 50%;
+  }
+  .modal-header{background-color: orange;
+  
+  }
+  .modal-footer{background-color: white;
+  
+  }
+  .modal-body{background-color: orange;
+  }
+  .modal-title{
+    color: blue;
+  }
+  #h1{color:blue}
+  #l{color:blue}
+  .btn-secondary{background-color:orange;
+  color: white}
+  #btn{border-color: aliceblue;
+    background-color: blue;}
+  #a{position: center;
+    margin: auto;
+   
+    border-color: white;
+    width: 20%;}
+  .btn-outline-secondary{color : orange;
+    background-color: white;
+  }
+  
+  .btn-outline-light {
+    background-color: blue;
+  }
+  
+  .btn-primary{
+    position:center;
+  }
+  
+  
+  
+  

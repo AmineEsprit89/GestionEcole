@@ -3,10 +3,10 @@
     <thead>
         <tr>
           <th>Classe</th>
-            <th>NameE</th>
-            <th>Namep</th>
-            <th>EmailE</th>
-            <th>EmailP</th>
+            <th>Nom eleve</th>
+            <th>Name parent</th>
+            <th>Email eleve</th>
+            
             <th>Date_abs</th>
             <th>heuresc</th>
             <th>matiere</th>
@@ -30,7 +30,7 @@
             <td  *ngIf="email==item.EmailE"> {{item.NameE}} </td> 
             <td  *ngIf="email==item.EmailE">{{item.Namep}}  </td>
             <td  *ngIf="email==item.EmailE">{{item.EmailE}} </td>
-            <td  *ngIf="email==item.EmailE">{{item.EmailP}} </td>
+            
             <td  *ngIf="email==item.EmailE">{{item.Date_abs.substring(0,10)}}</td>
             <td  *ngIf="email==item.EmailE">{{item.heuresc}}</td>
             <td  *ngIf="email==item.EmailE">{{item.matiere}}</td>
@@ -40,7 +40,7 @@
             <td *ngIf="accountType=='Professeur'||accountType=='Admin'"> {{item.NameE}} </td>
             <td *ngIf="accountType=='Professeur'||accountType=='Admin'"> {{item.Namep}} </td>
             <td *ngIf="accountType=='Professeur'||accountType=='Admin'"> {{item.EmailE}} </td>
-            <td *ngIf="accountType=='Professeur'||accountType=='Admin'"> {{item.EmailP}} </td>
+           
             <td *ngIf="accountType=='Professeur'||accountType=='Admin'"> {{item.Date_abs.substring(0,10)}} </td>
             <td *ngIf="accountType=='Professeur'||accountType=='Admin'"> {{item.heuresc}} </td>
             <td *ngIf="accountType=='Professeur'||accountType=='Admin'"> {{item.matiere}} </td>
@@ -53,9 +53,9 @@
             <td>
                <button   class="btn-primary" data-toggle="modal" data-target="#exampleModal"
                 (click)="getdata(item.Classe,item.NameE,item.Namep,item.EmailE,item.EmailP,
-                item.Date_abs,item.heuresc,item.matiere,item._id)"> update abs</button>
+                item.Date_abs,item.heuresc,item.matiere,item._id)"> update absence</button>
                 
-                <button  (click)=" delete(item._id,i)">supprimer abs</button> 
+                <button  (click)=" delete(item._id,i)">supprimer absence</button> 
             
             </td>
           </div>
@@ -67,7 +67,7 @@
     </tbody>
 </table> 
 <div *ngIf="accountType=='Professeur'" >
-<h3><button><a routerLink="/createabs">Ajouter abs</a></button></h3></div>
+<h3><button><a routerLink="/createabs">Ajouter absences</a></button></h3></div>
 
 
 
@@ -94,7 +94,7 @@
           </button>
         </div>
         <div class="modal-body">
-            <h1>modifier rdv</h1>
+            <h1>modifier absence</h1>
             <form #y="ngForm"  (ngSubmit)=" updateabs(y)">
               <label>Classe</label>
 <select name="Classe" id="pet-select"  #i="ngModel" ngModel> >
@@ -107,13 +107,13 @@
     <option value="1cinfo9">1cinfo2</option>
     
 </select> <br>
-            <label>NameE</label>
+            <label>Nom eleve</label>
             <input type="text" name="NameE" #i="ngModel"  ngModel [(ngModel)]="dataabs.NameE" > <br>
-            <label>Namep</label>
+            <label>Nom parent</label>
             <input type="text" name="Namep" #t="ngModel" ngModel [(ngModel)]="dataabs.Namep"> <br>
-            <label>EmailE</label>
+            <label>Email Eleve</label>
             <input type="text" name="EmailE" #d="ngModel" ngModel [(ngModel)]="dataabs.EmailE"><br>
-            <label>EmailP</label>
+            <label>Email Parent</label>
             <input type="text" name="EmailP" #d="ngModel" ngModel [(ngModel)]="dataabs.EmailP"><br>
             <label>Date_abs</label>
             <input type="text" name="Date_abs" #p="ngModel" ngModel [(ngModel)]="dataabs.Date_abs"><br>
@@ -130,7 +130,7 @@
             
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">fermer</button>
           
         </div>
       </div>
