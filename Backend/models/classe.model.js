@@ -8,9 +8,8 @@ const classeSchema= mongoose.Schema(
         },
         
         NbrEleves: Number,
-        emailP: String, // email prof => chef de classe
-        email: String, // email eleve => liste eleve
-        NivCls: String
+        ChefDeClasse: String, // designation
+        ListEleves: String // 
     },
 );
 

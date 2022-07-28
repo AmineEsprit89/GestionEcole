@@ -6,10 +6,17 @@ module.exports = {
         res.render("createC");
     },
     createCour: async (req, res) => {
-        const cour = new Cour(req.body);
-
+        const cour = new Cour({
+            Designation:req.body.Designation,
+            nomcour:req.body.nomcour,
+            nomEnseignant:req.body.nomEnseignant,
+            chapitre:req.body.chapitre,
+            EmailE:req.body.EmailE,
+            EmailP:req.body.EmailP,
+           
+        });
         if(req.file){
-            cour.imageUrl= req.file.filename;
+            cour.imageUrl= req.file.path;
         }
 
         await cour.save();

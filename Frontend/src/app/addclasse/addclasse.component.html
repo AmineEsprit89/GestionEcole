@@ -1,5 +1,9 @@
 <h1>Ajouter Classe</h1>
 <form #y="ngForm">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 1f743d9a27f57972bce2711d3042dbdc87a2cd49
 
 <div>
     <label>Niveau</label>
@@ -12,18 +16,39 @@
  </div>  
     <br>
     <label>Classe</label>
-    <input type="text" name="ClsID" #i="ngModel" ngModel>
+    <input type="text" name="ClsID" #i="ngModel" ngModel placeholder="Exp: 7B1">
     <br>
     <label>Nombre d'élèves</label>
-    <input type="text" name="NbrEleves" #t="ngModel" ngModel>
+    <input type="number" name="NbrEleves" #t="ngModel" ngModel>
     <br>
-    <label>Designation</label>
+    <label>Responsable de Classe</label>
     <input type="text" name="ChefDeClasse" #d="ngModel" ngModel> <!--designation -->
     <br>
     <br>
+
+
     
    
 
     
     <input type="submit" value="Ajouter Classe" (click)="ajouterclasse(y.value)">
+<<<<<<< HEAD
 </form>
+=======
+</form>
+=======
+<label>Classe</label>
+<input type="text" name="ClsID" #i="ngModel" ngModel>
+<label>Nombre d'élèves</label>
+<input type="text" name="NbrEleves" #t="ngModel" ngModel>
+<label>Designation</label>
+<input type="text" name="ChefDeClasse" #d="ngModel" ngModel> <!--designation -->
+
+
+
+<input type="submit" value="Ajouter Classe" (click)="ajouterclasse(y.value)">
+
+</form>
+
+>>>>>>> 5e03e279db51fcf90d4f2a2e9e46d2b396234760
+>>>>>>> 1f743d9a27f57972bce2711d3042dbdc87a2cd49

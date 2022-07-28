@@ -1,1 +1,1 @@
-GET  http://localhost:3000/pdfuser
+POST http://localhost:3000/eleve/listeAppel

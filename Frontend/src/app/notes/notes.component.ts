@@ -1,3 +1,5 @@
+import { NgIf } from '@angular/common';
+import { isNgTemplate } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
@@ -13,7 +15,8 @@ export class NotesComponent implements OnInit {
   dataArray!:any;
   accountType!:any;
   email:any
-  
+  total:any
+  totalamount: any
   constructor(private cs:NotesService,private us : AuthService,private ar:ActivatedRoute,private route:Router) { 
 
     this.cs.getallnotes().subscribe((d)=>{this.dataArray=d;})
@@ -22,6 +25,9 @@ export class NotesComponent implements OnInit {
   }
 
  
+    
+   
+  
     ngOnInit(): void {
       
       
@@ -74,11 +80,11 @@ export class NotesComponent implements OnInit {
   pdfdownload(){
 
 this.cs.pdf().subscribe((d)=>{this.dataArray=d;});
+
 this.msg='pdf telecharge ';
     return this.msg;
   }
  
 
-  
 }
 

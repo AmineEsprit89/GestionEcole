@@ -13,6 +13,8 @@ export class EventsComponent implements OnInit {
   dataArray:any
   email:any
   userId:any
+  Image:any
+  imgFile:any
   constructor(private es:EventsService,private us : AuthService,private ar:ActivatedRoute,private route:Router) { 
 
     this.es.getallevents().subscribe((e)=>{this.dataArray=e;})
@@ -90,4 +92,18 @@ export class EventsComponent implements OnInit {
     // console.log(this.email)
     // console.log(this.userId)
   }
+  selectImage(event: any) {
+    const reader = new FileReader();
+
+    if (event.target.files.length > 0) {
+      const file = event.target.files[0];
+      this.Image = file;
+
+      reader.readAsDataURL(file);
+
+      reader.onload = () => {
+        this.imgFile = reader.result as string;
+      };
+    }
+}
 }

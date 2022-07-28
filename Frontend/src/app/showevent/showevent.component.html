@@ -1,4 +1,4 @@
-<table border="2" >
+<!-- <table border="2" >
     <thead>
         <tr>
             <th>Name</th>
@@ -34,18 +34,46 @@
             <td>{{data.Lieu}}</td>
             <td>{{data.Nbr_place}}</td>
             <td>{{data.Nom_Club}}</td>
-            <td> <img src="http://localhost:3000/images/'{{data.Image}}'"></td> 
+            <td> <img src="http://localhost:3000/images/{{data.Image}}" width="100" height="100"></td> 
             
             
-        </tr>
-
-      
-            
-          
-          
-      
-
-        
+        </tr>  
         
     </tbody>
 </table>
+<h2><button  [routerLink]="['/evenements']" class="btn btn-primary" href="">Retour</button></h2> -->
+
+
+<h1>Détails de l'évenement</h1>
+<img  src="http://localhost:3000/images/{{data.Image}}" 
+    class="img-fluid" alt="Responsive image" width="200" height="200">
+
+
+<br>
+
+    
+    
+
+         <a> 
+        
+             Nom de l'évenement :{{data.Name}} <br>
+             Type  : {{data.Type}}<br>
+             Free : {{data.Free}} <br>
+             Price : {{data.Price}}<br>
+             Date_event : {{data.Date_event.substring(0,10)}}<br>
+             Date_fin_event : {{data.Date_fin_event.substring(0,10)}}<br>
+             Heure_debut : {{data.Heure_debut}} <br>
+             Lieu : {{data.Lieu}}<br>
+             Nbr_place : {{data.Nbr_place}}<br>
+             Nom_Club : {{data.Nom_Club}}<br>
+        </a>
+           
+            <!-- <td> <img src="http://localhost:3000/images/{{data.Logo}}" width="200" height="100"></td>  -->
+            
+            
+      
+<h2><button  [routerLink]="['/evenements']" class="btn btn-primary" href="">Retour</button></h2>
+
+
+
+

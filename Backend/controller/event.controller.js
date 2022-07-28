@@ -20,24 +20,24 @@ module.exports = {
             Lieu:req.body.Lieu,
             Nbr_place:req.body.Nbr_place,
             Nom_Club:req.body.Nom_Club,
-            Image:req.body.Image
+            
 
 
         });
 
-        // if(req.file){
-        //     event.Image = req.file.filename;
-        // }
+        if(req.file){
+            event.Image = req.file.filename;
+         }
 
         await event.save();
         res.json({ message: "evenement crée" });
         //res.redirect("/events");
 
-        //for( int i = 0 ; i<user.length ; i++){
+        //*for( int i = 0 ; i<user.length ; i++){
            // user[i].email
         sendEventEmail("rabii.benkhlifa@esprit.tn",event.Name,event.Type,event.Price,event.Free,
                           event.Date_event,event.Heure_debut,event.Date_fin_event,event.Lieu,
-                          event.Nbr_place,event.Nom_Club,event.Image)
+                          event.Nbr_place,event.Nom_Club)
                           
     //}
     },

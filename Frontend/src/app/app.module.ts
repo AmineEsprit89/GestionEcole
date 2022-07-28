@@ -38,6 +38,8 @@ import { AddclasseComponent } from './addclasse/addclasse.component';
 import { AddabsComponent } from './addabs/addabs.component';
 import { AddrdvComponent } from './addrdv/addrdv.component';
 import { LoginComponent } from './login/login.component';
+import { ShowclubComponent } from './showclub/showclub.component';
+
 
 
 
@@ -77,18 +79,20 @@ import { LoginComponent } from './login/login.component';
     AddabsComponent,
     AddrdvComponent,
     LoginComponent,
+    ShowclubComponent,
 
-    
-    
-   
-  
+
+
+
+
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule
-    
+
   ],
   providers: [],
   bootstrap: [AppComponent]

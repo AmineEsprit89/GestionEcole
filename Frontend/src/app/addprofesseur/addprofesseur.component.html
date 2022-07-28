@@ -1,37 +1,48 @@
 <h1>Ajouter Professeur</h1>
 <form #y="ngForm">
-<label>Email   </label>
-<input type="email" name="email" #i="ngModel" ngModel placeholder="mail@serveur.com">
-<br>
+<label>Email</label>
+<input type="text" name="email" #i="ngModel" ngModel>
 <label>Password</label>
 <input type="text" name="password" #t="ngModel" ngModel>
-<br>
 <label>Account Type</label>
+<<<<<<< HEAD
 <select name="accountType" #d="ngModel" ngModel>
     <option value="">--Selectionnez le rôle--</option>
     <option value="Admin">Admin</option>
-    <option value="Eleve">Eleve</option>
     <option value="Professeur">Professeur</option> 
 </select><!--default ¨Professeur -->
 <br>
 <label>Nom   </label>
+=======
+<input type="text" name="accountType" #d="ngModel" ngModel> <!--default ¨Professeur -->
+<label>Nom</label>
+>>>>>>> 5e03e279db51fcf90d4f2a2e9e46d2b396234760
 <input type="text" name="nom" #p="ngModel" ngModel>
-<br>
-<label>Prenom   </label>
+<label>Prenom</label>
 <input type="text" name="prenom" #s="ngModel" ngModel>
+<<<<<<< HEAD
 <br>
 <label>Date De Naissance   </label>
 <input  type="date" id="start" name="trip-start"value="2018-07-22" name="dateDeNaissance" #p="ngModel" ngModel> 
 <br>
-<label>Sexe   </label>
-<input type="text" name="isActive" #a="ngModel" ngModel placeholder="M or F">
+<label>Sexe</label>
+<select name="Sexe" #d="ngModel" ngModel>
+<option value="">--Selectionnez le sexe--</option>
+<option value="M">Masculin</option>
+<option value="F">Féminin</option> 
+</select>
 <br>
 <label>Adresse   </label>
+=======
+<label>Date De Naissance</label>
+<input type="text" name="dateDeNaissance" #e="ngModel" ngModel>
+<label>Sexe</label>
+<input type="text" name="isActive" #a="ngModel" ngModel>
+<label>Adresse</label>
+>>>>>>> 5e03e279db51fcf90d4f2a2e9e46d2b396234760
 <input type="text" name="adresse" #x="ngModel" ngModel>
-<br>
-<label>Specialité   </label>
+<label>Specialité</label>
 <input type="text" name="specialite" #b="ngModel" ngModel>
-<br>
 
 
 <input type="submit" value="Ajouter Professeur" (click)="ajouteruser(y.value)">
