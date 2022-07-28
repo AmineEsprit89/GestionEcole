@@ -9,9 +9,9 @@
 <label>Account Type</label>
 <select name="accountType" #d="ngModel" ngModel>
     <option value="">--Selectionnez le rôle--</option>
-    <option value="Admin">Admin</option>
+    
     <option value="Eleve">Eleve</option>
-    <option value="Professeur">Professeur</option> 
+    
 </select>
 <br>
 <label>Nom</label>
@@ -24,7 +24,11 @@
 <input  type="date" id="start" name="trip-start"value="2018-07-22" name="dateDeNaissance" #p="ngModel" ngModel> <!--<input  type="date" id="start" name="trip-start"value="2018-07-22" name="Date_abs" #p="ngModel" ngModel> <br>-->
 <br>
 <label>Sexe</label>
-<input type="text" name="isActive" #a="ngModel" ngModel placeholder="M ou F">
+            <select name="Sexe" #d="ngModel" ngModel>
+            <option value="">--Selectionnez le sexe--</option>
+            <option value="M">Masculin</option>
+            <option value="F">Féminin</option> 
+            </select>
 <br>
 <label>Adresse</label>
 <input type="text" name="adresse" #x="ngModel" ngModel>

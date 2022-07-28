@@ -4,7 +4,7 @@
             <th>Niveau</th>
             <th>Classe</th>
             <th>Nombre Max d'élèves</th>
-            <th>Professeur </th>
+            <th>Professeur Responsable </th>
             
         </tr>
     </thead>
@@ -21,7 +21,7 @@
             <td>
   
                 <button   class="btn-primary" data-toggle="modal" data-target="#exampleModal"
-                (click)="getdata(cl.NivCls,cl.ClsID,cl.NbrEleves,cl.emailP,cl.email,cl._id)"> Update Classe</button>
+                (click)="getdata(cl.NivCls,cl.ClsID,cl.NbrEleves,cl.emailP,cl.email,cl._id)"> Modifier Classe</button>
   
                 <button  (click)=" deleteClasse(cl._id,i)">Supprimer Classe</button>
   
@@ -58,9 +58,9 @@
             <input type="text" name="ClsID" #a="ngModel" ngModel [(ngModel)]="dataclasse.ClsID" >
   <br>
             <label id="l">Nombre Max d'élèves</label>
-            <input type="text" name="NbrEleves" #b="ngModel" ngModel [(ngModel)]="dataclasse.NbrEleves">
+            <input type="number" name="NbrEleves" #b="ngModel" ngModel [(ngModel)]="dataclasse.NbrEleves">
   <br>
-            <label id="l">Professeur</label>
+            <label id="l">Professeur Responsable</label>
             <input type="text" name="emailP" #c="ngModel" ngModel [(ngModel)]="dataclasse.emailP">
   
             
