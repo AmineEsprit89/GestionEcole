@@ -25,7 +25,7 @@ const upload = multer({storage})
 
 
 router.get("/create", showCreateFormE)
-router.post("/create", upload.single('Image') , createEvent)
+router.post("/create", upload.single('file') , createEvent)
 
 router.get("/", showEvents)
 router.get("/update/:id" , showUpdateEvent )

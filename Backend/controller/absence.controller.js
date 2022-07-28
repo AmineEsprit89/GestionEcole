@@ -12,7 +12,8 @@ module.exports = {
         if(req.file){
             absence.NameE = req.file.filename;
             absence.Namep = req.file.filename;
-            absence.Emailp = req.file.filename;
+            absence.EmailE = req.file.filename;
+            absence.EmailP = req.file.filename;
             absence.Date_abs = req.file.filename;
             absence.heuresc = req.file.filename;
             absence.matiere = req.file.filename;
@@ -42,7 +43,8 @@ module.exports = {
         console.log(req.body)
         absence.NameE = req.body.NameE;
         absence.Namep = req.body.Namep;
-        absence.Emailp = req.body.Emailp;
+        absence.EmailE = req.body.EmailE;
+        absence.EmailP = req.body.EmailP;
         absence.Date_abs = req.body.Date_abs;
         absence.heuresc = req.body.heuresc;
         absence.matiere = req.body.matiere;

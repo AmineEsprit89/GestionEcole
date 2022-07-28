@@ -5,7 +5,8 @@
           <th>Classe</th>
             <th>NameE</th>
             <th>Namep</th>
-            <th>Emailp</th>
+            <th>EmailE</th>
+            <th>EmailP</th>
             <th>Date_abs</th>
             <th>heuresc</th>
             <th>matiere</th>
@@ -17,31 +18,41 @@
             
         </tr>
     </thead>
-    
-   
-    
+      
     <tbody>
-        <tr *ngFor="let item of dataArray  index as i" > 
-          <td> {{item.Classe}} </td>
+      
 
-            <td> {{item.NameE}} </td> 
+        <tr *ngFor="let item of dataArray  index as i"  > 
+
+          
+
+            <td  *ngIf="email==item.EmailE"> {{item.Classe}} </td>
+            <td  *ngIf="email==item.EmailE"> {{item.NameE}} </td> 
+            <td  *ngIf="email==item.EmailE">{{item.Namep}}  </td>
+            <td  *ngIf="email==item.EmailE">{{item.EmailE}} </td>
+            <td  *ngIf="email==item.EmailE">{{item.EmailP}} </td>
+            <td  *ngIf="email==item.EmailE">{{item.Date_abs.substring(0,10)}}</td>
+            <td  *ngIf="email==item.EmailE">{{item.heuresc}}</td>
+            <td  *ngIf="email==item.EmailE">{{item.matiere}}</td>
+
             
-            <td>{{item.Namep}}</td>
-            <td>{{item.Emailp}} </td>
-            <td>{{item.Date_abs}}</td>
-            <td>{{item.heuresc}}</td>
-            <td>{{item.matiere}}</td>
-
-
-
+            <td *ngIf="accountType=='Professeur'||accountType=='Admin'"> {{item.Classe}} </td>
+            <td *ngIf="accountType=='Professeur'||accountType=='Admin'"> {{item.NameE}} </td>
+            <td *ngIf="accountType=='Professeur'||accountType=='Admin'"> {{item.Namep}} </td>
+            <td *ngIf="accountType=='Professeur'||accountType=='Admin'"> {{item.EmailE}} </td>
+            <td *ngIf="accountType=='Professeur'||accountType=='Admin'"> {{item.EmailP}} </td>
+            <td *ngIf="accountType=='Professeur'||accountType=='Admin'"> {{item.Date_abs.substring(0,10)}} </td>
+            <td *ngIf="accountType=='Professeur'||accountType=='Admin'"> {{item.heuresc}} </td>
+            <td *ngIf="accountType=='Professeur'||accountType=='Admin'"> {{item.matiere}} </td>
+            
+            
+          
+          
+          
             <div *ngIf="accountType=='Professeur'" >
             <td>
-
-
-              
-  
                <button   class="btn-primary" data-toggle="modal" data-target="#exampleModal"
-                (click)="getdata(item.Classe,item.NameE,item.Namep,item.Emailp,
+                (click)="getdata(item.Classe,item.NameE,item.Namep,item.EmailE,item.EmailP,
                 item.Date_abs,item.heuresc,item.matiere,item._id)"> update abs</button>
                 
                 <button  (click)=" delete(item._id,i)">supprimer abs</button> 
@@ -49,13 +60,15 @@
             </td>
           </div>
             
-          
+        
           
         </tr>
+        
     </tbody>
 </table> 
 <div *ngIf="accountType=='Professeur'" >
 <h3><button><a routerLink="/createabs">Ajouter abs</a></button></h3></div>
+
 
 
 
@@ -98,8 +111,10 @@
             <input type="text" name="NameE" #i="ngModel"  ngModel [(ngModel)]="dataabs.NameE" > <br>
             <label>Namep</label>
             <input type="text" name="Namep" #t="ngModel" ngModel [(ngModel)]="dataabs.Namep"> <br>
-            <label>Emailp</label>
-            <input type="text" name="Emailp" #d="ngModel" ngModel [(ngModel)]="dataabs.Emailp"><br>
+            <label>EmailE</label>
+            <input type="text" name="EmailE" #d="ngModel" ngModel [(ngModel)]="dataabs.EmailE"><br>
+            <label>EmailP</label>
+            <input type="text" name="EmailP" #d="ngModel" ngModel [(ngModel)]="dataabs.EmailP"><br>
             <label>Date_abs</label>
             <input type="text" name="Date_abs" #p="ngModel" ngModel [(ngModel)]="dataabs.Date_abs"><br>
             <label>heuresc</label>

@@ -19,7 +19,7 @@ export class AddabsComponent implements OnInit {
    
     this.service.addabs(f).subscribe(
       
-      ()=>{this.route.navigate(['/absences'])}
+      ()=>{this.route.navigate(['/abscences'])}
 
     )
   }

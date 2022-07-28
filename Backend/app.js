@@ -36,7 +36,7 @@ var pdfrouter = require('./routes/pdfuser');
 var cors = require ('cors');
 var xlsxRouter = require('./routes/xlsx');
 var absxlsxRouter = require('./routes/absxlsx');
-
+//require('.env').config();
 
 
 var app = express();
@@ -50,6 +50,9 @@ app.set('view engine', 'twig');
 app.use(cors());
 app.use(logger('dev'));
 app.use(express.json());
+app.use('/upload',express.static(__dirname+'/upload'));
+app.use(express.static('public'))
+
 
 app.all('/*',(req,res,next)=>{
   res.header('Access-Control-Allow-Origin','*');
@@ -61,7 +64,13 @@ app.all('/*',(req,res,next)=>{
   
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+//app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static('public'))
+
+app.use('/public',express.static(__dirname+'/public'));
+
+
+//app.use(express.urlencoded({ extended: false }));
 
 //on consomme la route comme un middleware : celle qu'on a cree et importe en haut 
 //app.use('/', indexRouter);

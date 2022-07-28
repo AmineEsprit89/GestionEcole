@@ -17,7 +17,7 @@ export class AddrdvComponent implements OnInit {
    
     this.service.addrdv(f).subscribe(
       
-      ()=>{this.route.navigate(['/rdvs'])}
+      ()=>{this.route.navigate(['/rdv'])}
 
     )
   }

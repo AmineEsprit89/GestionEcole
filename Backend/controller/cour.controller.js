@@ -31,6 +31,8 @@ module.exports = {
         cour.Designation = req.body.Designation;
         cour.nomcour=req.body.nomcour ; 
         cour.nomEnseignant = req.body.nomEnseignant;
+        cour.EmailE=req.body.EmailE ; 
+        cour.EmailP = req.body.EmailP;
         cour.imageUrl= req.body.imageUrl;
         cour.chapitre= req.body.chapitre; 
 

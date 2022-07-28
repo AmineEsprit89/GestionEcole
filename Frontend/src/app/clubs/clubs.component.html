@@ -9,17 +9,10 @@
       <th scope="col">Duree</th>
       
       <th scope="col">Description</th>
+      <th scope="col">images</th>
 
-      <div *ngIf="accountType=='Admin'" >
-      <th scope="col">Actions</th>
-      <th scope="col">Actions</th>
-      <th scope="col">Actions</th>
-      </div>
       
-     
-    
-     
-            
+      <th *ngIf="accountType!='Professeur'" scope="col">Actions</th>       
     </tr>
     </thead>
     
@@ -34,21 +27,24 @@
             <td>{{item.Heure_debut}}</td>
             <td>{{item.Duree}}</td>
             <td>{{item.Description}}</td>
+            <td> <img src="http://localhost:3000/images/{{item.Logo}}" width="200" height="100"></td> 
 
 
 
 
-            <div *ngIf="accountType=='Admin'" >
-            <td>
+            <!-- <div *ngIf="accountType=='Admin'" > -->
+            <td *ngIf="accountType=='Admin'">
                 <button   class="btn  btn-primary" data-toggle="modal" data-target="#exampleModal"
                 (click)="getdata(item.Name,item.Type,item.Date_seance,
                 item.Heure_debut,item.Duree,item.Description,item._id)"> Update </button>
 
-                <button class="btn  btn-success" [routerLink]="['/show']" (click)=" (item._id)">show </button> 
+                <button class="btn   btn-success" [routerLink]="['/showC/'+item._id]" >show </button>  
                 
                 <button class="btn  btn-danger" (click)=" delete(item._id,i)">Delete</button>
             </td>
-            </div>
+          <td *ngIf="accountType=='Eleve'">
+            <button class="btn   btn-success" [routerLink]="['/showC/'+item._id]" >show </button>
+          </td>
             
           
           

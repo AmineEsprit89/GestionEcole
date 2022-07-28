@@ -25,7 +25,7 @@ const upload = multer({storage})
 
 
 router.get("/create", showCreateForm)
-router.post("/create", upload.single('Type') , createClub)
+router.post("/create", upload.single('file') , createClub)
 
 router.get("/", showClubs)
 router.get("/show/:id" , showOneClub )

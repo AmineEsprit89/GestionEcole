@@ -1,5 +1,7 @@
 import { isNgTemplate } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { AuthService } from '../services/auth.service';
 import { PaymentService } from '../services/payment.service';
 
 
@@ -10,6 +12,8 @@ import { PaymentService } from '../services/payment.service';
 })
 export class PayementsComponent implements OnInit {
   dataArray!:any
+  email:any
+  accountType:any
 
 
 
@@ -19,8 +23,13 @@ export class PayementsComponent implements OnInit {
   title = ''
   paymentHandler:any = null
 
-  constructor(private ps : PaymentService) {
+  constructor(private ps : PaymentService,private us : AuthService,private ar:ActivatedRoute,private route:Router) {
     this.ps.getallpayments().subscribe((d)=>{this.dataArray=d;})
+
+
+
+    this.accountType=us.getUserAccountType()
+    this.email=us.getUserEmail()
 
   }
 

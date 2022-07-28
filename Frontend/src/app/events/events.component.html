@@ -15,22 +15,23 @@
           <th scope="col">Lieu</th>
           <th scope="col">Nbr place</th>
           <th scope="col">Nom Club</th>
+          <th scope="col">Image</th>
 
 
-          <div *ngIf="accountType=='Admin'" >
+          <!-- <div *ngIf="accountType=='Admin'" > -->
 
-          <th scope="col">Actions</th>
-          <th scope="col">Actions</th>
-          <th scope="col">Actions</th>
-          <th>FB  </th>
+          <th *ngIf="accountType!='Professeur'" scope="col">Actions</th>
+         
           
-          </div>
+          
+          <!-- </div> -->
           
         </tr>
       </thead>
       
         <tbody>
           <tr *ngFor="let item of dataArray index as i">
+            
   
               <td> {{item.Name}} </td> 
               
@@ -43,34 +44,40 @@
               <td>{{item.Lieu}}</td>
               <td>{{item.Nbr_place}}</td>
               <td>{{item.Nom_Club}}</td>
+               <td> <img src="http://localhost:3000/images/{{item.Image}}" width="200" height="100"></td> 
+            
   
   
               
-              <div *ngIf="accountType=='Admin'" >
-                  <td>
-                 <button   class="btn btn-primary"  data-toggle="modal" data-target="#exampleModal"
+               <!-- <div *ngIf="accountType=='Admin'" > -->
+                  <td *ngIf="accountType=='Admin'" >
+                 <button   class="btn  btn-primary"  data-toggle="modal" data-target="#exampleModal"
                   (click)="getdataevent(item.Name,item.Type,item.Free,
                   item.Price,item.Date_event,item.Date_fin_event,item.Heure_debut,
                   item.Lieu,item.Nbr_place,item.Nom_Club,
                   item._id)"> Update</button>
                   
                   
-                  <button class="btn  btn-success" [routerLink]="['/show']" (click)=" (item._id)">show </button> 
-                 <!--<input type="submit" class="btn-primary" [routerLink]="['/show']" value="Show">-->
-               
-
-                  <button   class="btn  btn-danger" (click)=" delete(item._id,i)"> Delete </button>
+                  <button class="btn   btn-success" [routerLink]="['/show/'+item._id]" >show </button> 
                  
+
+               
+                 <button class="btn  btn-danger" (click)=" delete(item._id,i)">Delete</button>
               
                   
                  
                  <button class="facebook"  (click)=" facebook(item._id)">
                  <a class="btn btn-outline-light btn-square mr-2" ><i class="fab fa-facebook-f"></i></a>
-                  <!--<a href="#" class="fa fa-facebook"></a>-->
+
                   </button>
                 </td>
-                </div>
-                  
+
+                <!-- <div *ngIf="accountType=='Eleve'" ></div> -->
+                <td *ngIf="accountType=='Eleve'" >
+                  <button class="btn btn-success" [routerLink]="['/show/'+item._id]" >show </button>
+                </td>
+                
+                   
 
                
 
@@ -132,6 +139,8 @@
             <label id="l">Nom_Club</label>
             <input type="text" name="Nom_Club" #c="ngModel" ngModel [(ngModel)]="dataevent.Nom_Club" required><br><br>
 
+
+            
 
             <input type="submit" class="btn btn-secondary" value="Mettre a jour" id="btn">
             
