@@ -5,6 +5,7 @@
             <th>nomcour</th>
             <th>nomEnseignant</th>
             <th>chapitre</th>
+            <th>Image</th>
             <div *ngIf="accountType=='Professeur'" >
             <th>actions</th>
             </div>
@@ -22,6 +23,8 @@
             <td>{{item.nomcour}} </td>
             <td>{{item.nomEnseignant}}</td>
             <td>{{item.chapitre}}</td>
+            <td> <img src="http://localhost:3000/images/{{item.imageUrl}}" width="200" height="100"></td> 
+
            
 
 

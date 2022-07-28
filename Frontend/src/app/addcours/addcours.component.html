@@ -1,6 +1,6 @@
 
 <h1>Ajouter cours</h1>
-<form #y="ngForm">
+<form #y="ngForm" (ngSubmit)="ajoutercour(y)">
 <label>Designation</label>
 <input type="text" name="Designation" #i="ngModel" ngModel>
 <label>nomcour</label>
@@ -10,11 +10,13 @@
 <label>chapitre</label>
 <input type="text" name="chapitre" #p="ngModel" ngModel>
 
-<<<<<<< HEAD
-<input type="submit"  [routerLink]= "['/courses']" value="Ajouter" (click)="ajoutercour(y.value)">
-=======
-<input type="submit" value="Ajouter" (click)="ajoutercour(y.value)">
->>>>>>> 77475c8ad8846c6d5c99f11368050398f1f48ede
+
+<input type="file" id="basic-addon-name" class="form-control" placeholder="Image" 
+                    aria-label="Name" aria-describedby="basic-addon-name" required 
+                    name="imageUrl" #imageUrl="ngModel" ngModel (change)="selectImage($event)" />
+
+<input type="submit" value="Ajouter" >
+
 
 </form>
 
