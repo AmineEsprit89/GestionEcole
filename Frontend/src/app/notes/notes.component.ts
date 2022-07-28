@@ -22,6 +22,9 @@ export class NotesComponent implements OnInit {
   }
 
  
+    
+   
+  
     ngOnInit(): void {
       
       

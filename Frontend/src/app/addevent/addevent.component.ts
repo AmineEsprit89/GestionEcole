@@ -20,10 +20,7 @@ imgFile:any
    
     const formData = new FormData();
     formData.append('file', this.Image);
-<<<<<<< HEAD
     formData.append('Free', f.value.Free);
-=======
->>>>>>> 96911e4a6e6da26c6467c1c19bd1050405b6d844
     formData.append('Price', f.value.Price);
     formData.append('Name', f.value.Name);
     formData.append('Type', f.value.Type);

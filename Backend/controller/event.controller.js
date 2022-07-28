@@ -20,7 +20,6 @@ module.exports = {
             Lieu:req.body.Lieu,
             Nbr_place:req.body.Nbr_place,
             Nom_Club:req.body.Nom_Club,
-<<<<<<< HEAD
             
 
 
@@ -29,16 +28,6 @@ module.exports = {
         if(req.file){
             event.Image = req.file.filename;
          }
-=======
-            Image:req.body.Image
-
-
-        });
-
-        // if(req.file){
-        //     event.Image = req.file.filename;
-        // }
->>>>>>> 96911e4a6e6da26c6467c1c19bd1050405b6d844
 
         await event.save();
         res.json({ message: "evenement crée" });
