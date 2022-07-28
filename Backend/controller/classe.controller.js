@@ -48,11 +48,10 @@ module.exports = {
         updateClasse : async (req, res) => {
             const classe = await Classe.findById(req.params.id);
             console.log(req.body)
-            classe.NivCls = req.body.NivCls;
             classe.ClsID = req.body.ClsID;
             classe.NbrEleves = req.body.NbrEleves;
-            classe.emailP = req.body.emailP;
-            classe.email = req.body.email;
+            classe.ChefDeClasse = req.body.ChefDeClasse;
+            classe.ListEleves = req.body.ListEleves;
             await classe.save();
             console.log(classe);
             res.json({message: "Classe modifiée"});

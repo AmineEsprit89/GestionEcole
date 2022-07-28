@@ -173,7 +173,6 @@ module.exports = {
 findAllProfesseur: async (req, res) => {
   const eleves = await User.find({ accountType :  "Professeur" })
   res.json(eleves);
-
 }
 
 

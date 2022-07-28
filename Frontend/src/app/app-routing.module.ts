@@ -33,6 +33,7 @@ import { AddrdvComponent } from './addrdv/addrdv.component';
 import { AddabsComponent } from './addabs/addabs.component';
 import { LoginComponent } from './login/login.component';
 import { ShoweventComponent } from './showevent/showevent.component';
+import { ShowclubComponent } from './showclub/showclub.component';
 
 const routes: Routes = [
   {path: '', component: ContentComponent},
@@ -88,6 +89,9 @@ const routes: Routes = [
 
   //show event
   {path: 'show/:id', component:ShoweventComponent },
+
+  //show club
+  {path: 'showC/:id', component:ShowclubComponent },
 
 
 

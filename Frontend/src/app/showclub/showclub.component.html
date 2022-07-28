@@ -1,0 +1,29 @@
+<h1>Détails du club</h1>
+<img  src="http://localhost:3000/images/{{data.Logo}}" 
+    class="img-fluid" alt="Responsive image" width="200" height="200">
+
+
+<br>
+
+    
+    
+
+         <a> 
+            Nom du club : {{data.Name}}  <br>
+            
+            Type  :{{data.Type}}<br>
+            Date de la séance: {{data.Date_seance.substring(0,10)}} <br>
+            Heure : {{data.Heure_debut}}<br>
+            Durée : {{data.Duree}}<br>
+            Description : {{data.Description}}
+        </a>
+           
+            <!-- <td> <img src="http://localhost:3000/images/{{data.Logo}}" width="200" height="100"></td>  -->
+            
+            
+      
+<h2><button  [routerLink]="['/clubs']" class="btn btn-primary" href="">Retour</button></h2>
+
+
+
+

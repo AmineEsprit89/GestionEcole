@@ -1,7 +1,9 @@
+import { isNgTemplate } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
 import { PaymentService } from '../services/payment.service';
+
 
 @Component({
   selector: 'app-payements',
@@ -13,6 +15,9 @@ export class PayementsComponent implements OnInit {
   email:any
   accountType:any
 
+
+
+
   success : boolean =false;
   failure : boolean =false;
   title = ''
@@ -20,12 +25,18 @@ export class PayementsComponent implements OnInit {
 
   constructor(private ps : PaymentService,private us : AuthService,private ar:ActivatedRoute,private route:Router) {
     this.ps.getallpayments().subscribe((d)=>{this.dataArray=d;})
+
+
+
     this.accountType=us.getUserAccountType()
     this.email=us.getUserEmail()
+
   }
 
   ngOnInit(): void {
     this.invokeStripe()
+
+
   }
 
 
@@ -83,13 +94,6 @@ export class PayementsComponent implements OnInit {
       window.document.body.appendChild(script);
     }
   }
-
-
-
-
-
-
-
 
 
 

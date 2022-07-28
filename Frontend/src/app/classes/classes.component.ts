@@ -26,14 +26,12 @@ export class ClassesComponent implements OnInit {
   }
 
 
-  dataclasse={NivCls:'',ClsID:'', NbrEleves :'' , emailP:'', email:'',id:''}
-  getdata(NivCls: string,ClsID: string,NbrEleves: string, emailP: string,email: string,id:any){
+  dataclasse={ClsID:'', NbrEleves :'' ,ChefDeClasse:'',id:''}
+  getdata(ClsID: string,NbrEleves: string, ChefDeClasse: string,id:any){
 
-    this.dataclasse.NivCls=NivCls;
     this.dataclasse.ClsID=ClsID;
     this.dataclasse.NbrEleves=NbrEleves;
-    this.dataclasse.emailP=emailP;
-    this.dataclasse.email=email;
+    this.dataclasse.ChefDeClasse=ChefDeClasse;
   
     this.dataclasse.id=id;
     console.log("ok");
@@ -46,9 +44,7 @@ export class ClassesComponent implements OnInit {
       let indexId = this.dataArray.findIndex((obj:any)=>obj._id==this.dataclasse.id)
       this.dataArray[indexId].ClsID = data.ClsID
       this.dataArray[indexId].NbrEleves = data.NbrEleves
-      this.dataArray[indexId].emailP = data.emailP
-      this.dataArray[indexId].email = data.email
-
+      this.dataArray[indexId].ChefDeClasse = data.ChefDeClasse
 
     })
 
