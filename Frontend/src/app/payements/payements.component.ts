@@ -1,5 +1,7 @@
+import { isNgTemplate } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { PaymentService } from '../services/payment.service';
+
 
 @Component({
   selector: 'app-payements',
@@ -9,6 +11,9 @@ import { PaymentService } from '../services/payment.service';
 export class PayementsComponent implements OnInit {
   dataArray!:any
 
+
+
+
   success : boolean =false;
   failure : boolean =false;
   title = ''
@@ -16,10 +21,13 @@ export class PayementsComponent implements OnInit {
 
   constructor(private ps : PaymentService) {
     this.ps.getallpayments().subscribe((d)=>{this.dataArray=d;})
+
   }
 
   ngOnInit(): void {
     this.invokeStripe()
+
+
   }
 
 
@@ -77,13 +85,6 @@ export class PayementsComponent implements OnInit {
       window.document.body.appendChild(script);
     }
   }
-
-
-
-
-
-
-
 
 
 

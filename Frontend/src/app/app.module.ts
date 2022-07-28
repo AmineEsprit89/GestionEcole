@@ -42,6 +42,7 @@ import { LoginComponent } from './login/login.component';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -78,17 +79,18 @@ import { LoginComponent } from './login/login.component';
     AddrdvComponent,
     LoginComponent,
 
-    
-    
-   
-  
+
+
+
+
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule
-    
+
   ],
   providers: [],
   bootstrap: [AppComponent]

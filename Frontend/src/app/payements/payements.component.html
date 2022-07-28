@@ -1,3 +1,6 @@
+
+
+
 <table border="2" >
   <thead>
       <tr>
@@ -8,9 +11,9 @@
   </thead>
 
   <tbody>
-      <tr *ngFor="let e of dataArray  index as i" >
+      <tr *ngFor="let e of dataArray index as i" >
 
-          <td>{{e.email}} </td>
+          <td>{{e.email }} </td>
           <td>{{e.montantPaye}} </td>
           <td>{{e.createdAt.substring(0,10)}} </td>
 
@@ -21,14 +24,6 @@
 <button (click)="makePayment(6200)">Pay With Stripe</button>
 
 
-<div *ngIf="success">
-  <h1>Your Payment is complete successfully</h1>
-</div>
-
-
-<div *ngIf="failure">
-  <h1>Your Payment is complete successfully</h1>
-</div>
 
 
 
