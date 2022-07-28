@@ -33,7 +33,10 @@ import { AddrdvComponent } from './addrdv/addrdv.component';
 import { AddabsComponent } from './addabs/addabs.component';
 import { LoginComponent } from './login/login.component';
 import { ShoweventComponent } from './showevent/showevent.component';
+<<<<<<< HEAD
 import { ShowclubComponent } from './showclub/showclub.component';
+=======
+>>>>>>> 96911e4a6e6da26c6467c1c19bd1050405b6d844
 
 const routes: Routes = [
   {path: '', component: ContentComponent},
@@ -90,9 +93,12 @@ const routes: Routes = [
   //show event
   {path: 'show/:id', component:ShoweventComponent },
 
+<<<<<<< HEAD
   //show club
   {path: 'showC/:id', component:ShowclubComponent },
 
+=======
+>>>>>>> 96911e4a6e6da26c6467c1c19bd1050405b6d844
 
 
 

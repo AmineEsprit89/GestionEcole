@@ -13,8 +13,11 @@ export class EventsComponent implements OnInit {
   dataArray:any
   email:any
   userId:any
+<<<<<<< HEAD
   Image:any
   imgFile:any
+=======
+>>>>>>> 96911e4a6e6da26c6467c1c19bd1050405b6d844
   constructor(private es:EventsService,private us : AuthService,private ar:ActivatedRoute,private route:Router) { 
 
     this.es.getallevents().subscribe((e)=>{this.dataArray=e;})

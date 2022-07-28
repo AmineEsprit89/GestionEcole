@@ -21,6 +21,7 @@
       
     <tbody>
       
+<<<<<<< HEAD
 
         <tr *ngFor="let item of dataArray  index as i"  > 
 
@@ -45,6 +46,30 @@
             <td *ngIf="accountType=='Professeur'||accountType=='Admin'"> {{item.heuresc}} </td>
             <td *ngIf="accountType=='Professeur'||accountType=='Admin'"> {{item.matiere}} </td>
             
+=======
+
+        <tr *ngFor="let item of dataArray  index as i"  > 
+
+          
+
+            <td  *ngIf="email==item.EmailE"> {{item.Classe}} </td>
+            <td  *ngIf="email==item.EmailE"> {{item.NameE}} </td> 
+            <td  *ngIf="email==item.EmailE">{{item.Namep}}  </td>
+            <td  *ngIf="email==item.EmailE">{{item.EmailE}} </td>
+            <td  *ngIf="email==item.EmailE">{{item.EmailP}} </td>
+            <td  *ngIf="email==item.EmailE">{{item.Date_abs.substring(0,10)}}</td>
+            <td  *ngIf="email==item.EmailE">{{item.heuresc}}</td>
+            <td  *ngIf="email==item.EmailE">{{item.matiere}}</td>
+            <td *ngIf="accountType=='Professeur'||accountType=='Admin'"> {{item.Classe}} </td>
+            <td *ngIf="accountType=='Professeur'||accountType=='Admin'"> {{item.NameE}} </td>
+            <td *ngIf="accountType=='Professeur'||accountType=='Admin'"> {{item.Namep}} </td>
+            <td *ngIf="accountType=='Professeur'||accountType=='Admin'"> {{item.EmailE}} </td>
+            <td *ngIf="accountType=='Professeur'||accountType=='Admin'"> {{item.EmailP}} </td>
+            <td *ngIf="accountType=='Professeur'||accountType=='Admin'"> {{item.Date_abs.substring(0,10)}} </td>
+            <td *ngIf="accountType=='Professeur'||accountType=='Admin'"> {{item.heuresc}} </td>
+            <td *ngIf="accountType=='Professeur'||accountType=='Admin'"> {{item.matiere}} </td>
+            
+>>>>>>> 96911e4a6e6da26c6467c1c19bd1050405b6d844
             
           
           

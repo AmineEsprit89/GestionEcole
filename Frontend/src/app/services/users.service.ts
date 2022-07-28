@@ -39,6 +39,10 @@ export class UsersService {
     getallprofesseurs(){
       return this.http.get('http://localhost:3000/users/professeur')}
 
+      pdfuser(){
+        return this.http.get('http://localhost:3000/pdfuser')
+      }
+
 
 
 

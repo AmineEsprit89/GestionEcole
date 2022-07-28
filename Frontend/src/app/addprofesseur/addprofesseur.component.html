@@ -1,23 +1,37 @@
 <h1>Ajouter Professeur</h1>
 <form #y="ngForm">
-<label>Email</label>
-<input type="text" name="email" #i="ngModel" ngModel>
+<label>Email   </label>
+<input type="email" name="email" #i="ngModel" ngModel placeholder="mail@serveur.com">
+<br>
 <label>Password</label>
 <input type="text" name="password" #t="ngModel" ngModel>
+<br>
 <label>Account Type</label>
-<input type="text" name="accountType" #d="ngModel" ngModel> <!--default ¨Professeur -->
-<label>Nom</label>
+<select name="accountType" #d="ngModel" ngModel>
+    <option value="">--Selectionnez le rôle--</option>
+    <option value="Admin">Admin</option>
+    <option value="Eleve">Eleve</option>
+    <option value="Professeur">Professeur</option> 
+</select><!--default ¨Professeur -->
+<br>
+<label>Nom   </label>
 <input type="text" name="nom" #p="ngModel" ngModel>
-<label>Prenom</label>
+<br>
+<label>Prenom   </label>
 <input type="text" name="prenom" #s="ngModel" ngModel>
-<label>Date De Naissance</label>
-<input type="text" name="dateDeNaissance" #e="ngModel" ngModel>
-<label>Sexe</label>
-<input type="text" name="isActive" #a="ngModel" ngModel>
-<label>Adresse</label>
+<br>
+<label>Date De Naissance   </label>
+<input  type="date" id="start" name="trip-start"value="2018-07-22" name="dateDeNaissance" #p="ngModel" ngModel> 
+<br>
+<label>Sexe   </label>
+<input type="text" name="isActive" #a="ngModel" ngModel placeholder="M or F">
+<br>
+<label>Adresse   </label>
 <input type="text" name="adresse" #x="ngModel" ngModel>
-<label>Specialité</label>
+<br>
+<label>Specialité   </label>
 <input type="text" name="specialite" #b="ngModel" ngModel>
+<br>
 
 
 <input type="submit" value="Ajouter Professeur" (click)="ajouteruser(y.value)">

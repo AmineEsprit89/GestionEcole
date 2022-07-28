@@ -44,22 +44,37 @@
               <td>{{item.Lieu}}</td>
               <td>{{item.Nbr_place}}</td>
               <td>{{item.Nom_Club}}</td>
+<<<<<<< HEAD
                <td> <img src="http://localhost:3000/images/{{item.Image}}" width="200" height="100"></td> 
+=======
+              <!-- <td> <img src="http://localhost:3000/images/{{item.images}}"></td> -->
+>>>>>>> 96911e4a6e6da26c6467c1c19bd1050405b6d844
             
   
   
               
+<<<<<<< HEAD
                <!-- <div *ngIf="accountType=='Admin'" > -->
                   <td *ngIf="accountType=='Admin'" >
                  <button   class="btn  btn-primary"  data-toggle="modal" data-target="#exampleModal"
+=======
+              <div *ngIf="accountType=='Admin'" >
+                  <td>
+                 <button   class="btn btn-sm btn-primary"  data-toggle="modal" data-target="#exampleModal"
+>>>>>>> 96911e4a6e6da26c6467c1c19bd1050405b6d844
                   (click)="getdataevent(item.Name,item.Type,item.Free,
                   item.Price,item.Date_event,item.Date_fin_event,item.Heure_debut,
                   item.Lieu,item.Nbr_place,item.Nom_Club,
                   item._id)"> Update</button>
                   
                   
+<<<<<<< HEAD
                   <button class="btn   btn-success" [routerLink]="['/show/'+item._id]" >show </button> 
                  
+=======
+                  <button class="btn  btn-sm btn-success" [routerLink]="['/show/'+item._id]" >show </button> 
+                 <!--<input type="submit" class="btn-primary" [routerLink]="['/show']" value="Show">-->
+>>>>>>> 96911e4a6e6da26c6467c1c19bd1050405b6d844
 
                
                  <button class="btn  btn-danger" (click)=" delete(item._id,i)">Delete</button>
