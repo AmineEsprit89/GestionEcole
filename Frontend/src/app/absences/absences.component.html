@@ -3,10 +3,10 @@
     <thead>
         <tr>
           <th>Classe</th>
-            <th>NameE</th>
-            <th>Namep</th>
-            <th>EmailE</th>
-            <th>EmailP</th>
+            <th>Name Eleve</th>
+            <th>Name parent</th>
+            <th>Email Eleve</th>
+            <th>Email Parent</th>
             <th>Date_abs</th>
             <th>heuresc</th>
             <th>matiere</th>
@@ -67,7 +67,7 @@
     </tbody>
 </table> 
 <div *ngIf="accountType=='Professeur'" >
-<h3><button><a routerLink="/createabs">Ajouter abs</a></button></h3></div>
+<h3><button><a routerLink="/createabs">Ajouter Absence</a></button></h3></div>
 
 
 
@@ -77,7 +77,7 @@
 <div style="text-align: center">
 
   <button (click)="exeldownload()">
-    download 
+    TÉLÉCHARGER
   </button>
   <h5>{{msg}} </h5>
   </div>
@@ -88,32 +88,26 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <h5 class="modal-title" id="exampleModalLabel"></h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
-            <h1>modifier rdv</h1>
+            <h1>modifier rend vouz</h1>
             <form #y="ngForm"  (ngSubmit)=" updateabs(y)">
               <label>Classe</label>
-<select name="Classe" id="pet-select"  #i="ngModel" ngModel> >
-    <option value="">--Please choose an Classe--</option>
-    <option value="1cinfo2">1cinfo5</option>
-    <option value="1cinfo2">1cinfo2</option>
-    <option value="1cinfo4">1cinfo2</option>
-    <option value="1cinfo2">1cinfo2</option>
-    <option value="1cinfo5">1cinfo2</option>
-    <option value="1cinfo9">1cinfo2</option>
+              <input type="text" name="NameE" #i="ngModel"  ngModel [(ngModel)]="dataabs.Classe" > <br>
+   
     
-</select> <br>
-            <label>NameE</label>
+
+            <label>Name Eleve</label>
             <input type="text" name="NameE" #i="ngModel"  ngModel [(ngModel)]="dataabs.NameE" > <br>
-            <label>Namep</label>
+            <label>Name Parent</label>
             <input type="text" name="Namep" #t="ngModel" ngModel [(ngModel)]="dataabs.Namep"> <br>
-            <label>EmailE</label>
+            <label>Email Eleve</label>
             <input type="text" name="EmailE" #d="ngModel" ngModel [(ngModel)]="dataabs.EmailE"><br>
-            <label>EmailP</label>
+            <label>Email Parent</label>
             <input type="text" name="EmailP" #d="ngModel" ngModel [(ngModel)]="dataabs.EmailP"><br>
             <label>Date_abs</label>
             <input type="text" name="Date_abs" #p="ngModel" ngModel [(ngModel)]="dataabs.Date_abs"><br>

@@ -3,6 +3,7 @@ var router = express.Router();
 const PDFDocument = require("../pdfkit-tables");
 const fs = require('fs');
 const {  Note } = require("../models/note.model");
+const e = require('express');
 
 
 router.get('/',async function(req,res){
@@ -14,7 +15,7 @@ router.get('/',async function(req,res){
    });
  }
  
- 
+
   
     const doc = new PDFDocument();
     doc.fontSize(25);
@@ -34,9 +35,11 @@ router.get('/',async function(req,res){
       rows: []
   };
   for (const notes of note){
+  
+   
     table.rows.push([notes.Designation , notes.nomEnseignant, notes.noteCc,  notes.noteExam  ])
+   
   }
-
     doc.moveDown().table(table, 10, 125, { width: 590 });
 
     doc.moveDown();

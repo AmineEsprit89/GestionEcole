@@ -16,7 +16,7 @@ module.exports = {
            
         });
         if(req.file){
-            cour.imageUrl= req.file.filename;
+            cour.imageUrl= req.file.path;
         }
 
         await cour.save();
