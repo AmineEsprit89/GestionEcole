@@ -1,11 +1,11 @@
 
 
 
-<table border="2" >
+<table border="2" class="table table-bordered" >
   <thead>
       <tr>
           <th>Email</th>
-          <th>montantPaye</th>
+          <th>Montant Paye</th>
           <th>Date Paiment</th>
       </tr>
   </thead>
@@ -33,7 +33,7 @@
   </tbody>
 </table>
 <div *ngIf="accountType=='Eleve'">
-<button (click)="makePayment(6200)">Pay With Stripe</button>
+<button (click)="makePayment(6200)" class="btn btn-primary mt-1">Pay With Stripe</button>
 </div>
 
 
