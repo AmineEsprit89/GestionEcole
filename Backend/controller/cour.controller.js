@@ -9,7 +9,7 @@ module.exports = {
         const cour = new Cour(req.body);
 
         if(req.file){
-            cour.imageUrl= req.file.filename;
+            cour.imageUrl= req.file.path;
         }
 
         await cour.save();

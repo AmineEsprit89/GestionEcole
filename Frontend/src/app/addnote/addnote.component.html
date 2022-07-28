@@ -1,24 +1,34 @@
 
 <h1>Ajouter notes</h1>
 <form #y="ngForm">
-<label>Designation</label>
-<input type="text" name="Designation" #i="ngModel" ngModel>
-<label>nomEnseignant</label>
-<input type="text" name="nomEnseignant" #t="ngModel" ngModel>
+    <table>
+<label>Designation</label><br>
+<select name="pets" id="pet-select" input type="text" name="Designation" #i="ngModel" ngModel><br>
+    <option value="">choisir </option>
+    <option value="Mathématiques">Mathématiques</option>
+    <option value="Français">Français </option>
+    <option value="géographie">géographie</option>
+    <option value="Histoire">Histoire</option>
+    <option value="Anglais">Anglais</option>
+    <option value="Sciences physiques.">Sciences physiques.</option>
+</select>
 
-<label>EmailE</label>
-<input type="text" name="EmailE" #t="ngModel" ngModel>
-<label>EmailP</label>
-<input type="text" name="EmailP" #d="ngModel" ngModel>
+<tr><label>nom de l'enseignant</label></tr>
+<tr><input type="text" name="nomEnseignant" #t="ngModel" ngModel><br></tr>
+
+<tr><label>Email Eleve </label></tr>
+<tr><input type="text" name="EmailE" #t="ngModel" ngModel><br></tr>
+<tr><label>Email Professeur</label></tr>
+<input type="text" name="EmailP" #d="ngModel" ngModel><br>
 
 
-<label>noteCc</label>
-<input type="text" name="noteCc" #d="ngModel" ngModel>
-<label>noteExam</label>
-<input type="text" name="noteExam" #p="ngModel" ngModel>
+<tr><label>note controle continue</label></tr>
+<input  type="text" name="noteCc" #d="ngModel" ngModel placeholder="0-20"><br>
+<tr><label>note Exam</label></tr>
+<input type="text" name="noteExam" #p="ngModel" ngModel placeholder="0-20"><br>
 
-<input type="submit" value="Ajouter" (click)="ajouternote(y.value)">
-
+<input type="submit" value="Ajouter" (click)="ajouternote(y.value)"><br>
+</table>
 </form>
 
 

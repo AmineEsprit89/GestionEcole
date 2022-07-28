@@ -1,12 +1,13 @@
-<table border="2" >
-    <thead>
-        <tr>
-            <th>Designation</th>
-            <th>nomcour</th>
-            <th>nomEnseignant</th>
-            <th>chapitre</th>
+<table  style="text-align:center" class="table" border="2">
+  <thead class="thead-dark">
+    <tr style="text-align:center" >
+            <th scope="col" >Designation</th>
+            <th scope="col" > nom du cour</th>
+            <th scope="col">nom de l'enseignant</th>
+            <th scope="col">chapitre</th>
             <div *ngIf="accountType=='Professeur'" >
-            <th>actions</th>
+           
+              <th width="10%"  >actions</th> 
             </div>
            
            
@@ -26,10 +27,10 @@
 
 
             <div *ngIf="accountType=='Professeur'" >
-           <td>
+           <td width="10%">
                <button   class="btn-primary" data-toggle="modal" data-target="#exampleModal"
                 (click)="getdata(item.Designation,item.nomcour,item.nomEnseignant,
-                item.chapitre,item._id)"> update cours</button> 
+                item.chapitre,item._id)"> Modifier  cours</button> 
                 
                 <button  (click)=" delete(item._id,i)">supprimer cours</button>
             </td> 
@@ -59,17 +60,17 @@
           </button>
         </div>
         <div class="modal-body">
-            <h1>modifier cour</h1>
+            <h1 id="h1">modifier cour</h1>
             <form #y="ngForm" (ngSubmit)=" updatecourInofrmations(y)">
-            <label>Designation</label>
-            <input type="text" name="Designation" #i="ngModel" ngModel [(ngModel)]="datacour.Designation" >
-            <label>nomcour</label>
-            <input type="text" name="nomcour" #t="ngModel" ngModel [(ngModel)]="datacour.nomcour">
-            <label>nomEnseignant</label>
-            <input type="text" name="nomEnseignant" #d="ngModel" ngModel [(ngModel)]="datacour.nomEnseignant">
-            <label>chapitre</label>
-            <input type="text" name="chapitre" #p="ngModel" ngModel [(ngModel)]="datacour.chapitre">
-           
+            <label>Designation</label><br>
+            <input type="text" name="Designation" #i="ngModel" ngModel [(ngModel)]="datacour.Designation" ><br>
+            <label>nom du cour</label><br>
+            <input type="text" name="nomcour" #t="ngModel" ngModel [(ngModel)]="datacour.nomcour"><br>
+            <label>nomde l'enseignant</label><br>
+            <input type="text" name="nomEnseignant" #d="ngModel" ngModel [(ngModel)]="datacour.nomEnseignant" ><br>
+            <label>chapitre</label><br>
+            <input type="text" name="chapitre" #p="ngModel" ngModel [(ngModel)]="datacour.chapitre"><br>
+            <br>
             <input type="submit" value="Mettre a jour" >
             
             </form>
@@ -79,7 +80,7 @@
             
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">fermer</button>
           
         </div>
       </div>
