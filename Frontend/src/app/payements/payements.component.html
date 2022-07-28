@@ -1,37 +1,41 @@
-<table border="2" >
+
+
+
+<table border="2" class="table table-bordered" >
   <thead>
       <tr>
           <th>Email</th>
-          <th>montantPaye</th>
+          <th>Montant Paye</th>
           <th>Date Paiment</th>
       </tr>
   </thead>
 
   <tbody>
+
+
       <tr *ngFor="let e of dataArray  index as i" >
-        <td  *ngIf="email==e.email"> {{e.email}} </td> 
-         
+        <td  *ngIf="email==e.email"> {{e.email}} </td>
+
         <td  *ngIf="email==e.email">{{e.montantPaye}} </td>
         <td  *ngIf="email==e.email">{{e.createdAt.substring(0,10)}} </td>
 
 
         <td *ngIf="accountType=='Admin'"> {{e.email}} </td>
         <td *ngIf="accountType=='Admin'"> {{e.montantPaye}} </td>
-        
-        <td *ngIf="accountType=='Admin'"> {{e.createdAt.substring(0,10)}} </td>
-        
-        
 
-          <!-- <td>{{e.email}} </td>
-          <td>{{e.montantPaye}} </td>
-          <td>{{e.createdAt.substring(0,10)}} </td> -->
+        <td *ngIf="accountType=='Admin'"> {{e.createdAt.substring(0,10)}} </td>
+
+
+
+
 
       </tr>
   </tbody>
 </table>
-<div *ngIf="accountType=='Eleve'"> 
-<button (click)="makePayment(6200)">Pay With Stripe</button>
+<div *ngIf="accountType=='Eleve'">
+<button (click)="makePayment(6200)" class="btn btn-primary mt-1">Pay With Stripe</button>
 </div>
+
 
 
 <!-- <div *ngIf="success">
@@ -42,6 +46,7 @@
 <div *ngIf="failure">
   <h1>Your Payment is complete successfully</h1>
 </div> -->
+
 
 
 

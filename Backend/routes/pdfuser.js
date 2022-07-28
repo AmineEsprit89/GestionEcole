@@ -3,7 +3,6 @@ var router = express.Router();
 const PDFDocument = require("../pdfkit-tablesEl");
 const fs = require('fs');
 const { User } = require("../models/user.model");
-const e = require('express');
 
 
 router.get('/',async function(req,res){
@@ -32,10 +31,9 @@ router.get('/',async function(req,res){
   };
 
   for (const e of user){
-    if (e.accountType == "Eleve"){
-    table.rows.push([e.nom, e.prenom, e.dateDeNaissance, e.email,])
+    table.rows.push([e.nom, e.prenom, e.dateDeNaissance, e.email])
   }
-}
+
     doc.moveDown().table(table, 10, 125, { width: 590 });
 
     doc.moveDown();

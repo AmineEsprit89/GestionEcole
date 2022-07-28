@@ -34,6 +34,8 @@
             <td  *ngIf="email==item.EmailE">{{item.Date_abs.substring(0,10)}}</td>
             <td  *ngIf="email==item.EmailE">{{item.heuresc}}</td>
             <td  *ngIf="email==item.EmailE">{{item.matiere}}</td>
+
+            
             <td *ngIf="accountType=='Professeur'||accountType=='Admin'"> {{item.Classe}} </td>
             <td *ngIf="accountType=='Professeur'||accountType=='Admin'"> {{item.NameE}} </td>
             <td *ngIf="accountType=='Professeur'||accountType=='Admin'"> {{item.Namep}} </td>

@@ -5,9 +5,19 @@ var noteSchema = new mongoose.Schema({
     nomEnseignant: {type:String, minLength:3 , maxLength:20, required: true }, 
     noteCc:{type: Number , min:0,max: 20 , required: false },
     noteExam:{type: Number,min:0,max: 20 , required: true},
+<<<<<<< HEAD
     EmailE:String,
     EmailP:String,
     
+=======
+<<<<<<< HEAD
+    EmailE:String , 
+    EmailP:String , 
+=======
+    EmailE:String,
+    EmailP:String,
+>>>>>>> 158d9027f369063fefa196474e61790b028172ce
+>>>>>>> 5e03e279db51fcf90d4f2a2e9e46d2b396234760
     imageUrl:String
 });
 

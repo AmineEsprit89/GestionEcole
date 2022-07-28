@@ -1,0 +1,24 @@
+.A1{
+    margin: auto;
+   
+    border-color: blue;
+    width: 50%;
+}
+.modal-header{background-color: orange;
+
+}
+.modal-footer{background-color: white;
+
+}
+.modal-body{background-color: orange;
+}
+.modal-title{
+    color: blue;
+}
+#h1{color:blue}
+#l{color:blue}
+.btn-secondary{background-color:orange;
+color: white}
+#btn{border-color: aliceblue;
+    background-color: blue;}
+

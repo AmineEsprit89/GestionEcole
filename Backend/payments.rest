@@ -4,7 +4,9 @@ get http://localhost:3000/payments
 
 ### (getPaymentById)
 
-get http://localhost:3000/payments/62c9ad25143b5dbb7e5b9d78
+get http://localhost:3000/payments/62deaef6fe152d7fa43d8dea
+
+
 
 ### (deletePayment)
 

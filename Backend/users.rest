@@ -11,10 +11,10 @@ Content-Type: application/json
 
 {
        "userName" : "eleve",
-       "email" : "admin1@gmail.com",
-       "password" : "admin123",
-       "verifyPassword": "admin123",
-       "accountType" :"Admin" ,
+       "email" : "eleve@gmail.com",
+       "password" : "eleveeleve",
+       "verifyPassword": "eleveeleve",
+       "accountType" :"Eleve" ,
        "questionSecurite" :"eleve",
        "reponseQuestionSecurite" :"eleve",
        "nom" :"eleve",
