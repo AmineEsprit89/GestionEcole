@@ -2,7 +2,7 @@
 <form #y="ngForm" >
   <div class="form-group" >
     <label >Email</label>
-<input type="text" name="email" #i="ngModel" ngModel class="form-control">
+<input type="email" name="email" #i="ngModel" ngModel class="form-control" placeholder="mail@serveur.com">
   </div>
 
   <div class="form-group">
@@ -12,7 +12,11 @@
   </div>
 <div class="form-group">
   <label>Account Type</label>
-  <input type="text" name="accountType" #d="ngModel" ngModel class="form-control">
+  <select name="accountType" #d="ngModel" ngModel>
+      <option value="">--Selectionnez le rôle--</option>
+      <option value="Eleve">Eleve</option>
+
+  </select>
 
 </div>
 
@@ -32,7 +36,7 @@
 
 <div class="form-group">
   <label>Date De Naissance</label>
-<input type="text" name="dateDeNaissance" #e="ngModel" ngModel class="form-control">
+  <input  type="date" id="start" name="trip-start"value="2018-07-22" name="dateDeNaissance" #p="ngModel" ngModel>
 </div>
 
 
@@ -50,7 +54,7 @@
 
 <div class="form-group">
   <label>Classe</label>
-<input type="text" name="classe" #b="ngModel" ngModel class="form-control">
+<input type="text" name="classe" #b="ngModel" ngModel class="form-control" placeholder="Exp: 7B1">
 </div>
 
 
@@ -61,6 +65,7 @@
 
 
 <input type="submit" value="Ajouter Eleve" (click)="ajouteruser(y.value)">
+
 
 </form>
 

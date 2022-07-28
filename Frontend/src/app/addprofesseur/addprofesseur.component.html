@@ -3,7 +3,7 @@
 
   <div class="form-group">
     <label>Email</label>
-<input type="text" name="email" #i="ngModel" ngModel class="form-control">
+<input type="email" name="email" #i="ngModel" ngModel class="form-control">
   </div>
 
 
@@ -15,7 +15,10 @@
 
 <div class="form-group">
   <label>Account Type</label>
-<input type="text" name="accountType" #d="ngModel" ngModel class="form-control">
+  <select name="accountType" #d="ngModel" ngModel>
+      <option value="">--Selectionnez le rôle--</option>
+      <option value="Professeur">Professeur</option>
+  </select>
 </div>
 
 
@@ -33,7 +36,7 @@
 
 <div class="form-group">
   <label>Date De Naissance</label>
-<input type="text" name="dateDeNaissance" #e="ngModel" ngModel class="form-control">
+  <input  type="date" id="start" name="trip-start"value="2018-07-22" name="dateDeNaissance" #p="ngModel" ngModel> 
 </div>
 
 
